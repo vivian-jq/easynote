@@ -242,7 +242,7 @@ ul.top-menu > li > .logout {
 }
 
 #sidebar .sub-menu > .sub li  {
-    padding-left: 32px;
+    padding-left: 36px;
 }
 
 #sidebar .sub-menu > .sub li:last-child {
@@ -1923,7 +1923,7 @@ label {
 /*LOGIN CONFIGURATION PAGE*/
 .form-login {
 	max-width: 330px;
-	margin: 100px auto 0;
+	margin: 200px auto 0;
 	background: #fff;
 	border-radius: 5px;
 	-webkit-border-radius: 5px;
