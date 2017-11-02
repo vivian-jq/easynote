@@ -31,9 +31,8 @@
 <section id="container" >
 
     <include file="Public/header" />
-    <include file="Public/admin_menu" email="active" all_emails="active"/>
 
-
+    <<include file="Public/admin_menu" email="active" unread_emails="active"/>
 
     <!-- **********************************************************************************************************************************************************
     MAIN CONTENT
@@ -44,12 +43,12 @@
             <h3><i class="fa fa-angle-right"></i> To-Do Lists</h3>
 
 
-            <!-- 用户列表 -->
+            <!-- COMPLEX TO DO LIST -->
             <div class="row mt">
                 <div class="col-md-12">
                     <section class="task-panel tasks-widget">
                         <div class="panel-heading">
-                            <div class="pull-left"><h5><i class="fa fa-tasks"></i> 用 户 管 理</h5></div>
+                            <div class="pull-left"><h5><i class="fa fa-tasks"></i> 未 读 邮 件</h5></div>
                             <br>
                         </div>
                         <div class="panel-body">
@@ -130,43 +129,19 @@
                             </div>
 
                             <div class=" add-task-row">
-                                <a class="btn btn-default btn-sm pull-right" href="todo_list.html#">查看全部</a>
+                                <a class="btn btn-success btn-sm pull-left" href="todo_list.html#">已读</a>
                             </div>
                         </div>
                     </section>
                 </div><!-- /col-md-12-->
             </div><!-- /row -->
 
-
-            <!-- 管理员列表 -->
-            <div class="row mt">
-                <div class="col-md-12">
-                    <section class="task-panel tasks-widget">
-                        <div class="panel-heading">
-                            <div class="pull-left"><h5><i class="fa fa-tasks"></i> 管 理 员 管 理</h5></div>
-                            <br>
-                        </div>
-                        <div class="panel-body">
-                            <div class="task-content">
-
-                                <ul class="task-list">
-
-                                </ul>
-                            </div>
-
-                            <div class=" add-task-row">
-                                <a class="btn btn-default btn-sm pull-right" href="todo_list.html#">查看全部</a>
-                            </div>
-                        </div>
-                    </section>
-                </div><!-- /col-md-12-->
-            </div><!-- /row -->
 
         </section><! --/wrapper -->
     </section><!-- /MAIN CONTENT -->
 
     <!--main content end-->
-    <include file="Public/footer"/>
+    <include file="Public/footer" />
 </section>
 
 <!-- js placed at the end of the document so the pages load faster -->

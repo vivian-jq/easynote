@@ -17,23 +17,23 @@ class AdminController extends Controller
     }
 
     public function allEmails(){
-//        return $this->redirect('Index/index');
+        return $this->display('all_emails');
     }
 
     public function unReadEmails(){
-//        return $this->redirect('Index/index');
+        return $this->display('unread_emails');
     }
 
     public function readEmails(){
-//        return $this->redirect('Index/index');
+        return $this->display('read_emails');
     }
 
     public function userManager(){
-//        return $this->redirect('Index/index');
+        return $this->display('user_manager');
     }
 
     public function adminManager(){
-//        return $this->redirect('Index/index');
+        return $this->display('admin_manager');
     }
 
     public function logout(){

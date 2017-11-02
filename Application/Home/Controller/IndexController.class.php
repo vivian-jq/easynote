@@ -18,10 +18,10 @@ class IndexController extends Controller {
 
         if($data){
             if($data[0]['password']==md5($password)){
-                if($username='admin') {
+                if($username=='admin') {
                     $this->redirect('Admin/index', ['id' => $data[0]['id']]);
                 }
-                $this->redirect('HomePage/show',['id'=>$data[0]['id']]);
+                $this->redirect('HomePage/index',['id'=>$data[0]['id']]);
             }else{
                 $warning = '密码错误，请重新输入';
             }

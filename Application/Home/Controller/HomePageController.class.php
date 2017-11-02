@@ -11,7 +11,7 @@ use Think\Controller;
 
 class HomePageController extends Controller
 {
-    public function show($id){
+    public function index($id){
 
         return $this->display('index');
     }
