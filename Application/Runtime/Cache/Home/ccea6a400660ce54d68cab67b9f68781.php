@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="Dashboard">
-    <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
 
-    <title>DASHGUM - Bootstrap Admin Template</title>
+    <title>EASYNOTE - Make Notes Simple</title>
 
     <!-- Bootstrap core CSS -->
     <link href="/Public/static/css/bootstrap.css" rel="stylesheet">
@@ -53,9 +52,9 @@
 						<?php echo ($warning); ?>
 					</div>
 		            <div class="registration">
-		                Don't have an account yet?<br/>
-		                <a class="" href="#">
-		                    Create an account
+		                还没有注册账户？<br/>
+		                <a class="" href="/index.php/Home/Index/newAccount">
+		                    注册一个吧
 		                </a>
 		            </div>
 		

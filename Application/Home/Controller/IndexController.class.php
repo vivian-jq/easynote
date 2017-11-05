@@ -7,6 +7,33 @@ class IndexController extends Controller {
         $this->display('login');
     }
 
+    public function newAccount(){
+        $this->assign(['hideWarn' => 'hide']);
+        $this->display('new_account');
+    }
+
+    public function create(){
+        $username = I('post.username');
+        $password1 = I('post.password1');
+        $password2 = I('post.password2');
+
+        $user = M('User');
+        $condition['username'] = $username;
+        $s_data = ($user->where($condition)->select());
+
+        if($s_data){
+            $this->assign(['warning' => '该用户名已被使用']);
+            $this->display('new_account');
+        }
+        if($password1!=$password2){
+            $this->assign(['warning' => '密码不一致']);
+            $this->display('new_account');
+        }
+        $data['username'] = $username;
+        $data['password'] = md5($password1);
+        $this->redirect('HomePage/index', ['id' => $user->add($data)]);
+    }
+
     public function login(){
         $username = I('post.username');
         $password = I('post.password');

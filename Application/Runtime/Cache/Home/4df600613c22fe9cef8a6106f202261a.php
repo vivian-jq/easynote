@@ -122,95 +122,84 @@
     </div>
 </header>
 <!--header end-->
-      
-      <!-- **********************************************************************************************************************************************************
+	  <!-- **********************************************************************************************************************************************************
       MAIN SIDEBAR MENU
       *********************************************************************************************************************************************************** -->
-      <!--sidebar start-->
-      <aside>
-          <div id="sidebar"  class="nav-collapse ">
-              <!-- sidebar menu start-->
-              <ul class="sidebar-menu" id="nav-accordion">
-              
-              	  <p class="centered"><a href="profile.html"><img src="/Public/images/temp/ui-sam.jpg" class="img-circle" width="60"></a></p>
-              	  <h5 class="centered"><?php echo ($user["username"]); ?></h5>
-              	  	
-                  <li class="mt">
-                      <a class="active" href="index.html">
-                          <i class="fa fa-dashboard"></i>
-                          <span>Dashboard</span>
-                      </a>
-                  </li>
+<!--sidebar start-->
+<aside>
+    <div id="sidebar"  class="nav-collapse ">
+        <!-- sidebar menu start-->
+        <ul class="sidebar-menu" id="nav-accordion">
 
-                  <li class="sub-menu">
-                      <a href="javascript:;" >
-                          <i class="fa fa-desktop"></i>
-                          <span>UI Elements</span>
-                      </a>
-                      <ul class="sub">
-                          <li><a  href="../Index/general.html">General</a></li>
-                          <li><a  href="../Index/buttons.html">Buttons</a></li>
-                          <li><a  href="../Index/panels.html">Panels</a></li>
-                      </ul>
-                  </li>
+            <p class="centered"><a href="profile.html"><img src=<?php echo ($user["img_url"]); ?> class="img-circle" width="60"></a></p>
+            <h5 class="centered"><?php echo ($user["username"]); ?></h5>
 
-                  <li class="sub-menu">
-                      <a href="javascript:;" >
-                          <i class="fa fa-cogs"></i>
-                          <span>Components</span>
-                      </a>
-                      <ul class="sub">
-                          <li><a  href="../Index/calendar.html">Calendar</a></li>
-                          <li><a  href="../Index/gallery.html">Gallery</a></li>
-                          <li><a  href="../Index/todo_list.html">Todo List</a></li>
-                      </ul>
-                  </li>
-                  <li class="sub-menu">
-                      <a href="javascript:;" >
-                          <i class="fa fa-book"></i>
-                          <span>Extra Pages</span>
-                      </a>
-                      <ul class="sub">
-                          <li><a  href="../Index/blank.html">Blank Page</a></li>
-                          <li><a  href="../Index/login.html">Login</a></li>
-                          <li><a  href="../Index/lock_screen.html">Lock Screen</a></li>
-                      </ul>
-                  </li>
-                  <li class="sub-menu">
-                      <a href="javascript:;" >
-                          <i class="fa fa-tasks"></i>
-                          <span>Forms</span>
-                      </a>
-                      <ul class="sub">
-                          <li><a  href="../Index/form_component.html">Form Components</a></li>
-                      </ul>
-                  </li>
-                  <li class="sub-menu">
-                      <a href="javascript:;" >
-                          <i class="fa fa-th"></i>
-                          <span>Data Tables</span>
-                      </a>
-                      <ul class="sub">
-                          <li><a  href="../Index/basic_table.html">Basic Table</a></li>
-                          <li><a  href="../Index/responsive_table.html">Responsive Table</a></li>
-                      </ul>
-                  </li>
-                  <li class="sub-menu">
-                      <a href="javascript:;" >
-                          <i class=" fa fa-bar-chart-o"></i>
-                          <span>Charts</span>
-                      </a>
-                      <ul class="sub">
-                          <li><a  href="../Index/morris.html">Morris</a></li>
-                          <li><a  href="../Index/chartjs.html">Chartjs</a></li>
-                      </ul>
-                  </li>
+            <li class="mt">
+                <a class=active href="/index.php/Home/HomePage/index">
+                    <i class="fa fa-dashboard"></i>
+                    <span>主 页</span>
+                </a>
+            </li>
 
-              </ul>
-              <!-- sidebar menu end-->
-          </div>
-      </aside>
-      <!--sidebar end-->
+            <li class="sub-menu">
+                <a class="[new]" href="javascript:;" >
+                    <i class="fa fa-desktop"></i>
+                    <span>快 速 开 始</span>
+                </a>
+                <ul class="sub">
+                    <li  class="[new_note]"><a href="/index.php/Home/HomePage/newNote">新 建 笔 记</a></li>
+                    <li  class="[new_notebook]"><a href="/index.php/Home/HomePage/newNotebook">新 建 笔 记 本</a></li>
+                </ul>
+            </li>
+
+            <li class="sub-menu">
+                <a class="[mynote]" href="javascript:;" >
+                    <i class="fa fa-cogs"></i>
+                    <span>我 的 笔 记</span>
+                </a>
+                <ul class="sub">
+                    <li  class="[note_by_book]"><a href="/index.php/Home/HomePage/noteByBook">笔 记 本 查 看</a></li>
+                    <li  class="[note_by_time]"><a href="/index.php/Home/HomePage/noteByTime">时 间 查 看</a></li>
+                    <li  class="[note_by_tag]"><a href="/index.php/Home/HomePage/noteByTag">标 签 查 看</a></li>
+                </ul>
+            </li>
+            <li class="sub-menu">
+                <a class="[friend]" href="javascript:;" >
+                    <i class="fa fa-book"></i>
+                    <span>好 友</span>
+                </a>
+                <ul class="sub">
+                    <li  class="[all_friend]><a" href="/index.php/Home/HomePage/friends">全 部 好 友</a></li>
+                    <li  class="[friend_share]"><a href="/index.php/Home/HomePage/friendShare">好 友 分 享</a></li>
+                    <li  class="[my_share]"><a href="/index.php/Home/HomePage/myShare">我 的 分 享</a></li>
+                </ul>
+            </li>
+            <li class="sub-menu">
+                <a href="javascript:;" >
+                    <i class="fa fa-tasks"></i>
+                    <span>社区</span>
+                </a>
+                <ul class="sub">
+                    <li><a  href="../Index/form_component.html">lalala</a></li>
+                </ul>
+            </li>
+            <li class="sub-menu">
+                <a href="javascript:;" >
+                    <i class="fa fa-th"></i>
+                    <span>等 级 评 分</span>
+                </a>
+                <ul class="sub">
+                    <li><a  href="#">等 级 查 看</a></li>
+                    <li><a  href="#">笔 记 评 分</a></li>
+                    <li><a  href="#">其 他 数 据</a></li>
+                </ul>
+            </li>
+
+        </ul>
+        <!-- sidebar menu end-->
+    </div>
+</aside>
+<!--sidebar end-->
       
       <!-- **********************************************************************************************************************************************************
       MAIN CONTENT

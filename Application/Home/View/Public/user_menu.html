@@ -1,0 +1,78 @@
+<!-- **********************************************************************************************************************************************************
+      MAIN SIDEBAR MENU
+      *********************************************************************************************************************************************************** -->
+<!--sidebar start-->
+<aside>
+    <div id="sidebar"  class="nav-collapse ">
+        <!-- sidebar menu start-->
+        <ul class="sidebar-menu" id="nav-accordion">
+
+            <p class="centered"><a href="profile.html"><img src=__ROOT__{$user.img_url} class="img-circle" width="60"></a></p>
+            <h5 class="centered">{$user.username}</h5>
+
+            <li class="mt">
+                <a class=[main] href="__URL__/index">
+                    <i class="fa fa-dashboard"></i>
+                    <span>主 页</span>
+                </a>
+            </li>
+
+            <li class="sub-menu">
+                <a class="[new]" href="javascript:;" >
+                    <i class="fa fa-desktop"></i>
+                    <span>快 速 开 始</span>
+                </a>
+                <ul class="sub">
+                    <li  class="[new_note]"><a href="__URL__/newNote">新 建 笔 记</a></li>
+                    <li  class="[new_notebook]"><a href="__URL__/newNotebook">新 建 笔 记 本</a></li>
+                </ul>
+            </li>
+
+            <li class="sub-menu">
+                <a class="[mynote]" href="javascript:;" >
+                    <i class="fa fa-cogs"></i>
+                    <span>我 的 笔 记</span>
+                </a>
+                <ul class="sub">
+                    <li  class="[note_by_book]"><a href="__URL__/noteByBook">笔 记 本 查 看</a></li>
+                    <li  class="[note_by_time]"><a href="__URL__/noteByTime">时 间 查 看</a></li>
+                    <li  class="[note_by_tag]"><a href="__URL__/noteByTag">标 签 查 看</a></li>
+                </ul>
+            </li>
+            <li class="sub-menu">
+                <a class="[friend]" href="javascript:;" >
+                    <i class="fa fa-book"></i>
+                    <span>好 友</span>
+                </a>
+                <ul class="sub">
+                    <li  class="[all_friend]><a" href="__URL__/friends">全 部 好 友</a></li>
+                    <li  class="[friend_share]"><a href="__URL__/friendShare">好 友 分 享</a></li>
+                    <li  class="[my_share]"><a href="__URL__/myShare">我 的 分 享</a></li>
+                </ul>
+            </li>
+            <li class="sub-menu">
+                <a href="javascript:;" >
+                    <i class="fa fa-tasks"></i>
+                    <span>社区</span>
+                </a>
+                <ul class="sub">
+                    <li><a  href="../Index/form_component.html">lalala</a></li>
+                </ul>
+            </li>
+            <li class="sub-menu">
+                <a href="javascript:;" >
+                    <i class="fa fa-th"></i>
+                    <span>等 级 评 分</span>
+                </a>
+                <ul class="sub">
+                    <li><a  href="#">等 级 查 看</a></li>
+                    <li><a  href="#">笔 记 评 分</a></li>
+                    <li><a  href="#">其 他 数 据</a></li>
+                </ul>
+            </li>
+
+        </ul>
+        <!-- sidebar menu end-->
+    </div>
+</aside>
+<!--sidebar end-->

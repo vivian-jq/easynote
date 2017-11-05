@@ -40,17 +40,19 @@
       <Position>1</Position>
     </column>
     <column id="16" parent="8" name="id">
-      <DataType>INT(11)|0</DataType>
+      <DataType>INTEGER|0</DataType>
       <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
     </column>
     <column id="17" parent="8" name="username">
       <Position>1</Position>
       <DataType>VARCHAR(25)|0</DataType>
-      <DefaultExpression>&apos;&apos;</DefaultExpression>
+      <NotNull>1</NotNull>
     </column>
     <column id="18" parent="8" name="password">
       <Position>2</Position>
       <DataType>TINYTEXT|0</DataType>
+      <NotNull>1</NotNull>
     </column>
     <column id="19" parent="8" name="tel">
       <Position>3</Position>
@@ -60,28 +62,21 @@
     <column id="20" parent="8" name="exp">
       <Position>4</Position>
       <DataType>INT(11)|0</DataType>
-      <NotNull>1</NotNull>
+      <DefaultExpression>0</DefaultExpression>
     </column>
     <column id="21" parent="8" name="introduction">
       <Position>5</Position>
       <DataType>TEXT|0</DataType>
-      <DefaultExpression>NULL</DefaultExpression>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
     <column id="22" parent="8" name="mailbox">
       <Position>6</Position>
       <DataType>TINYTEXT|0</DataType>
-      <DefaultExpression>NULL</DefaultExpression>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
-    <index id="23" parent="8" name="sqlite_autoindex_user_1">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>id</ColNames>
-      <ColumnCollations></ColumnCollations>
-      <Unique>1</Unique>
-    </index>
-    <key id="24" parent="8">
+    <key id="23" parent="8">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
-      <UnderlyingIndexName>sqlite_autoindex_user_1</UnderlyingIndexName>
     </key>
   </database-model>
 </dataSource>
