@@ -1947,10 +1947,23 @@ label {
 .login-wrap .registration {
 	text-align: center;
 }
-.login-social-link {
-	display: block;
-	margin-top: 20px;
-	margin-bottom: 15px;
+
+/*PROFILE CONFIGURATION PAGE*/
+.form-profile {
+    margin: 0 20px 0 10px;
+    background: transparent;
+}
+
+.form-profile h5 {
+    margin: 0;
+    padding: 10px 10px;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.form-profile button {
+    width: 100px;
 }
 
 
@@ -1989,37 +2002,6 @@ label {
 	border: 1px solid #999;
 	border: 1px solid rgba(0, 0, 0, .2);
 	border-radius: 5px;
-}
-
-
-.btn-facebook {
-  color: #fff;
-  background-color: #5193ea;
-  border-color: #2775e2;
-}
-.btn-facebook:hover,
-.btn-facebook:focus,
-.btn-facebook:active,
-.btn-facebook.active,
-.open .dropdown-toggle.btn-facebook {
-  color: #fff;
-  background-color: #2775e2;
-  border-color: #2775e2;
-}
-
-.btn-twitter {
-  color: #fff;
-  background-color: #44ccfe;
-  border-color: #2bb4e8;
-}
-.btn-twitter:hover,
-.btn-twitter:focus,
-.btn-twitter:active,
-.btn-twitter.active,
-.open .dropdown-toggle.btn-twitter {
-  color: #fff;
-  background-color: #2bb4e8;
-  border-color: #2bb4e8;
 }
 
 

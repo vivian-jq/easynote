@@ -17,6 +17,18 @@ class HomePageController extends Controller
         return $this->display('index');
     }
 
+    public function photoUpload(){
+//        return $this->display('profile');
+    }
+
+    public function saveProfile(){
+//        return $this->display('profile');
+    }
+
+    public function profile(){
+        return $this->display('profile');
+    }
+
     public function newNote(){
         return $this->display('new_note');
     }

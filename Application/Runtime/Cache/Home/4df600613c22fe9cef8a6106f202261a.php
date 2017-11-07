@@ -131,7 +131,7 @@
         <!-- sidebar menu start-->
         <ul class="sidebar-menu" id="nav-accordion">
 
-            <p class="centered"><a href="profile.html"><img src=<?php echo ($user["img_url"]); ?> class="img-circle" width="60"></a></p>
+            <p class="centered"><a href="/index.php/Home/HomePage/profile"><img src=<?php echo ($user["img_url"]); ?> class="img-circle" width="60"></a></p>
             <h5 class="centered"><?php echo ($user["username"]); ?></h5>
 
             <li class="mt">
@@ -169,7 +169,7 @@
                     <span>好 友</span>
                 </a>
                 <ul class="sub">
-                    <li  class="[all_friend]><a" href="/index.php/Home/HomePage/friends">全 部 好 友</a></li>
+                    <li  class="[all_friend]"><a href="/index.php/Home/HomePage/friends">全 部 好 友</a></li>
                     <li  class="[friend_share]"><a href="/index.php/Home/HomePage/friendShare">好 友 分 享</a></li>
                     <li  class="[my_share]"><a href="/index.php/Home/HomePage/myShare">我 的 分 享</a></li>
                 </ul>
