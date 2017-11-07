@@ -117,7 +117,7 @@
     </div>
     <div class="top-menu">
         <ul class="nav pull-right top-menu">
-            <li><a class="logout" href="/index.php/Home/HomePage/logout">Logout</a></li>
+            <li><a class="logout" href="/index.php/Home/HomePage/../Index/logout">Logout</a></li>
         </ul>
     </div>
 </header>
@@ -131,11 +131,11 @@
         <!-- sidebar menu start-->
         <ul class="sidebar-menu" id="nav-accordion">
 
-            <p class="centered"><a href="/index.php/Home/HomePage/profile"><img src=<?php echo ($user["img_url"]); ?> class="img-circle" width="60"></a></p>
+            <p class="centered"><a href="/index.php/Home/HomePage/../HomePage/profile"><img src=<?php echo ($user["img_url"]); ?> class="img-circle" width="60"></a></p>
             <h5 class="centered"><?php echo ($user["username"]); ?></h5>
 
             <li class="mt">
-                <a class=active href="/index.php/Home/HomePage/index">
+                <a class=active href="/index.php/Home/HomePage/../HomePage/index">
                     <i class="fa fa-dashboard"></i>
                     <span>主 页</span>
                 </a>
@@ -147,8 +147,8 @@
                     <span>快 速 开 始</span>
                 </a>
                 <ul class="sub">
-                    <li  class="[new_note]"><a href="/index.php/Home/HomePage/newNote">新 建 笔 记</a></li>
-                    <li  class="[new_notebook]"><a href="/index.php/Home/HomePage/newNotebook">新 建 笔 记 本</a></li>
+                    <li  class="[new_note]"><a href="/index.php/Home/HomePage/../Note/newNote">新 建 笔 记</a></li>
+                    <li  class="[new_notebook]"><a href="/index.php/Home/HomePage/../Note/newNotebook">新 建 笔 记 本</a></li>
                 </ul>
             </li>
 
@@ -158,9 +158,9 @@
                     <span>我 的 笔 记</span>
                 </a>
                 <ul class="sub">
-                    <li  class="[note_by_book]"><a href="/index.php/Home/HomePage/noteByBook">笔 记 本 查 看</a></li>
-                    <li  class="[note_by_time]"><a href="/index.php/Home/HomePage/noteByTime">时 间 查 看</a></li>
-                    <li  class="[note_by_tag]"><a href="/index.php/Home/HomePage/noteByTag">标 签 查 看</a></li>
+                    <li  class="[note_by_book]"><a href="/index.php/Home/HomePage/../Note/noteByBook">笔 记 本 查 看</a></li>
+                    <li  class="[note_by_time]"><a href="/index.php/Home/HomePage/../Note/noteByTime">时 间 查 看</a></li>
+                    <li  class="[note_by_tag]"><a href="/index.php/Home/HomePage/../Note/noteByTag">标 签 查 看</a></li>
                 </ul>
             </li>
             <li class="sub-menu">

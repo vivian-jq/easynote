@@ -35,7 +35,18 @@
 <section id="container" >
     <include file="Public/header"/>
     <include file="Public/user_menu" new="active" new_note="active"/>
+    <!-- **********************************************************************************************************************************************************
+    MAIN CONTENT
+    *********************************************************************************************************************************************************** -->
+    <!--main content start-->
+    <section id="main-content">
+        <section class="wrapper site-min-height">
+            <div id="editor">
+                <p>欢迎使用 <b>wangEditor</b> 富文本编辑器</p>
+            </div>
 
+        </section>
+    </section>
 
     <!--main content end-->
     <include file="Public/footer" />
@@ -74,33 +85,16 @@
         return false;
     });
 </script>
+<!-- 注意， 只需要引用 JS，无需引用任何 CSS ！！！-->
+<script type="text/javascript" src="_JS_/wangEditor.min.js"></script>
+<script type="text/javascript">
+    var E = window.wangEditor
+    var editor = new E('#editor')
+    // 或者 var editor = new E( document.getElementById('#editor') )
+    editor.create()
+</script>
 
 <script type="application/javascript">
-    $(document).ready(function () {
-        $("#date-popover").popover({html: true, trigger: "manual"});
-        $("#date-popover").hide();
-        $("#date-popover").click(function (e) {
-            $(this).hide();
-        });
-
-        $("#my-calendar").zabuto_calendar({
-            action: function () {
-                return myDateFunction(this.id, false);
-            },
-            action_nav: function () {
-                return myNavFunction(this.id);
-            },
-            ajax: {
-                url: "show_data.php?action=1",
-                modal: true
-            },
-            legend: [
-                {type: "text", label: "Special event", badge: "00"},
-                {type: "block", label: "Regular event", }
-            ]
-        });
-    });
-
 
     function myNavFunction(id) {
         $("#date-popover").hide();

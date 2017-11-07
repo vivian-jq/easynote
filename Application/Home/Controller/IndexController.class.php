@@ -45,10 +45,11 @@ class IndexController extends Controller {
 
         if($data){
             if($data[0]['password']==md5($password)){
+                session('id',$data[0]['id']);
                 if($username=='admin') {
-                    $this->redirect('Admin/index', ['id' => $data[0]['id']]);
+                    $this->redirect('Admin/index');
                 }
-                $this->redirect('HomePage/index',['id'=>$data[0]['id']]);
+                $this->redirect('HomePage/index');
             }else{
                 $warning = '密码错误，请重新输入';
             }
@@ -57,6 +58,11 @@ class IndexController extends Controller {
         }
         $this->assign(['username' => $username,'warning' => $warning,'hideWarn' => '']);
         $this->display('login');
+    }
+
+    public function logout(){
+        session('id',0);
+        $this->index();
     }
 
 }

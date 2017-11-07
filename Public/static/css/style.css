@@ -1949,16 +1949,22 @@ label {
 }
 
 /*PROFILE CONFIGURATION PAGE*/
-.form-profile {
+
+.profile-wrap{
     margin: 0 20px 0 10px;
-    background: transparent;
+}
+
+.profile-wrap .solid-para{
+    font-size: 20px;
+    color: #424a5d;
+    padding-left:10px;
+    border-left: #ffd777 3px solid;
 }
 
 .form-profile h5 {
     margin: 0;
-    padding: 10px 10px;
+    padding: 10px;
     font-size: 14px;
-    text-transform: uppercase;
     font-weight: 300;
 }
 
@@ -2216,7 +2222,7 @@ label {
 }
 
 .site-min-height {
-    min-height: 900px;
+    min-height: 800px;
 }
 
 

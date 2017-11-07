@@ -35,8 +35,4 @@ class AdminController extends Controller
     public function adminManager(){
         return $this->display('admin_manager');
     }
-
-    public function logout(){
-        return $this->redirect('Index/index');
-    }
 }

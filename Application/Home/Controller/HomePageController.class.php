@@ -11,9 +11,11 @@ use Think\Controller;
 
 class HomePageController extends Controller
 {
-    public function index($id=1){
-        $user = $this->getUser($id);
-        $this->assign(['user' => $user]);
+    var $user=null;
+
+    public function index(){
+        $this->getUser();
+        $this->assign(['user' => $this->user]);
         return $this->display('index');
     }
 
@@ -26,7 +28,15 @@ class HomePageController extends Controller
     }
 
     public function profile(){
+        $this->getUser();
+        $this->assign(['user' => $this->user]);
         return $this->display('profile');
+    }
+
+    public function profileModify(){
+        $this->getUser();
+        $this->assign(['user' => $this->user]);
+        return $this->display('profile_modify');
     }
 
     public function newNote(){
@@ -61,17 +71,16 @@ class HomePageController extends Controller
         return $this->display('my_share');
     }
 
-    public function logout(){
-        return $this->redirect('Index/index');
-    }
-
-    private function getUser($id=1){
+    private function getUser(){
+        $id = session('id');
+        echo $id;
+        if($id==0)
+            return $this->redirect("Index/index");
         $User = M('User');
         $condition['id'] = $id;
         $data = ($User->where($condition)->select());
 
-        $user = $data[0];
-        $user['img_url'] = "/public/images/temp/ui-sam.jpg";
-        return $user;
+        $this->user = $data[0];
+        $this->user['img_url'] = "/public/images/temp/ui-sam.jpg";
     }
 }
