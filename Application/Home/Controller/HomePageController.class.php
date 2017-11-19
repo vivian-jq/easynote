@@ -39,26 +39,6 @@ class HomePageController extends Controller
         return $this->display('profile_modify');
     }
 
-    public function newNote(){
-        return $this->display('new_note');
-    }
-
-    public function newNotebook(){
-        return $this->display('new_notebook');
-    }
-
-    public function noteByBook(){
-        return $this->display('note_by_book');
-    }
-
-    public function noteByTime(){
-        return $this->display('note_by_time');
-    }
-
-    public function noteByTag(){
-        return $this->display('note_by_tag');
-    }
-
     public function friends(){
         return $this->display('friends');
     }
@@ -73,7 +53,6 @@ class HomePageController extends Controller
 
     private function getUser(){
         $id = session('id');
-        echo $id;
         if($id==0)
             return $this->redirect("Index/index");
         $User = M('User');

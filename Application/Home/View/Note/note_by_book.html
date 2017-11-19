@@ -34,13 +34,50 @@
 
 <section id="container" >
     <include file="Public/header"/>
-    <include file="Public/user_menu" mynote="active" newByBook="active"/>
+    <include file="Public/user_menu" mynote="active" note_by_book="active"/>
     <!-- **********************************************************************************************************************************************************
     MAIN CONTENT
     *********************************************************************************************************************************************************** -->
     <!--main content start-->
     <section id="main-content">
         <section class="wrapper site-min-height">
+            <h3><i class="fa fa-angle-right"></i> 所 有 笔 记 本</h3>
+
+            <div class="row">
+                <div class="col-lg-12 main-chart">
+
+
+                    <for start="0" end="count($books)" step="1">
+                        <php>$book=$books[$i];</php>
+                        <! -- NOTEBOOK PANEL -->
+                        <div class="col-lg-4 col-md-4 col-sm-4 mb">
+                            <div class="content-panel pn">
+                                <div id="notebook" style="background-image: url(_IMG_/my/notebook.jpg)">
+                                    <h3>{$book.title}</h3>
+                                    <h6>创建时间：{$book.create_time}</h6>
+                                </div>
+                                <div class="notebook centered">
+                                    <p>查 看 所 有 笔 记</p>
+                                </div>
+                                <div class="centered">
+                                    <h6>修改时间：{$book.modify_time}</h6>
+                                </div>
+                            </div><! --/content-panel -->
+                        </div><! --/col-md-4 -->
+                    </for>
+
+
+
+                    <div class="col-lg-4 col-md-4 col-sm-4 mb" >
+                        <form action="__URL__/createNotebook" method="post">
+                            <div class="new-notebook-panel pn">
+                                <p class="add" onclick="modify()">+</p>
+                                <div id="change-part">
+                                    <p>再建一个笔记本吧~</p>
+                                </div>
+                            </div>
+                        </form>
+                    </div><!-- /col-md-4 -->
 
 
         </section>
@@ -52,3 +89,45 @@
 </section>
 </body>
 </html>
+
+<!-- js placed at the end of the document so the pages load faster -->
+<script src="_JS_/jquery.js"></script>
+<script src="_JS_/jquery-1.8.3.min.js"></script>
+<script src="_JS_/bootstrap.min.js"></script>
+<script class="include" type="text/javascript" src="_JS_/jquery.dcjqaccordion.2.7.js"></script>
+<script src="_JS_/jquery.scrollTo.min.js"></script>
+<script src="_JS_/jquery.nicescroll.js" type="text/javascript"></script>
+<script src="_JS_/jquery.sparkline.js"></script>
+
+<!--common script for all pages-->
+<script src="_JS_/common-scripts.js"></script>
+
+<script>
+    function check(id) {
+        var node = document.getElementById("title");
+        if(node.getAttribute('value')==""){
+            document.getElementById("save").setAttribute("disabled",disabled);
+        }
+
+        else
+            document.getElementById("save").removeAttribute("disabled");
+    }
+
+    function modify() {
+        document.getElementById("change-part").innerHTML=
+            "<input id=\"title\" type=\"text\" name=\"title\" class=\"form-control\" onchange='check()' placeholder=\"标题\">"+
+            "<button id=\"save\" class=\"btn btn-theme\" disabled type=\"submit\" > 保 存 </button>\n" +
+            "<button class=\"btn btn-default\" onclick=\"cancel()\" > 取 消 </button>";
+    }
+
+    function cancel() {
+        document.getElementById("change-part").innerHTML=
+            "<p>再建一个笔记本吧~</p>";
+    }
+
+</script>
+
+
+</body>
+</html>
+

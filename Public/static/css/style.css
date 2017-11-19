@@ -1267,6 +1267,31 @@ PANELS CONFIGURATIONS
 	font-weight: 900;
 }
 
+.new-notebook-panel{
+    border: dashed 5px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.new-notebook-panel p{
+    font-size: 20px;
+    cursor: default;
+}
+
+.new-notebook-panel input{
+    display: inline;
+    width: 60%;
+    margin: 0 5px;
+}
+
+
+.new-notebook-panel .add{
+    font-size: 140px;
+    font-weight: 900;
+    cursor: pointer;
+    margin: 0;
+}
+
 
 /* Instagram Panel*/
 .instagram-panel {
@@ -1482,8 +1507,8 @@ PANELS CONFIGURATIONS
 
 /* PROFILE PANELS */
 /* Profile 01*/
-#profile-01 {
-	background: url(../img/profile-01.jpg) no-repeat center top;
+#notebook {
+	background:  no-repeat center top;
 	margin-top: -15px;
 	background-attachment: relative;
 	background-position: center center;
@@ -1498,23 +1523,23 @@ PANELS CONFIGURATIONS
     -o-background-size: cover;
     background-size: cover;
 }
-#profile-01 h3 {
-	color: white;
+#notebook h3 {
+	color: black;
 	padding-top: 50px;
 	margin: 0px;
 	text-align: center;
 }
-#profile-01 h6 {
-	color: white;
+#notebook h6 {
+	color: black;
 	text-align: center;
 	margin-bottom: 0px;
 	font-weight: 900;
 }
-.profile-01 {
+.notebook {
 	background: #68dff0;
 	height: 50px;
 }
-.profile-01:hover {
+.notebook:hover {
 	background: #2f2f2f;
   -webkit-transition: background-color 0.6s;
   -moz-transition: background-color 0.6s;
@@ -1522,7 +1547,7 @@ PANELS CONFIGURATIONS
   transition: background-color 0.6s;
   cursor: pointer;
 }
-.profile-01 p {
+.notebook p {
 	color: white;
 	padding-top: 15px;
 	font-weight: 400;

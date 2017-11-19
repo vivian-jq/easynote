@@ -31,7 +31,13 @@ class IndexController extends Controller {
         }
         $data['username'] = $username;
         $data['password'] = md5($password1);
-        $this->redirect('HomePage/index', ['id' => $user->add($data)]);
+
+        $id = $user->add($data);
+        $book = M('notebook');
+        $book->add(['uid'=>$id,'create_time'=> date('Y-m-d H:i:s',time()),
+            'modify_time'=> date('Y-m-d H:i:s',time())]);
+
+        $this->redirect('HomePage/index', ['id' => $id]);
     }
 
     public function login(){
