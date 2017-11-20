@@ -66,6 +66,11 @@ class IndexController extends Controller {
         $this->display('login');
     }
 
+    public function warning($title='操作禁止',$content='对不起，你没有权限'){
+        $this->assign(['title'=>":(  ".$title,'content'=>$content]);
+        $this->display(warning);
+    }
+
     public function logout(){
         session('id',0);
         $this->index();

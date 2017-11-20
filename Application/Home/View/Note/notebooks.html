@@ -41,37 +41,43 @@
     <!--main content start-->
     <section id="main-content">
         <section class="wrapper site-min-height">
-            <h3><i class="fa fa-angle-right"></i> {$notebook.title}</h3>
+            <h3><i class="fa fa-angle-right"></i> 所 有 笔 记 本</h3>
 
             <div class="row">
                 <div class="col-lg-12 main-chart">
 
 
-                    <for start="0" end="count($notes)" step="1">
-                        <php>$note=$notes[$i];</php>
-                        <! -- NOTE PANEL -->
+                    <for start="0" end="count($books)" step="1">
+                        <php>$book=$books[$i];</php>
+                        <! -- NOTEBOOK PANEL -->
                         <div class="col-lg-4 col-md-4 col-sm-4 mb">
-
-                            <div class="note-panel-sm pn" onmouseenter="appear(this)" onmouseleave="disapper(this)">
-                                <div class="note-panel-title">
-                                    <p>{$note.title}</p>
-                                    <p style="font-size: 15px">上次修改：{$note.create_time}</p>
+                            <div class="content-panel pn">
+                                <div class="notebook" style="background-image: url(_IMG_/my/notebook.jpg)">
+                                    <h3>{$book.title}</h3>
+                                    <h6>创建时间：{$book.create_time}</h6>
                                 </div>
-
-                                <div class="note-panel-content">
-                                    <p><i class="fa fa-heart"></i> {}</p>
-                                    <p>创建于{$note.create_time}</p>
+                                <div class="notebook-more centered" id="{$book.id}" onclick="more(this)">
+                                    <p>查 看 所 有 笔 记</p>
                                 </div>
-
-                                <div id="{$note.id}" class="note-operate pull-down" hidden >
-                                    <i class="fa fa-eye fa-2x" onclick="show_note(this)"></i>
-                                    <i class="fa fa-edit fa-2x"></i>
-                                    <i class="fa fa-trash-o fa-2x" onclick="delete_note(this)"></i>
+                                <div class="centered">
+                                    <h6>修改时间：{$book.modify_time}</h6>
                                 </div>
-
-                            </div>
-                        </div><!-- /col-md-4 -->
+                            </div><! --/content-panel -->
+                        </div><! --/col-md-4 -->
                     </for>
+
+
+
+                    <div class="col-lg-4 col-md-4 col-sm-4 mb" >
+                        <form action="__URL__/createNotebook" method="post">
+                            <div class="new-notebook-panel pn">
+                                <p class="add" onclick="modify()">+</p>
+                                <div id="change-part">
+                                    <p>再建一个笔记本吧~</p>
+                                </div>
+                            </div>
+                        </form>
+                    </div><!-- /col-md-4 -->
 
 
         </section>
@@ -97,22 +103,20 @@
 <script src="_JS_/common-scripts.js"></script>
 
 <script>
-    function appear(node) {
-        node.getElementsByClassName("note-operate").item(0).removeAttribute("hidden");
+    function more(node) {
+        window.location.href="__URL__/notebook/bid/"+node.id;
     }
 
-    function disapper(node) {
-        node.getElementsByClassName("note-operate").item(0).setAttribute("hidden","");
+    function modify() {
+        document.getElementById("change-part").innerHTML=
+            "<input id=\"title\" type=\"text\" name=\"title\" class=\"form-control\"  placeholder=\"标题\" required>"+
+            "<button id=\"save\" class=\"btn btn-theme\" type=\"submit\" > 保 存 </button>\n" +
+            "<button class=\"btn btn-default\" onclick=\"cancel()\" > 取 消 </button>";
     }
 
-    function delete_note(node) {
-        if(window.confirm("删除是不可恢复的，你确认要删除这篇笔记吗？")){
-            window.location="__URL__/deleteNote/nid/"+node.parentNode.id;
-        }
-    }
-
-    function show_note(node) {
-        window.location="__URL__/note/nid/"+node.parentNode.id;
+    function cancel() {
+        document.getElementById("change-part").innerHTML=
+            "<p>再建一个笔记本吧~</p>";
     }
 
 </script>

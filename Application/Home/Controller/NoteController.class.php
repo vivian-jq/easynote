@@ -11,16 +11,14 @@ use Think\Controller;
 
 class NoteController extends Controller
 {
-    var $user=null;
     public function newNote(){
         $this->getUser();
         $this->assign(['user' => $this->user,'hideWarn' => 'hide']);
-        return $this->display('new_note');
+        $this->display('new_note');
     }
 
     public function createNote(){
-        $this->getUser();
-        $this->assign(['user' => $this->user]);
+        $this->assign(['user' => $this->getUser()]);
 
         $data['title'] = I('post.title');
         $data['content'] = I('post.content');
@@ -31,7 +29,7 @@ class NoteController extends Controller
             return $this->display('new_note');
         }else if($data['content']==""){
             $this->assign(['warning' => '正文不能为空']);
-            return $this->display('new_note');
+            $this->display('new_note');
         }
         if(I('post.private')=='on'){
             $data['note_stat'] = 0;//私有
@@ -45,9 +43,8 @@ class NoteController extends Controller
     }
 
     public function newNotebook(){
-        $this->getUser();
-        $this->assign(['user' => $this->user]);
-        return $this->display('new_notebook');
+        $this->assign(['user' => $this->getUser()]);
+        $this->display('new_notebook');
     }
 
     public function createNotebook(){
@@ -64,13 +61,50 @@ class NoteController extends Controller
     }
 
     public function noteByBook(){
-        $this->getUser();
         $this->assign(['user' => $this->user]);
         $notebook = M('notebook');
         $condition['uid'] = session('id');
         $data = ($notebook->where($condition)->select());
         $this->assign(['books' => $data]);
-        return $this->display('note_by_book');
+        $this->display('notebooks');
+    }
+
+    public function notebook($bid){
+        $note = M('note');
+        $notebook = M('notebook');
+        $condition1['bid']=$bid;
+        $data = ($note->where($condition1)->select());
+        $condition2['id']=$bid;
+        $book = ($notebook->where($condition2)->select())[0];
+
+        if(count($data)!=0&&$data[0]['uid']!=session('id')){
+            $this->redirect('index/warning');
+        }
+
+        $this->assign(['user' => $this->getUser(),'notes'=>$data, 'notebook'=>$book]);
+        $this->display('note_by_book');
+    }
+
+    public function deleteNote($nid){
+        $note = M('note');
+        $condition['id']=$nid;
+        $data = $note->where($condition)->select();
+        if(count($data)==0||$data[0]['uid']!=session('id')){
+            $this->redirect('index/warning');
+        }
+        $note->where($condition)->delete();
+        $this->notebook($data[0]['bid']);
+    }
+
+    public function note($nid){
+        $note = M('note');
+        $condition['id']=$nid;
+        $data = $note->where($condition)->select();
+        if(count($data)==0||($data[0]['note_stat']==0&&$data[0]['uid']!=session('id'))){
+            $this->redirect('index/warning');
+        }
+        $this->assign(['user' => $this->getUser(),'note'=>$data[0]]);
+        $this->display('note');
     }
 
     public function noteByTime(){
