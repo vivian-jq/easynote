@@ -7,7 +7,7 @@
     <meta name="author" content="Dashboard">
     <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
 
-    <title>DASHGUM - FREE Bootstrap Admin Template</title>
+    <title>EASYNOTE - Make Notes Simple</title>
 
     <!-- Bootstrap core CSS -->
     <link href="_CSS_/bootstrap.css" rel="stylesheet">
@@ -41,7 +41,12 @@
                     <br>
                     <input type="text" name="title" class="form-control" placeholder="标题" >
                     <br>
+                    <input type="text" name="tag" class="form-control" placeholder="标签" onchange="show_labels()">
+                    <span class="help-block">&nbsp;<i class="fa fa-angle-up"></i> 每个标签之间用中文<code>；</code>隔开</span>
 
+                    <div class="note-labels">
+                    </div>
+                    <br>
 
                     <!--编辑器-->
                     <script id="editor" name="content" type="text/plain">欢迎使用easynote</script>
@@ -99,6 +104,23 @@
 <!-- 实例化编辑器 -->
 <script type="text/javascript">
     var ue = UE.getEditor('editor');
+
+    function show_labels() {
+        var label_long = document.getElementsByName('tag').item(0).value;
+        var labels = label_long.split('；');
+        var node = document.getElementsByClassName('note-labels').item(0);
+
+        while(node.hasChildNodes()){
+            node.removeChild(node.firstChild);
+        }
+
+        for(var i = 0;i<labels.length;i++){
+            var temp = document.createElement("span");
+            temp.appendChild(document.createTextNode(labels[i]));
+            temp.className="label label-info";
+            node.appendChild(temp);
+        }
+    }
 
 </script>
 

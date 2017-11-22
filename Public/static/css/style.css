@@ -1292,6 +1292,10 @@ PANELS CONFIGURATIONS
     margin: 0;
 }
 
+.note-labels span{
+    margin-left: 10px;
+}
+
 
 /* Instagram Panel*/
 .instagram-panel {
@@ -1338,7 +1342,6 @@ PANELS CONFIGURATIONS
 
 .note-operate i:hover {
     color: #424a5d;
-    margin-top: 35px;
     cursor: pointer;
 }
 
@@ -1350,6 +1353,36 @@ PANELS CONFIGURATIONS
     margin-right: 30px;
     padding-right: 10px;
     color: #424a5d;
+}
+
+.note-content-wrap{
+    background: #ffffff;
+    min-height: 400px;
+    padding: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0px 3px 2px #aab2bd;
+}
+
+.note-full-operate{
+    text-align: right;
+}
+
+.note-full-operate p{
+    display: inline;
+    text-align: right;
+    margin-right: 20px;
+}
+
+.note-full-operate i {
+    right: 10px;
+    color: #424a5d;
+    margin-right: 20px;
+}
+
+.note-full-operate i:hover {
+    color: #ffd777;
+    cursor: pointer;
 }
 
 /* Product Panel */

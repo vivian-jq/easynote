@@ -55,7 +55,7 @@
                             <div class="note-panel-sm pn" onmouseenter="appear(this)" onmouseleave="disapper(this)">
                                 <div class="note-panel-title">
                                     <p>{$note.title}</p>
-                                    <p style="font-size: 15px">上次修改：{$note.create_time}</p>
+                                    <p style="font-size: 15px">上次修改：{$note.modify_time}</p>
                                 </div>
 
                                 <div class="note-panel-content">
@@ -65,7 +65,7 @@
 
                                 <div id="{$note.id}" class="note-operate pull-down" hidden >
                                     <i class="fa fa-eye fa-2x" onclick="show_note(this)"></i>
-                                    <i class="fa fa-edit fa-2x"></i>
+                                    <i class="fa fa-edit fa-2x" onclick="edit_note(this)"></i>
                                     <i class="fa fa-trash-o fa-2x" onclick="delete_note(this)"></i>
                                 </div>
 
@@ -113,6 +113,10 @@
 
     function show_note(node) {
         window.location="__URL__/note/nid/"+node.parentNode.id;
+    }
+
+    function edit_note(node) {
+        window.location="__URL__/editNote/nid/"+node.parentNode.id;
     }
 
 </script>

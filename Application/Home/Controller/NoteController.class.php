@@ -38,8 +38,7 @@ class NoteController extends Controller
         $data['uid'] = session('id');
         //将note数据保存到数据库
         $note = M('note');
-        $note->add($data);
-        echo $data;
+        $this->note($note->add($data));
     }
 
     public function newNotebook(){
@@ -54,6 +53,7 @@ class NoteController extends Controller
         $data['uid'] = session('id');
         $data['create_time'] = $data['modify_time'] = date('Y-m-d H:i:s',time());
         //将notebook数据保存到数据库
+        $data['note_stat']=I('post.private');
         $notebook = M('notebook');
         $notebook->add($data);
         $this->noteByBook();
@@ -103,8 +103,34 @@ class NoteController extends Controller
         if(count($data)==0||($data[0]['note_stat']==0&&$data[0]['uid']!=session('id'))){
             $this->redirect('index/warning');
         }
+        $data[0]['stat']=($data[0]['note_stat']==1)?'公开':'私有';
+        $data[0]['content']=htmlspecialchars_decode($data[0]['content']);
         $this->assign(['user' => $this->getUser(),'note'=>$data[0]]);
         $this->display('note');
+    }
+
+    public function editNote($nid){
+        $note = M('note');
+        $condition['id']=$nid;
+        $data = $note->where($condition)->select();
+        if(count($data)==0||($data[0]['note_stat']==0&&$data[0]['uid']!=session('id'))){
+            $this->redirect('index/warning');
+        }
+        $data[0]['stat']=($data[0]['note_stat']==1)?'':'checked';
+        $data[0]['content']=htmlspecialchars_decode($data[0]['content']);
+        $this->assign(['user' => $this->getUser(),'note'=>$data[0]]);
+        $this->display('edit_note');
+    }
+
+    public function updateNote(){
+        $note = M('note');
+        $condition['id']=I('post.id');
+        $data['content']=I('post.content');
+        $data['title']=I('post.title');
+        $data['modify_time'] = date('Y-m-d H:i:s',time());
+        $data['note_stat']=I('post.private');
+        $note->where($condition)->save($data);
+        $this->note($condition['id']);
     }
 
     public function noteByTime(){
@@ -124,7 +150,8 @@ class NoteController extends Controller
         $condition['id'] = $id;
         $data = ($User->where($condition)->select());
 
-        $this->user = $data[0];
-        $this->user['img_url'] = "/public/images/temp/ui-sam.jpg";
+        $user = $data[0];
+        $user['img_url'] = "/public/images/temp/ui-sam.jpg";
+        return $user;
     }
 }
