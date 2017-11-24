@@ -41,7 +41,7 @@
                     <br>
                     <input type="text" name="title" class="form-control" placeholder="标题" >
                     <br>
-                    <input type="text" name="tag" class="form-control" placeholder="标签" onchange="show_labels()">
+                    <input type="text" name="tags" class="form-control" placeholder="标签" onchange="show_labels()">
                     <span class="help-block">&nbsp;<i class="fa fa-angle-up"></i> 每个标签之间用中文<code>；</code>隔开</span>
 
                     <div class="note-labels">
@@ -106,7 +106,7 @@
     var ue = UE.getEditor('editor');
 
     function show_labels() {
-        var label_long = document.getElementsByName('tag').item(0).value;
+        var label_long = document.getElementsByName('tags').item(0).value;
         var labels = label_long.split('；');
         var node = document.getElementsByClassName('note-labels').item(0);
 

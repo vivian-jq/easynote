@@ -46,8 +46,15 @@
             <div class="note-full-operate">
                 <p>修改于：<b>{$note.modify_time}</b></p>
                 <p>创建于：<b>{$note.create_time}</b></p>
+
+                <php>$tags=explode('；',$note['tags']);</php>
+                <for start="0" end="count($tags)" step="1">
+                    <php>$tag=$tags[$i];</php>
+                    <span class="label label-info" style="font-size: 14px;margin-right: 10px">{$tag}</span>
+                </for>
+
                 <p>状态：<b>{$note.stat}</b></p>
-                <i class="fa fa-share fa-2x"></i>
+                <i class="fa fa-share fa-2x" onclick="share_note()"></i>
                 <i class="fa fa-edit fa-2x" onclick="edit_note()"></i>
                 <i class="fa fa-trash-o fa-2x" onclick="delete_note()"></i>
             </div>
@@ -58,6 +65,62 @@
 
 
 
+            <!-- Modal -->
+            <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="shareModal" class="modal fade">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title"> 分 享 </h4>
+                        </div>
+                        <form action="" method="post">
+                            <div class="modal-body">
+                                <p>请输入TA的ID：</p>
+                                <input required type="text" name="reason" class="form-control">
+
+                                <br>
+                                <p>请输入分享理由:</p>
+                                <input required type="text" name="reason" value="快来看看吧" autocomplete="off"
+                                       class="form-control placeholder-no-fix">
+
+                                <br>
+                                <p>请选择TA的权限</p>
+
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="share_stat" value="4">
+                                        可以编辑、分享
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="share_stat" value="3" checked>
+                                        可以阅读、分享
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="share_stat" value="2">
+                                        可以编辑，不可以分享
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="share_stat" value="1">
+                                        可以阅读，不可以编辑、分享
+                                    </label>
+                                </div>
+
+                            </div>
+                            <div class="modal-footer">
+                                <button data-dismiss="modal" class="btn btn-default" type="button">取 消</button>
+                                <button class="btn btn-theme" type="submit">分 享</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- modal -->
 
 
         </section>
@@ -92,6 +155,10 @@
 
     function edit_note() {
         window.location="__URL__/editNote/nid/"+{$note.id};
+    }
+
+    function share_note() {
+        $('#shareModal').modal('show')
     }
 
 </script>

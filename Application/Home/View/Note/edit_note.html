@@ -41,8 +41,19 @@
                     <input type="hidden" name="id" value="{$note.id}">
                     <br>
                     <input required type="text" name="title" class="form-control" placeholder="标题" value="{$note.title}">
-                    <br>
 
+                    <br>
+                    <input type="text" name="tags" class="form-control" placeholder="标签" onchange="show_labels()" value="{$note.tags}">
+                    <span class="help-block">&nbsp;<i class="fa fa-angle-up"></i> 每个标签之间用中文<code>；</code>隔开</span>
+
+                    <div class="note-labels">
+                        <php>$tags=explode('；',$note['tags']);</php>
+                        <for start="0" end="count($tags)" step="1">
+                            <php>$tag=$tags[$i];</php>
+                            <span class="label label-info">{$tag}</span>
+                        </for>
+                    </div>
+                    <br>
 
                     <!--编辑器-->
                     <script id="editor" name="content" type="text/plain">{$note.content}</script>
@@ -91,6 +102,23 @@
 <!-- 实例化编辑器 -->
 <script type="text/javascript">
     var ue = UE.getEditor('editor');
+
+    function show_labels() {
+        var label_long = document.getElementsByName('tags').item(0).value;
+        var labels = label_long.split('；');
+        var node = document.getElementsByClassName('note-labels').item(0);
+
+        while(node.hasChildNodes()){
+            node.removeChild(node.firstChild);
+        }
+
+        for(var i = 0;i<labels.length;i++){
+            var temp = document.createElement("span");
+            temp.appendChild(document.createTextNode(labels[i]));
+            temp.className="label label-info";
+            node.appendChild(temp);
+        }
+    }
 
 
 

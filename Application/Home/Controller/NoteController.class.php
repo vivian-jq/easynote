@@ -13,7 +13,7 @@ class NoteController extends Controller
 {
     public function newNote(){
         $this->getUser();
-        $this->assign(['user' => $this->user,'hideWarn' => 'hide']);
+        $this->assign(['user' => $this->getUser(),'hideWarn' => 'hide']);
         $this->display('new_note');
     }
 
@@ -35,6 +35,7 @@ class NoteController extends Controller
             $data['note_stat'] = 0;//私有
         }
         $data['create_time'] = $data['modify_time'] = date('Y-m-d H:i:s',time());
+        $data['tags']=I('post.tags');
         $data['uid'] = session('id');
         //将note数据保存到数据库
         $note = M('note');
@@ -61,11 +62,10 @@ class NoteController extends Controller
     }
 
     public function noteByBook(){
-        $this->assign(['user' => $this->user]);
         $notebook = M('notebook');
         $condition['uid'] = session('id');
         $data = ($notebook->where($condition)->select());
-        $this->assign(['books' => $data]);
+        $this->assign(['books' => $data,'user' => $this->getUser()]);
         $this->display('notebooks');
     }
 
@@ -129,6 +129,7 @@ class NoteController extends Controller
         $data['title']=I('post.title');
         $data['modify_time'] = date('Y-m-d H:i:s',time());
         $data['note_stat']=I('post.private');
+        $data['tags']=I('post.tags');
         $note->where($condition)->save($data);
         $this->note($condition['id']);
     }

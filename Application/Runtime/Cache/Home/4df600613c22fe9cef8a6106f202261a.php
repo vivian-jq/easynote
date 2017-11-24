@@ -131,7 +131,7 @@
         <!-- sidebar menu start-->
         <ul class="sidebar-menu" id="nav-accordion">
 
-            <p class="centered"><a href="/index.php/Home/HomePage/../HomePage/profile"><img src=<?php echo ($user["img_url"]); ?> class="img-circle" width="60"></a></p>
+            <p class="centered"><a href="/index.php/Home/HomePage/../HomePage/profile"><img src="<?php echo ($user["img_url"]); ?>" class="img-circle" width="60"></a></p>
             <h5 class="centered"><?php echo ($user["username"]); ?></h5>
 
             <li class="mt">
@@ -166,12 +166,12 @@
             <li class="sub-menu">
                 <a class="[friend]" href="javascript:;" >
                     <i class="fa fa-book"></i>
-                    <span>好 友</span>
+                    <span>关 注</span>
                 </a>
                 <ul class="sub">
-                    <li  class="[all_friend]"><a href="/index.php/Home/HomePage/friends">全 部 好 友</a></li>
-                    <li  class="[friend_share]"><a href="/index.php/Home/HomePage/friendShare">好 友 分 享</a></li>
-                    <li  class="[my_share]"><a href="/index.php/Home/HomePage/myShare">我 的 分 享</a></li>
+                    <li  class="[all_friend]"><a href="/index.php/Home/HomePage/friends">我 的 关 注</a></li>
+                    <li  class="[friend_share]"><a href="/index.php/Home/HomePage/friendShare">谁 关 注 我</a></li>
+                    <li  class="[my_share]"><a href="/index.php/Home/HomePage/myShare">他 人 分 析</a></li>
                 </ul>
             </li>
             <li class="sub-menu">

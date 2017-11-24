@@ -39,119 +39,129 @@
       <DataType>VARCHAR(25)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="15" parent="6" name="content">
+    <column id="15" parent="6" name="tags">
       <Position>4</Position>
+      <DataType>VARCHAR(255)|0</DataType>
+    </column>
+    <column id="16" parent="6" name="content">
+      <Position>5</Position>
       <DataType>TEXT|0</DataType>
     </column>
-    <column id="16" parent="6" name="create_time">
-      <Position>5</Position>
-      <DataType>datetime|0</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="17" parent="6" name="modify_time">
+    <column id="17" parent="6" name="create_time">
       <Position>6</Position>
       <DataType>datetime|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="18" parent="6" name="note_stat">
+    <column id="18" parent="6" name="modify_time">
       <Position>7</Position>
+      <DataType>datetime|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="19" parent="6" name="note_stat">
+      <Position>8</Position>
       <DataType>tinyint(2)|0</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
     </column>
-    <key id="19" parent="6">
+    <column id="20" parent="6" name="votes">
+      <Position>9</Position>
+      <DataType>INTEGER|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <key id="21" parent="6">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="20" parent="7" name="id">
+    <column id="22" parent="7" name="id">
       <DataType>INTEGER|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="21" parent="7" name="uid">
+    <column id="23" parent="7" name="uid">
       <Position>1</Position>
       <DataType>INTEGER|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="22" parent="7" name="title">
+    <column id="24" parent="7" name="title">
       <Position>2</Position>
       <DataType>VARCHAR(25)|0</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;默认笔记本&apos;</DefaultExpression>
     </column>
-    <column id="23" parent="7" name="create_time">
+    <column id="25" parent="7" name="create_time">
       <Position>3</Position>
       <DataType>DATETIME|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="24" parent="7" name="modify_time">
+    <column id="26" parent="7" name="modify_time">
       <Position>4</Position>
       <DataType>DATETIME|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="25" parent="7">
+    <key id="27" parent="7">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="26" parent="8" name="type">
+    <column id="28" parent="8" name="type">
       <DataType>text|0</DataType>
     </column>
-    <column id="27" parent="8" name="name">
+    <column id="29" parent="8" name="name">
       <Position>1</Position>
       <DataType>text|0</DataType>
     </column>
-    <column id="28" parent="8" name="tbl_name">
+    <column id="30" parent="8" name="tbl_name">
       <Position>2</Position>
       <DataType>text|0</DataType>
     </column>
-    <column id="29" parent="8" name="rootpage">
+    <column id="31" parent="8" name="rootpage">
       <Position>3</Position>
       <DataType>integer|0</DataType>
     </column>
-    <column id="30" parent="8" name="sql">
+    <column id="32" parent="8" name="sql">
       <Position>4</Position>
       <DataType>text|0</DataType>
     </column>
-    <column id="31" parent="9" name="name"/>
-    <column id="32" parent="9" name="seq">
+    <column id="33" parent="9" name="name"/>
+    <column id="34" parent="9" name="seq">
       <Position>1</Position>
     </column>
-    <column id="33" parent="10" name="id">
+    <column id="35" parent="10" name="id">
       <DataType>INTEGER|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="34" parent="10" name="username">
+    <column id="36" parent="10" name="username">
       <Position>1</Position>
       <DataType>VARCHAR(25)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="35" parent="10" name="password">
+    <column id="37" parent="10" name="password">
       <Position>2</Position>
       <DataType>TINYTEXT|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="36" parent="10" name="tel">
+    <column id="38" parent="10" name="tel">
       <Position>3</Position>
       <DataType>INT(11)|0</DataType>
       <DefaultExpression>NULL</DefaultExpression>
     </column>
-    <column id="37" parent="10" name="exp">
+    <column id="39" parent="10" name="exp">
       <Position>4</Position>
       <DataType>INT(11)|0</DataType>
       <DefaultExpression>0</DefaultExpression>
     </column>
-    <column id="38" parent="10" name="introduction">
+    <column id="40" parent="10" name="introduction">
       <Position>5</Position>
       <DataType>TEXT|0</DataType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
-    <column id="39" parent="10" name="mailbox">
+    <column id="41" parent="10" name="mailbox">
       <Position>6</Position>
       <DataType>TINYTEXT|0</DataType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
-    <key id="40" parent="10">
+    <key id="42" parent="10">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
