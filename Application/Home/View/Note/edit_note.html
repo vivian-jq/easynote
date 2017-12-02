@@ -67,6 +67,19 @@
                         <i class="fa fa-lock"></i>
                     </div>
 
+                    <label >选择笔记本</label>
+                    <select name="notebook" class="form-control"  style="display: inline;width: 30%">
+                        <for start="0" end="count($books)" step="1">
+                            <php>$book=$books[$i];
+                                if($note['bid']==$book['id'])
+                                    $book['selected']='selected';
+                            </php>
+                            <option {$book.selected} value="{$book.id}">{$book.title}</option>
+                        </for>
+                    </select>
+                    <br>
+                    <br>
+
                     <button class="btn btn-theme" type="submit"> 保 存 </button>
                     <button class="btn btn-warning" type="button" onclick="window.history.back()" > 取 消 </button>
                 </form>

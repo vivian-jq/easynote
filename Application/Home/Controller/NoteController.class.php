@@ -12,8 +12,11 @@ use Think\Controller;
 class NoteController extends Controller
 {
     public function newNote(){
-        $this->getUser();
-        $this->assign(['user' => $this->getUser(),'hideWarn' => 'hide']);
+        $notebook = M('notebook');
+        $condition['uid'] = session('id');
+        $data = ($notebook->where($condition)->select());
+
+        $this->assign(['user' => $this->getUser(),'hideWarn' => 'hide','books'=>$data]);
         $this->display('new_note');
     }
 
@@ -36,15 +39,11 @@ class NoteController extends Controller
         }
         $data['create_time'] = $data['modify_time'] = date('Y-m-d H:i:s',time());
         $data['tags']=I('post.tags');
+        $data['bid']=I('post.notebook');
         $data['uid'] = session('id');
         //将note数据保存到数据库
         $note = M('note');
         $this->note($note->add($data));
-    }
-
-    public function newNotebook(){
-        $this->assign(['user' => $this->getUser()]);
-        $this->display('new_notebook');
     }
 
     public function createNotebook(){
@@ -58,6 +57,8 @@ class NoteController extends Controller
         $notebook = M('notebook');
         $notebook->add($data);
         $this->noteByBook();
+
+
 
     }
 
@@ -118,7 +119,12 @@ class NoteController extends Controller
         }
         $data[0]['stat']=($data[0]['note_stat']==1)?'':'checked';
         $data[0]['content']=htmlspecialchars_decode($data[0]['content']);
-        $this->assign(['user' => $this->getUser(),'note'=>$data[0]]);
+
+        $notebook = M('notebook');
+        $condition2['uid'] = session('id');
+        $books = ($notebook->where($condition2)->select());
+
+        $this->assign(['user' => $this->getUser(),'note'=>$data[0],'books'=>$books]);
         $this->display('edit_note');
     }
 
@@ -129,17 +135,23 @@ class NoteController extends Controller
         $data['title']=I('post.title');
         $data['modify_time'] = date('Y-m-d H:i:s',time());
         $data['note_stat']=I('post.private');
+        $data['bid']=I('post.notebook');
         $data['tags']=I('post.tags');
         $note->where($condition)->save($data);
         $this->note($condition['id']);
     }
 
     public function noteByTime(){
-        return $this->display('note_by_time');
+        $note = M('note');
+        $condition['uid']=session('id');
+        $data=($note->where($condition)->order('modify_time desc')->select());
+
+        $this->assign(['user' => $this->getUser(),'notes'=>$data]);
+        $this->display('note_by_time');
     }
 
     public function noteByTag(){
-        return $this->display('note_by_tag');
+        $this->display('note_by_tag');
     }
 
 

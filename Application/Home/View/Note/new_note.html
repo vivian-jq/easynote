@@ -28,7 +28,7 @@
 
 <section id="container" >
     <include file="Public/header"/>
-    <include file="Public/user_menu" new="active" new_note="active"/>
+    <include file="Public/user_menu" new="active"/>
     <!-- **********************************************************************************************************************************************************
     MAIN CONTENT
     *********************************************************************************************************************************************************** -->
@@ -59,6 +59,16 @@
                         <label> 私 有</label>
                         <i class="fa fa-lock"></i>
                     </div>
+
+                    <label >选择笔记本</label>
+                    <select name="notebook" class="form-control"  style="display: inline;width: 30%">
+                        <for start="0" end="count($books)" step="1">
+                            <php>$book=$books[$i];</php>
+                            <option value="{$book.id}">{$book.title}</option>
+                        </for>
+                    </select>
+                    <br>
+                    <br>
 
                     <button class="btn btn-theme" type="submit"> 保 存 </button>
                     <button class="btn btn-warning" type="button" onclick="window.location='__URL__/../HomePage/index'" > 取 消 </button>

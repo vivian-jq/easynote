@@ -34,7 +34,58 @@
 
 <section id="container" >
     <include file="Public/header"/>
-    <include file="Public/user_menu" mynote="active" newByTime="active"/>
+    <include file="Public/user_menu" mynote="active" note_by_time="active"/>
+
+    <!-- **********************************************************************************************************************************************************
+        MAIN CONTENT
+        *********************************************************************************************************************************************************** -->
+    <!--main content start-->
+    <section id="main-content">
+        <section class="wrapper site-min-height">
+
+            <div class="col-lg-12 main-chart">
+                <div class="row">
+                    <php>$date=date("Y-m-d",strtotime($notes[0]['modify_time']));
+                        echo '<h3><i class="fa fa-angle-right"></i> '.$date.'</h3>';</php>
+                    <for start="0" end="count($notes)" step="1">
+                        <php>$note=$notes[$i];
+                            if($date!=date("Y-m-d",strtotime($note['modify_time']))){
+                            $date= date("Y-m-d",strtotime($note['modify_time']));
+                            echo '</div>';
+                echo '<div class="row">';
+                echo '<h3><i class="fa fa-angle-right"></i> '.$date.'</h3>';
+
+                }
+                </php>
+
+                <! -- NOTE PANEL -->
+                <div class="col-lg-4 col-md-4 col-sm-4 mb">
+
+                    <div class="note-panel-sm pn" onmouseenter="appear(this)" onmouseleave="disapper(this)">
+                        <div class="note-panel-title">
+                            <p>{$note.title}</p>
+                            <p style="font-size: 15px">上次修改：{$note.modify_time}</p>
+                        </div>
+
+                        <div class="note-panel-content">
+                            <p><i class="fa fa-heart"></i> {$note.votes}</p>
+                            <p>创建于{$note.create_time}</p>
+                        </div>
+
+                        <div id="{$note.id}" class="note-operate pull-down" hidden >
+                            <i class="fa fa-eye fa-2x" onclick="show_note(this)"></i>
+                            <i class="fa fa-edit fa-2x" onclick="edit_note(this)"></i>
+                            <i class="fa fa-trash-o fa-2x" onclick="delete_note(this)"></i>
+                        </div>
+
+                    </div>
+                </div><!-- /col-md-4 -->
+                </for>
+            </div>
+            </div>
+
+        </section>
+    </section>
 
 
     <!--main content end-->
@@ -42,3 +93,40 @@
 </section>
 </body>
 </html>
+
+<!-- js placed at the end of the document so the pages load faster -->
+<script src="_JS_/jquery.js"></script>
+<script src="_JS_/jquery-1.8.3.min.js"></script>
+<script src="_JS_/bootstrap.min.js"></script>
+<script class="include" type="text/javascript" src="_JS_/jquery.dcjqaccordion.2.7.js"></script>
+<script src="_JS_/jquery.scrollTo.min.js"></script>
+<script src="_JS_/jquery.nicescroll.js" type="text/javascript"></script>
+<script src="_JS_/jquery.sparkline.js"></script>
+
+<!--common script for all pages-->
+<script src="_JS_/common-scripts.js"></script>
+
+<script>
+    function appear(node) {
+        node.getElementsByClassName("note-operate").item(0).removeAttribute("hidden");
+    }
+
+    function disapper(node) {
+        node.getElementsByClassName("note-operate").item(0).setAttribute("hidden","");
+    }
+
+    function delete_note(node) {
+        if(window.confirm("删除是不可恢复的，你确认要删除这篇笔记吗？")){
+            window.location="__URL__/deleteNote/nid/"+node.parentNode.id;
+        }
+    }
+
+    function show_note(node) {
+        window.location="__URL__/note/nid/"+node.parentNode.id;
+    }
+
+    function edit_note(node) {
+        window.location="__URL__/editNote/nid/"+node.parentNode.id;
+    }
+
+</script>
