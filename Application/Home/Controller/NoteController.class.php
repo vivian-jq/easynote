@@ -6,6 +6,7 @@
  * Time: 14:05
  */
 namespace Home\Controller;
+use function Sodium\add;
 use Think\Controller;
 
 
@@ -62,12 +63,18 @@ class NoteController extends Controller
 
     }
 
-    public function noteByBook(){
+    public function noteByBook($title=""){
         $notebook = M('notebook');
         $condition['uid'] = session('id');
+        $condition['title']=array('like','%'.$title.'%');
         $data = ($notebook->where($condition)->select());
         $this->assign(['books' => $data,'user' => $this->getUser()]);
         $this->display('notebooks');
+    }
+
+    public function searchByBook(){
+        $title=I('post.title');
+        $this->noteByBook($title);
     }
 
     public function notebook($bid){
@@ -150,10 +157,47 @@ class NoteController extends Controller
         $this->display('note_by_time');
     }
 
-    public function noteByTag(){
+    public function noteByTag($tag=""){
+        $note = M('note');
+        $condition['uid']=session('id');
+        $condition['tags']=array('like','%'.$tag.'%');
+        $data=($note->where($condition)->select());
+
+        if($tag!=""){
+            $data_tag[$tag]=$data;
+            $this->assign(['user' => $this->getUser(),'notesTag'=>$data_tag]);
+            $this->display('note_by_tag');
+        }
+
+        $allTags = "";
+        foreach($data as $note){
+            $allTags=$allTags.$note['tags'];
+        }
+        $tags=array_unique(explode("；",$allTags));
+        $data_tag = array();
+
+        foreach($tags as $tag){
+            $temp = array();
+            foreach ($data as $note){
+                if($note['tags']!=""&&stripos($note['tags'],$tag)==false)
+                    $temp[]=$note;
+            }
+            $data_tag[$tag]=$temp;
+        }
+
+        foreach ($data as $note){
+            if($note['tags']=="")
+                $data_tag['无标签'][]=$note;
+        }
+
+        $this->assign(['user' => $this->getUser(),'notesTag'=>$data_tag]);
         $this->display('note_by_tag');
     }
 
+    public function searchByTag(){
+        $tag=I('post.tag');
+        $this->noteByTag($tag);
+    }
 
     private function getUser(){
         $id = session('id');

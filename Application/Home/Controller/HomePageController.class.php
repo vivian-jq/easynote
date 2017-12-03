@@ -39,18 +39,6 @@ class HomePageController extends Controller
         return $this->display('profile_modify');
     }
 
-    public function friends(){
-        return $this->display('friends');
-    }
-
-    public function friendShare(){
-        return $this->display('friend_share');
-    }
-
-    public function myShare(){
-        return $this->display('my_share');
-    }
-
     private function getUser(){
         $id = session('id');
         if($id==0)

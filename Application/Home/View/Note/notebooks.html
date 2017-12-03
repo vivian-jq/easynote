@@ -41,9 +41,17 @@
     <!--main content start-->
     <section id="main-content">
         <section class="wrapper site-min-height">
-            <h3><i class="fa fa-angle-right"></i> 所 有 笔 记 本</h3>
+            <h3><i class="fa fa-angle-right"></i> 笔 记 本 查 看</h3>
 
             <div class="row">
+
+                <form action="__URL__/searchByBook" method="post">
+                    <div class="col-sm-11" style="margin-left: 20px">
+                        <input type="text" name="title" class="form-control round-form" placeholder="输入待查找的笔记本名">
+                    </div>
+                    <button type="submit" class="btn btn-round btn-info"><i class="fa fa-search"></i></button>
+                </form>
+
                 <div class="col-lg-12 main-chart">
 
 
