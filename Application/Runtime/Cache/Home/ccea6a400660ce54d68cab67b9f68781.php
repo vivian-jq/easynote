@@ -36,9 +36,9 @@
 		      <form class="form-login" action="/index.php/Home/Index/login" method="post">
 		        <h2 class="form-login-heading">EASY NOTE</h2>
 		        <div class="login-wrap">
-		            <input type="text" name="username" value="<?php echo ($username); ?>" class="form-control" placeholder="User ID" autofocus>
+		            <input type="text" name="username" value="<?php echo ($username); ?>" class="form-control" placeholder="用 户 名" autofocus>
 		            <br>
-		            <input type="password" name="password" class="form-control" placeholder="Password">
+		            <input type="password" name="password" class="form-control" placeholder="密 码">
 		            <br>
 		            <button class="btn btn-theme btn-block" type="submit" ><i class="fa fa-lock">
 					</i> 登&nbsp&nbsp陆</button>

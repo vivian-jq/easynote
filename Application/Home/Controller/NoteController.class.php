@@ -171,23 +171,26 @@ class NoteController extends Controller
 
         $allTags = "";
         foreach($data as $note){
-            $allTags=$allTags.$note['tags'];
+            $allTags=$allTags.'；'.$note['tags'];
         }
         $tags=array_unique(explode("；",$allTags));
         $data_tag = array();
 
         foreach($tags as $tag){
             $temp = array();
-            foreach ($data as $note){
-                if($note['tags']!=""&&stripos($note['tags'],$tag)==false)
-                    $temp[]=$note;
+            if($tag==""){
+                foreach ($data as $note){
+                    if($note['tags']=="")
+                        $temp[]=$note;
+                }
+                $data_tag['无标签']=$temp;
+            }else{
+                foreach ($data as $note){
+                    if(($note['tags']!="")&&stripos('；'.$note['tags'],$tag))
+                        $temp[]=$note;
+                }
+                $data_tag[$tag]=$temp;
             }
-            $data_tag[$tag]=$temp;
-        }
-
-        foreach ($data as $note){
-            if($note['tags']=="")
-                $data_tag['无标签'][]=$note;
         }
 
         $this->assign(['user' => $this->getUser(),'notesTag'=>$data_tag]);
@@ -208,7 +211,6 @@ class NoteController extends Controller
         $data = ($User->where($condition)->select());
 
         $user = $data[0];
-        $user['img_url'] = "/public/images/temp/ui-sam.jpg";
         return $user;
     }
 }

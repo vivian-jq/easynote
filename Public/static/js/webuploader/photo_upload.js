@@ -71,8 +71,8 @@ jQuery(function() {
 
         accept: {
             title: 'Images',
-            extensions: 'jpg,jpeg,png',
-            mimeTypes: 'image/jpg,image/jpeg,image/png'
+            extensions: 'jpg',
+            mimeTypes: 'image/jpg'
         },
 
         // swf文件路径
@@ -81,8 +81,7 @@ jQuery(function() {
         disableGlobalDnd: true,
 
         chunked: true,
-        // server: 'http://webuploader.duapp.com/server/fileupload.php',
-        server: 'photoUpload',
+        server: 'http://localhost:8088/index.php/Home/HomePage/photoUpload',
         fileNumLimit: 1,
         fileSingleSizeLimit: 5 * 1024 * 1024    // 5 M
     });

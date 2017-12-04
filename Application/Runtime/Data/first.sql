@@ -99,3 +99,22 @@ INSERT INTO comment (uname, nid, content,cmt_time) VALUES
  ('share',1,'哎呀呀呀',datetime('now'));
 
 -- ****************************************************************************************************
+DROP TABLE IF EXISTS `follow`;
+CREATE TABLE `follow`
+(
+ id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+ uid_from INTEGER NOT NULL,
+ uid_to INTEGER NOT NULL,
+ follow_time datetime NOT NULL
+);
+
+INSERT INTO follow (uid_from, uid_to, follow_time) VALUES
+ (1,2,datetime('now'));
+INSERT INTO follow (uid_from, uid_to, follow_time) VALUES
+ (1,4,datetime('now'));
+INSERT INTO follow (uid_from, uid_to, follow_time) VALUES
+ (4,2,datetime('now'));
+INSERT INTO follow (uid_from, uid_to, follow_time) VALUES
+ (4,1,datetime('now'));
+
+

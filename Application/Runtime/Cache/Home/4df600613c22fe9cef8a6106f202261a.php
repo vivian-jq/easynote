@@ -165,8 +165,8 @@
                     <span>关 注</span>
                 </a>
                 <ul class="sub">
-                    <li  class="[all_friend]"><a href="/index.php/Home/HomePage/friends">我 的 关 注</a></li>
-                    <li  class="[friend_share]"><a href="/index.php/Home/HomePage/friendShare">谁 关 注 我</a></li>
+                    <li  class="[following]"><a href="/index.php/Home/HomePage/../Follow/following">我 的 关 注</a></li>
+                    <li  class="[followers]"><a href="/index.php/Home/HomePage/../Follow/followers">谁 关 注 我</a></li>
                     <li  class="[my_share]"><a href="/index.php/Home/HomePage/myShare">他 人 分 析</a></li>
                 </ul>
             </li>

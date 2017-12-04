@@ -48,7 +48,8 @@
 
                 <h5><i class="fa fa-sort-down"></i> 头 像</h5>
 
-                <img class="img-thumbnail" src="_IMG_/temp/ui-danro.jpg" width="100px" height="100px" align="">
+                <img class="img-thumbnail" src="__ROOT__/upload/profile{$user.id}.jpg" width="100px" height="100px" align=""
+                     onerror="this.src='__ROOT__/upload/profile-default.jpg'">
 
                 <h5><i class="fa fa-sort-down"></i> 用 户 名</h5>
                 <p class="solid-para">{$user.username}</p>

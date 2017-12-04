@@ -36,7 +36,48 @@
     <include file="Public/header"/>
     <include file="Public/user_menu" friend="active" followers="active"/>
 
+    <!-- **********************************************************************************************************************************************************
+            MAIN CONTENT
+            *********************************************************************************************************************************************************** -->
+    <!--main content start-->
+    <section id="main-content">
+        <section class="wrapper site-min-height">
+            <h3><i class="fa fa-angle-right"></i> 关 注 我 的</h3>
 
+            <div class="col-lg-12 main-chart">
+                <foreach name="people" item="person">
+
+                    <! -- Follow Panel -->
+                    <div class="col-lg-4 col-md-4 col-sm-4 mb">
+                        <div class="content-panel pn">
+                            <div class="follow-panel">
+                                <div id="{$person.id}" class="col-xs-4 col-xs-offset-8">
+                                    <php>if($person['exfollow']!=0){
+                                        echo '<button class="btn btn-sm btn-clear-g" onclick="unfollow(this)"
+                                                      onmouseenter="enter(this)" onmouseleave="leave(this)">
+                                            <i class="fa fa-check">&nbsp;已关注</i></button>';
+                                        }else{
+                                        echo '<button class="btn btn-sm btn-clear-g" onclick="follow(this)">
+                                            <i class="fa fa-plus">&nbsp;关注</i></button>';
+                                    }</php>
+
+                                </div>
+                                <div class="sp-title">
+                                    <h3>{$person.username}</h3>
+                                </div>
+                                <div class="follow-more">
+                                    <i class="fa fa-home"></i>
+                                </div>
+                            </div>
+                            <p class="followers"><i class="fa fa-user"></i> {$person.followers} 名关注者</p>
+                        </div>
+                    </div><! --/col-md-4-->
+
+                </foreach>
+
+            </div>
+        </section>
+    </section>
     <!--main content end-->
     <include file="Public/footer" />
 </section>
@@ -54,3 +95,25 @@
 
 <!--common script for all pages-->
 <script src="_JS_/common-scripts.js"></script>
+
+<script>
+    function enter(node) {
+        node.innerHTML='取消关注</i>';
+    }
+
+    function leave(node) {
+        node.innerHTML='<i class="fa fa-check">&nbsp;已关注</i>';
+    }
+
+    function unfollow(node) {
+        if(window.confirm("你确认要取消对ta的关注吗？")){
+            window.location="__URL__/unfollow/uid/"+node.parentNode.id;
+        }
+    }
+
+    function follow(node) {
+        if(window.confirm("你确认关注ta吗？")){
+            window.location="__URL__/follow/uid/"+node.parentNode.id;
+        }
+    }
+</script>

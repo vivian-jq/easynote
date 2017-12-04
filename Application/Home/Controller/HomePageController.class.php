@@ -14,13 +14,18 @@ class HomePageController extends Controller
     var $user=null;
 
     public function index(){
-        $this->getUser();
-        $this->assign(['user' => $this->user]);
+        $this->assign(['user' => $this->getUser()]);
         return $this->display('index');
     }
 
     public function photoUpload(){
-//        return $this->display('profile');
+        $uploadFolder = "upload";
+        if(!file_exists($uploadFolder)){
+            mkdir($uploadFolder,0777,true);
+        }
+        $filename = "profile" . session('id').'.'.substr(strrchr($_FILES["file"]["name"], '.'), 1);
+        $url = $uploadFolder.'/'.$filename;
+        move_uploaded_file($_FILES["file"]["tmp_name"], $url);
     }
 
     public function saveProfile(){
@@ -28,16 +33,15 @@ class HomePageController extends Controller
     }
 
     public function profile(){
-        $this->getUser();
-        $this->assign(['user' => $this->user]);
+        $this->assign(['user' => $this->getUser()]);
         return $this->display('profile');
     }
 
     public function profileModify(){
-        $this->getUser();
-        $this->assign(['user' => $this->user]);
+        $this->assign(['user' => $this->getUser()]);
         return $this->display('profile_modify');
     }
+//$user['img_url'] = "/upload/profile".$id.".jpg";
 
     private function getUser(){
         $id = session('id');
@@ -47,7 +51,7 @@ class HomePageController extends Controller
         $condition['id'] = $id;
         $data = ($User->where($condition)->select());
 
-        $this->user = $data[0];
-        $this->user['img_url'] = "/public/images/temp/ui-sam.jpg";
+        $user = $data[0];
+        return $user;
     }
 }
