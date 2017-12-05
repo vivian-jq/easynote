@@ -174,14 +174,14 @@
                 </ul>
             </li>
             <li class="sub-menu">
-                <a href="javascript:;" >
+                <a class="[social]" href="javascript:;" >
                     <i class="fa fa-tasks"></i>
                     <span>社 区</span>
                 </a>
                 <ul class="sub">
-                    <li><a  href="/index.php/Home/HomePage/../Social/publicNote"> 笔 记 圈</a></li>
-                    <li><a  href="/index.php/Home/HomePage/../Social/otherShare"> 好 友 分 享</a></li>
-                    <li><a  href="/index.php/Home/HomePage/../Social/myShare"> 我 的 分 享</a></li>
+                    <li  class="[public_note]"><a  href="/index.php/Home/HomePage/../Social/publicNote"> 笔 记 圈</a></li>
+                    <li  class="[other_share]"><a  href="/index.php/Home/HomePage/../Social/otherShare"> 好 友 分 享</a></li>
+                    <li  class="[my_share]"><a  href="/index.php/Home/HomePage/../Social/myShare"> 我 的 分 享</a></li>
                 </ul>
             </li>
             <li class="sub-menu">

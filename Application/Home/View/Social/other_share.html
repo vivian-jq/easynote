@@ -41,38 +41,95 @@
     <!--main content start-->
     <section id="main-content">
         <section class="wrapper site-min-height">
-            <h3><i class="fa fa-angle-right"></i> {$notebook.title}</h3>
-
             <div class="row">
-                <div class="col-lg-12 main-chart">
+                <div class="col-lg-9 main-chart">
+                    <h3><i class="fa fa-angle-right"></i> 好 友 分 享</h3>
 
 
-                    <for start="0" end="count($notes)" step="1">
-                        <php>$note=$notes[$i];</php>
-                        <! -- NOTE PANEL -->
-                        <div class="col-lg-4 col-md-4 col-sm-4 mb">
+                    <foreach name="shares" item="share">
+                        <! -- SHARE PANEL -->
+                        <div class="row">
+                        <div class="col-lg-12">
+                            <div class="share-panel pn">
+                                <div class="share-panel-header" style="display: inline-block">
+                                    <div class="photo">
+                                        <img src="/upload/profile/profile{$share.uid_from}.jpg" width="100px" style="margin-left: -20px"
+                                             onerror="this.src='/upload/profile/profile-default.jpg'">
+                                    </div>
 
-                            <div class="note-panel-sm pn" onmouseenter="appear(this)" onmouseleave="disapper(this)">
-                                <div class="note-panel-title">
-                                    <p>{$note.title}</p>
-                                    <p style="font-size: 15px">上次修改：{$note.modify_time}</p>
+                                    <div class="details" style="float:left">
+                                        <p>
+                                            <a href="#">{$share.username}</a>&nbsp;给你分享了一篇笔记：<br>
+                                            <i style="font-size: 16px">&nbsp;“{$share.reason}”</i></p>
+                                    </div>
+
+                                    <div class="title" >
+                                        <p style="font-size: 16px;font-weight: bold">《{$share.title}》</p>
+
+                                        <php>$alltags = explode("；",$share['tags'])</php>
+                                        <foreach name="alltags" item="tag">
+                                            <span class="label label-info" style="font-size: 12px;margin-right: 5px">{$tag}</span>
+                                        </foreach>
+
+                                    </div>
+
                                 </div>
+                                <br>
 
-                                <div class="note-panel-content">
-                                    <p><i class="fa fa-heart"></i> {$note.votes}</p>
-                                    <p>创建于{$note.create_time}</p>
+                                <div class="share-panel-content">
+                                    {$share.content|htmlspecialchars_decode}
                                 </div>
+                                <br>
 
-                                <div id="{$note.id}" class="note-operate pull-down" hidden >
-                                    <i class="fa fa-eye fa-2x" onclick="show_note(this)"></i>
-                                    <i class="fa fa-edit fa-2x" onclick="edit_note(this)"></i>
-                                    <i class="fa fa-trash-o fa-2x" onclick="delete_note(this)"></i>
+                                <div class="share-panel-footer">
+                                    <p style="float: left;color: #818182;position: absolute;bottom: 5px">分享时间：{$share.modify_time}</p>
+                                    <div class="share-panel-operator" style="float: right;position:absolute;right: 25px">
+                                        <button class="btn btn-warning"><i class="fa fa-heart"></i>&nbsp;{$share.votes}</button>
+                                        <button class="btn btn-warning"><i class="fa fa-comment">&nbsp;评论</i></button>
+                                        <button class="btn btn-warning">阅读原文&nbsp;<i class="fa fa-angle-right"></i></button>
+                                    </div>
                                 </div>
 
                             </div>
-                        </div><!-- /col-md-4 -->
-                    </for>
+
+                        </div></div><!-- /col-lg-12 -->
+                        <br>
+                    </foreach>
+
+
                 </div>
+
+                <div class="col-lg-3 ds">
+                    <!--COMPLETED ACTIONS DONUTS CHART-->
+                    <h3>NOTIFICATIONS</h3>
+
+                    <!-- First Action -->
+                    <div class="desc">
+                        <div class="thumb">
+                            <span class="badge bg-theme"><i class="fa fa-clock-o"></i></span>
+                        </div>
+                        <div class="details">
+                            <p><muted>2 Minutes Ago</muted><br/>
+                                <a href="#">James Brown</a> subscribed to your newsletter.<br/>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- USERS ONLINE SECTION -->
+                    <h3>TEAM MEMBERS</h3>
+                    <!-- First Member -->
+                    <div class="desc">
+                        <div class="thumb">
+                            <img class="img-circle" src="assets/img/ui-divya.jpg" width="35px" height="35px" align="">
+                        </div>
+                        <div class="details">
+                            <p><a href="#">DIVYA MANIAN</a><br/>
+                                <muted>Available</muted>
+                            </p>
+                        </div>
+                    </div>
+
+                </div><!-- /col-lg-3 -->
             </div>
 
 
@@ -99,27 +156,6 @@
 <script src="_JS_/common-scripts.js"></script>
 
 <script>
-    function appear(node) {
-        node.getElementsByClassName("note-operate").item(0).removeAttribute("hidden");
-    }
-
-    function disapper(node) {
-        node.getElementsByClassName("note-operate").item(0).setAttribute("hidden","");
-    }
-
-    function delete_note(node) {
-        if(window.confirm("删除是不可恢复的，你确认要删除这篇笔记吗？")){
-            window.location="__URL__/deleteNote/nid/"+node.parentNode.id;
-        }
-    }
-
-    function show_note(node) {
-        window.location="__URL__/note/nid/"+node.parentNode.id;
-    }
-
-    function edit_note(node) {
-        window.location="__URL__/editNote/nid/"+node.parentNode.id;
-    }
 
 </script>
 

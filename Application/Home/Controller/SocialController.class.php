@@ -13,23 +13,48 @@ class SocialController extends Controller
 {
 
     public function myShare(){
-        $data=['username'=>"小敏",'reason'=>"这文章写的真好",'modify_time'=>"2017-12-01 13:12:11",
-            'tags'=>"小敏",'title'=>"小敏",'content'=>"&lt;p&gt;欢迎使用easynote2017-12-0420:47:29&lt;/p&gt;&lt;hr/&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;pre class=&quot;brush:as3;toolbar:false;&quot;&gt;include&amp;nbsp;&amp;lt;&amp;gt;&lt;/pre&gt;&lt;p&gt;&lt;img width=&quot;530&quot; height=&quot;340&quot; src=&quot;http://api.map.baidu.com/staticimage?center=116.404,39.915&amp;zoom=18&amp;width=530&amp;height=340&amp;markers=116.404,39.915&quot;/&gt;&lt;/p&gt;",
-            'votes'=>"5"];
-        $this->assign(['user' => $this->getUser(),'share'=>$data]);
+        $Model = new \Think\Model();
+        $sql = "SELECT * FROM share s, note n, user u 
+WHERE s.uid_from=".session('id')." AND s.nid=n.id AND u.id=s.uid_to 
+ORDER BY s.share_time DESC;";
+        $data = $Model->query($sql);
+
+
+        $this->assign(['user' => $this->getUser(),'shares'=>$data]);
         $this->display('my_share');
     }
 
     public function otherShare(){
+        $Model = new \Think\Model();
+        $sql = "SELECT * FROM share s, note n, user u 
+WHERE s.uid_to=".session('id')." AND s.nid=n.id AND u.id=s.uid_from 
+ORDER BY s.share_time DESC;";
+        $data = $Model->query($sql);
 
-        $this->assign(['user' => $this->getUser()]);
+        $this->assign(['user' => $this->getUser(),'shares'=>$data]);
         $this->display('other_share');
     }
 
-    public function publicNote(){
+    public function publicNote($keyword=""){
+        $Model = new \Think\Model();
+        $sql = 'SELECT * FROM note n, user u 
+WHERE n.note_stat=1 AND n.title LIKE "%'.$keyword.'%" AND n.uid=u.id 
+ORDER BY n.modify_time DESC;';
 
-        $this->assign(['user' => $this->getUser()]);
+//        if($keyword==""){
+//            $sql='SELECT * FROM note n, user u
+//WHERE n.note_stat=1 AND n.title LIKE "%'.$keyword.'%" AND n.uid=u.id
+//ORDER BY n.modify_time DESC LIMIT 3;';
+//        }
+        $data = $Model->query($sql);
+
+        $this->assign(['user' => $this->getUser(),'notes'=>$data]);
         $this->display('public_note');
+    }
+
+    public function searchNote(){
+        $keyword = I('post.key');
+        $this->publicNote($keyword);
     }
 
     private function getUser(){
