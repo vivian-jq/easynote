@@ -1417,7 +1417,7 @@ PANELS CONFIGURATIONS
 
 /* Soptify Panel */
 .follow-panel {
-	background: url(/public/images/temp/lorde.jpg) no-repeat center top;
+	background: no-repeat center top;
 	margin-top: -15px;
 	background-attachment: relative;
 	background-position: center center;

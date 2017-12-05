@@ -121,8 +121,16 @@ class NoteController extends Controller
         $note = M('note');
         $condition['id']=$nid;
         $data = $note->where($condition)->select();
-        if(count($data)==0||($data[0]['note_stat']==0&&$data[0]['uid']!=session('id'))){
+        if(count($data)==0){
             $this->redirect('index/warning');
+        }else if($data[0]['uid']!=session('id')&&$data[0]['note_stat']==0){
+            //非原作者
+            $share = M('share');
+            $condition3['uid_to']=session('id');
+            $condition3['nid']=$nid;
+            $confirm = $share->where($condition3)->where('share_stat=2 OR share_stat=4')->select();
+            if(count($confirm)==0)
+                $this->redirect('index/warning');
         }
         $data[0]['stat']=($data[0]['note_stat']==1)?'':'checked';
         $data[0]['content']=htmlspecialchars_decode($data[0]['content']);
@@ -146,6 +154,33 @@ class NoteController extends Controller
         $data['tags']=I('post.tags');
         $note->where($condition)->save($data);
         $this->note($condition['id']);
+    }
+
+    public function shareNote(){
+        $data['uid_from'] = session('id');
+        $data['nid'] = I('post.nid');
+        $data['uid_to'] = I('post.uid');
+        $data['reason'] = I('post.reason');
+        $data['reason'] = I('post.reason');
+        $data['share_time'] = date('Y-m-d H:i:s',time());
+        $data['share_stat'] = I('post.share_stat');
+
+        $share = M('share');
+        $share->add($data);
+        $this->redirect('Social/myShare');
+
+    }
+
+    public function validate(){
+        $uid = I('post.uid');
+        $user = M('user');
+        $condition['id']=$uid;
+        $data = $user->where($condition)->select();
+        if(count($data)>0)
+            $this->ajaxReturn("true");
+        else{
+            $this->ajaxReturn("false");
+        }
     }
 
     public function noteByTime(){

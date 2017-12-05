@@ -12,181 +12,223 @@
     <table id="6" parent="2" name="follow"/>
     <table id="7" parent="2" name="note"/>
     <table id="8" parent="2" name="notebook"/>
-    <table id="9" parent="2" name="sqlite_master">
+    <table id="9" parent="2" name="share"/>
+    <table id="10" parent="2" name="sqlite_master">
       <System>1</System>
     </table>
-    <table id="10" parent="2" name="sqlite_sequence">
+    <table id="11" parent="2" name="sqlite_sequence">
       <System>1</System>
     </table>
-    <table id="11" parent="2" name="user"/>
-    <column id="12" parent="6" name="id">
+    <table id="12" parent="2" name="user"/>
+    <column id="13" parent="6" name="id">
       <DataType>INTEGER|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="13" parent="6" name="uid_from">
+    <column id="14" parent="6" name="uid_from">
       <Position>1</Position>
       <DataType>INTEGER|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="14" parent="6" name="uid_to">
+    <column id="15" parent="6" name="uid_to">
       <Position>2</Position>
       <DataType>INTEGER|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="15" parent="6" name="follow_time">
+    <column id="16" parent="6" name="follow_time">
       <Position>3</Position>
       <DataType>DATETIME|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="16" parent="6">
+    <key id="17" parent="6">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="17" parent="7" name="id">
+    <column id="18" parent="7" name="id">
       <DataType>INTEGER|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="18" parent="7" name="uid">
+    <column id="19" parent="7" name="uid">
       <Position>1</Position>
       <DataType>INTEGER|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="19" parent="7" name="bid">
+    <column id="20" parent="7" name="bid">
       <Position>2</Position>
       <DataType>INTEGER|0</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;1&apos;</DefaultExpression>
     </column>
-    <column id="20" parent="7" name="title">
+    <column id="21" parent="7" name="title">
       <Position>3</Position>
       <DataType>VARCHAR(25)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="21" parent="7" name="tags">
+    <column id="22" parent="7" name="tags">
       <Position>4</Position>
       <DataType>VARCHAR(255)|0</DataType>
     </column>
-    <column id="22" parent="7" name="content">
+    <column id="23" parent="7" name="content">
       <Position>5</Position>
       <DataType>TEXT|0</DataType>
     </column>
-    <column id="23" parent="7" name="create_time">
+    <column id="24" parent="7" name="create_time">
       <Position>6</Position>
       <DataType>datetime|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="24" parent="7" name="modify_time">
+    <column id="25" parent="7" name="modify_time">
       <Position>7</Position>
       <DataType>datetime|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="25" parent="7" name="note_stat">
+    <column id="26" parent="7" name="note_stat">
       <Position>8</Position>
       <DataType>tinyint(2)|0</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
     </column>
-    <column id="26" parent="7" name="votes">
+    <column id="27" parent="7" name="votes">
       <Position>9</Position>
       <DataType>INTEGER|0</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
     </column>
-    <key id="27" parent="7">
+    <key id="28" parent="7">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="28" parent="8" name="id">
+    <column id="29" parent="8" name="id">
       <DataType>INTEGER|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="29" parent="8" name="uid">
+    <column id="30" parent="8" name="uid">
       <Position>1</Position>
       <DataType>INTEGER|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="30" parent="8" name="title">
+    <column id="31" parent="8" name="title">
       <Position>2</Position>
       <DataType>VARCHAR(25)|0</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;默认笔记本&apos;</DefaultExpression>
     </column>
-    <column id="31" parent="8" name="create_time">
+    <column id="32" parent="8" name="create_time">
       <Position>3</Position>
       <DataType>DATETIME|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="32" parent="8" name="modify_time">
+    <column id="33" parent="8" name="modify_time">
       <Position>4</Position>
       <DataType>DATETIME|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="33" parent="8">
+    <key id="34" parent="8">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="34" parent="9" name="type">
-      <DataType>text|0</DataType>
-    </column>
-    <column id="35" parent="9" name="name">
-      <Position>1</Position>
-      <DataType>text|0</DataType>
-    </column>
-    <column id="36" parent="9" name="tbl_name">
-      <Position>2</Position>
-      <DataType>text|0</DataType>
-    </column>
-    <column id="37" parent="9" name="rootpage">
-      <Position>3</Position>
-      <DataType>integer|0</DataType>
-    </column>
-    <column id="38" parent="9" name="sql">
-      <Position>4</Position>
-      <DataType>text|0</DataType>
-    </column>
-    <column id="39" parent="10" name="name"/>
-    <column id="40" parent="10" name="seq">
-      <Position>1</Position>
-    </column>
-    <column id="41" parent="11" name="id">
+    <column id="35" parent="9" name="id">
       <DataType>INTEGER|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="42" parent="11" name="username">
+    <column id="36" parent="9" name="uid_from">
+      <Position>1</Position>
+      <DataType>INTEGER|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="37" parent="9" name="uid_to">
+      <Position>2</Position>
+      <DataType>INTEGER|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="38" parent="9" name="nid">
+      <Position>3</Position>
+      <DataType>INTEGER|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="39" parent="9" name="reason">
+      <Position>4</Position>
+      <DataType>VARCHAR(25)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;快来看看吧&apos;</DefaultExpression>
+    </column>
+    <column id="40" parent="9" name="share_time">
+      <Position>5</Position>
+      <DataType>datetime|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="41" parent="9" name="share_stat">
+      <Position>6</Position>
+      <DataType>tinyint(1)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <key id="42" parent="9">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="43" parent="10" name="type">
+      <DataType>text|0</DataType>
+    </column>
+    <column id="44" parent="10" name="name">
+      <Position>1</Position>
+      <DataType>text|0</DataType>
+    </column>
+    <column id="45" parent="10" name="tbl_name">
+      <Position>2</Position>
+      <DataType>text|0</DataType>
+    </column>
+    <column id="46" parent="10" name="rootpage">
+      <Position>3</Position>
+      <DataType>integer|0</DataType>
+    </column>
+    <column id="47" parent="10" name="sql">
+      <Position>4</Position>
+      <DataType>text|0</DataType>
+    </column>
+    <column id="48" parent="11" name="name"/>
+    <column id="49" parent="11" name="seq">
+      <Position>1</Position>
+    </column>
+    <column id="50" parent="12" name="id">
+      <DataType>INTEGER|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="51" parent="12" name="username">
       <Position>1</Position>
       <DataType>VARCHAR(25)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="43" parent="11" name="password">
+    <column id="52" parent="12" name="password">
       <Position>2</Position>
       <DataType>TINYTEXT|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="44" parent="11" name="tel">
+    <column id="53" parent="12" name="tel">
       <Position>3</Position>
       <DataType>INT(11)|0</DataType>
       <DefaultExpression>NULL</DefaultExpression>
     </column>
-    <column id="45" parent="11" name="exp">
+    <column id="54" parent="12" name="exp">
       <Position>4</Position>
       <DataType>INT(11)|0</DataType>
       <DefaultExpression>0</DefaultExpression>
     </column>
-    <column id="46" parent="11" name="introduction">
+    <column id="55" parent="12" name="introduction">
       <Position>5</Position>
       <DataType>TEXT|0</DataType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
-    <column id="47" parent="11" name="mailbox">
+    <column id="56" parent="12" name="mailbox">
       <Position>6</Position>
       <DataType>TINYTEXT|0</DataType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
-    <key id="48" parent="11">
+    <key id="57" parent="12">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>

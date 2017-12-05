@@ -19,7 +19,7 @@ class HomePageController extends Controller
     }
 
     public function photoUpload(){
-        $uploadFolder = "upload";
+        $uploadFolder = "upload/profile";
         if(!file_exists($uploadFolder)){
             mkdir($uploadFolder,0777,true);
         }

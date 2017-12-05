@@ -57,15 +57,15 @@ CREATE TABLE `share`
  uid_from INTEGER NOT NULL,
  uid_to INTEGER NOT NULL,
  nid INTEGER NOT NULL,
- reason VARCHAR(25) NOT NULL,
+ reason VARCHAR(25) NOT NULL DEFAULT '快来看看吧',
  share_time datetime NOT NULL,
  share_stat tinyint(1) NOT NULL DEFAULT '0'
 );
 -- 有四种状态，share_edit 4, share_read 3, edit_only 2, read_only 1
 INSERT INTO share (uid_from, uid_to, nid,reason,share_time, share_stat) VALUES
- (1,3,1,'快来看看吧',datetime('now'),4);
+ (1,4,3,'快来看看吧',datetime('now'),4);
 INSERT INTO share (uid_from, uid_to, nid,reason,share_time, share_stat) VALUES
- (1,3,2,'快来看看吧',datetime('now'),3);
+ (1,4,2,'快来看看吧',datetime('now'),3);
 
 -- ****************************************************************************************************
 DROP TABLE IF EXISTS `vote`;

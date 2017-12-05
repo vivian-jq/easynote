@@ -7,7 +7,7 @@
     <meta name="author" content="Dashboard">
     <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
 
-    <title>EASYNOTE - Make Notes Simple</title>
+    <title>DASHGUM - FREE Bootstrap Admin Template</title>
 
     <!-- Bootstrap core CSS -->
     <link href="_CSS_/bootstrap.css" rel="stylesheet">
@@ -34,27 +34,43 @@
 
 <section id="container" >
     <include file="Public/header"/>
-    <include file="Public/user_menu" friend="active" following="active"/>
+    <include file="Public/user_menu" friend="active" search="active"/>
 
     <!-- **********************************************************************************************************************************************************
-        MAIN CONTENT
-        *********************************************************************************************************************************************************** -->
+            MAIN CONTENT
+            *********************************************************************************************************************************************************** -->
     <!--main content start-->
     <section id="main-content">
         <section class="wrapper site-min-height">
-            <h3><i class="fa fa-angle-right"></i> 我 的 关 注</h3>
+            <h3><i class="fa fa-angle-right"></i> 用 户 搜 索</h3>
 
             <div class="col-lg-12 main-chart">
+
+                <form action="__URL__/searchUser" method="post">
+                    <div class="col-sm-11">
+                        <input type="text" name="name" class="form-control round-form" placeholder="输入待查找的用户名">
+                    </div>
+                    <button type="submit" class="btn btn-round btn-info"><i class="fa fa-search"></i></button>
+                </form>
+                <br>
+
                 <foreach name="people" item="person">
 
                     <! -- Follow Panel -->
                     <div class="col-lg-4 col-md-4 col-sm-4 mb">
                         <div class="content-panel pn">
-                            <div class="follow-panel" style="background-image: url(/upload/profile/profile{$person.id}.jpg)">
+                            <div class="follow-panel" style="background-image: url(/upload/profile/profile{$person.id}.jpg),
+                            url(/upload/profile/profile-default.jpg)">
                                 <div id="{$person.id}" class="col-xs-4 col-xs-offset-8">
-                                    <button class="btn btn-sm btn-clear-g" onclick="unfollow(this)"
-                                            onmouseenter="enter(this)" onmouseleave="leave(this)">
-                                        <i class="fa fa-check">&nbsp;已关注</i></button>
+                                    <php>if($person['exfollow']!=0){
+                                        echo '<button class="btn btn-sm btn-clear-g" onclick="unfollow(this)"
+                                                      onmouseenter="enter(this)" onmouseleave="leave(this)">
+                                            <i class="fa fa-check">&nbsp;已关注</i></button>';
+                                        }else{
+                                        echo '<button class="btn btn-sm btn-clear-g" onclick="follow(this)">
+                                            <i class="fa fa-plus">&nbsp;关注</i></button>';
+                                        }</php>
+
                                 </div>
                                 <div class="sp-title">
                                     <h3>{$person.username}</h3>
@@ -73,12 +89,12 @@
         </section>
     </section>
 
-
     <!--main content end-->
     <include file="Public/footer" />
 </section>
 </body>
 </html>
+
 
 <!-- js placed at the end of the document so the pages load faster -->
 <script src="_JS_/jquery.js"></script>
@@ -104,6 +120,12 @@
     function unfollow(node) {
         if(window.confirm("你确认要取消对ta的关注吗？")){
             window.location="__URL__/unfollow/uid/"+node.parentNode.id;
+        }
+    }
+
+    function follow(node) {
+        if(window.confirm("你确认关注ta吗？")){
+            window.location="__URL__/follow/uid/"+node.parentNode.id;
         }
     }
 </script>

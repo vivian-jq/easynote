@@ -34,42 +34,48 @@
 
 <section id="container" >
     <include file="Public/header"/>
-    <include file="Public/user_menu" friend="active" following="active"/>
-
+    <include file="Public/user_menu" social="active" other_share="active"/>
     <!-- **********************************************************************************************************************************************************
-        MAIN CONTENT
-        *********************************************************************************************************************************************************** -->
+    MAIN CONTENT
+    *********************************************************************************************************************************************************** -->
     <!--main content start-->
     <section id="main-content">
         <section class="wrapper site-min-height">
-            <h3><i class="fa fa-angle-right"></i> 我 的 关 注</h3>
+            <h3><i class="fa fa-angle-right"></i> {$notebook.title}</h3>
 
-            <div class="col-lg-12 main-chart">
-                <foreach name="people" item="person">
+            <div class="row">
+                <div class="col-lg-12 main-chart">
 
-                    <! -- Follow Panel -->
-                    <div class="col-lg-4 col-md-4 col-sm-4 mb">
-                        <div class="content-panel pn">
-                            <div class="follow-panel" style="background-image: url(/upload/profile/profile{$person.id}.jpg)">
-                                <div id="{$person.id}" class="col-xs-4 col-xs-offset-8">
-                                    <button class="btn btn-sm btn-clear-g" onclick="unfollow(this)"
-                                            onmouseenter="enter(this)" onmouseleave="leave(this)">
-                                        <i class="fa fa-check">&nbsp;已关注</i></button>
+
+                    <for start="0" end="count($notes)" step="1">
+                        <php>$note=$notes[$i];</php>
+                        <! -- NOTE PANEL -->
+                        <div class="col-lg-4 col-md-4 col-sm-4 mb">
+
+                            <div class="note-panel-sm pn" onmouseenter="appear(this)" onmouseleave="disapper(this)">
+                                <div class="note-panel-title">
+                                    <p>{$note.title}</p>
+                                    <p style="font-size: 15px">上次修改：{$note.modify_time}</p>
                                 </div>
-                                <div class="sp-title">
-                                    <h3>{$person.username}</h3>
+
+                                <div class="note-panel-content">
+                                    <p><i class="fa fa-heart"></i> {$note.votes}</p>
+                                    <p>创建于{$note.create_time}</p>
                                 </div>
-                                <div class="follow-more">
-                                    <i class="fa fa-home"></i>
+
+                                <div id="{$note.id}" class="note-operate pull-down" hidden >
+                                    <i class="fa fa-eye fa-2x" onclick="show_note(this)"></i>
+                                    <i class="fa fa-edit fa-2x" onclick="edit_note(this)"></i>
+                                    <i class="fa fa-trash-o fa-2x" onclick="delete_note(this)"></i>
                                 </div>
+
                             </div>
-                            <p class="followers"><i class="fa fa-user"></i> {$person.followers} 名关注者</p>
-                        </div>
-                    </div><! --/col-md-4-->
-
-                </foreach>
-
+                        </div><!-- /col-md-4 -->
+                    </for>
+                </div>
             </div>
+
+
         </section>
     </section>
 
@@ -93,17 +99,31 @@
 <script src="_JS_/common-scripts.js"></script>
 
 <script>
-    function enter(node) {
-        node.innerHTML='取消关注</i>';
+    function appear(node) {
+        node.getElementsByClassName("note-operate").item(0).removeAttribute("hidden");
     }
 
-    function leave(node) {
-        node.innerHTML='<i class="fa fa-check">&nbsp;已关注</i>';
+    function disapper(node) {
+        node.getElementsByClassName("note-operate").item(0).setAttribute("hidden","");
     }
 
-    function unfollow(node) {
-        if(window.confirm("你确认要取消对ta的关注吗？")){
-            window.location="__URL__/unfollow/uid/"+node.parentNode.id;
+    function delete_note(node) {
+        if(window.confirm("删除是不可恢复的，你确认要删除这篇笔记吗？")){
+            window.location="__URL__/deleteNote/nid/"+node.parentNode.id;
         }
     }
+
+    function show_note(node) {
+        window.location="__URL__/note/nid/"+node.parentNode.id;
+    }
+
+    function edit_note(node) {
+        window.location="__URL__/editNote/nid/"+node.parentNode.id;
+    }
+
 </script>
+
+
+</body>
+</html>
+

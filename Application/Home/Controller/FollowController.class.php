@@ -51,7 +51,24 @@ WHERE u.id=a.uid_from;";
         $data['uid_to']=$uid;
         $data['follow_time'] = date('Y-m-d H:i:s',time());
         $follow->add($data);
-        $this->followers();
+        $this->followering();
+    }
+
+    public function searchUser(){
+        $name = I('post.name');
+
+        if($name!=""){
+            $Model = new \Think\Model();
+            $sql = "SELECT a.id,a.username,a.followers , ifnull(f2.id,0) exfollow
+FROM (SELECT u.id, u.username, ifnull(COUNT(f1.id),0) followers
+      FROM user u LEFT JOIN follow f1 on u.id=f1.uid_to
+      WHERE u.username LIKE \"%".$name."%\" GROUP BY u.id) a
+  LEFT JOIN follow f2 on a.id=f2.uid_to AND f2.uid_from=".session('id').";";
+            $data = $Model->query($sql);
+            $this->assign(['people'=>$data]);
+        }
+        $this->assign(['user' => $this->getUser()]);
+        $this->display('search_user');
     }
 
 

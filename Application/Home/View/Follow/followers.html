@@ -50,7 +50,8 @@
                     <! -- Follow Panel -->
                     <div class="col-lg-4 col-md-4 col-sm-4 mb">
                         <div class="content-panel pn">
-                            <div class="follow-panel">
+                            <div class="follow-panel" style="background-image: url(/upload/profile/profile{$person.id}.jpg),
+                            url(/upload/profile/profile-default.jpg)">
                                 <div id="{$person.id}" class="col-xs-4 col-xs-offset-8">
                                     <php>if($person['exfollow']!=0){
                                         echo '<button class="btn btn-sm btn-clear-g" onclick="unfollow(this)"

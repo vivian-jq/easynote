@@ -8,8 +8,8 @@
         <ul class="sidebar-menu" id="nav-accordion">
 
             <p class="centered"><a href="__URL__/../HomePage/profile">
-                <img src="__ROOT__/upload/profile{$user.id}.jpg" class="img-circle" width="60"
-                     onerror="this.src='__ROOT__/upload/profile-default.jpg'">
+                <img src="__ROOT__/upload/profile/profile{$user.id}.jpg" class="img-circle" width="60" height="60"
+                     onerror="this.src='__ROOT__/upload/profile/profile-default.jpg'">
             </a></p>
             <h5 class="centered">{$user.username}</h5>
 
@@ -46,16 +46,18 @@
                 <ul class="sub">
                     <li  class="[following]"><a href="__URL__/../Follow/following">我 的 关 注</a></li>
                     <li  class="[followers]"><a href="__URL__/../Follow/followers">谁 关 注 我</a></li>
-                    <li  class="[my_share]"><a href="__URL__/myShare">他 人 分 析</a></li>
+                    <li  class="[search]"><a href="__URL__/../Follow/searchUser">用 户 搜 索</a></li>
                 </ul>
             </li>
             <li class="sub-menu">
-                <a href="javascript:;" >
+                <a class="[social]" href="javascript:;" >
                     <i class="fa fa-tasks"></i>
-                    <span>社区</span>
+                    <span>社 区</span>
                 </a>
                 <ul class="sub">
-                    <li><a  href="../Index/form_component.html">lalala</a></li>
+                    <li  class="[public_note]"><a  href="__URL__/../Social/publicNote"> 笔 记 圈</a></li>
+                    <li  class="[other_share]"><a  href="__URL__/../Social/otherShare"> 好 友 分 享</a></li>
+                    <li  class="[my_share]"><a  href="__URL__/../Social/myShare"> 我 的 分 享</a></li>
                 </ul>
             </li>
             <li class="sub-menu">

@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9c1523c5-92d2-4e12-a2d4-84e410c90bcf" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/77fedb1b-25f4-4127-b5bc-6b4cf6e785d1/_metadata_/metadata" afterPath="$PROJECT_DIR$/.idea/dataSources/77fedb1b-25f4-4127-b5bc-6b4cf6e785d1/_metadata_/metadata" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/77fedb1b-25f4-4127-b5bc-6b4cf6e785d1/_metadata_/metadata.values.at" afterPath="$PROJECT_DIR$/.idea/dataSources/77fedb1b-25f4-4127-b5bc-6b4cf6e785d1/_metadata_/metadata.values.at" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Home/Controller/SocialController.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Home/View/Social/my_share.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Home/View/Social/other_share.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Home/View/Social/public_note.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/Home/View/HomePage/friend_share.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Data/easynote.db" afterPath="$PROJECT_DIR$/Application/Runtime/Data/easynote.db" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/77fedb1b-25f4-4127-b5bc-6b4cf6e785d1.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/77fedb1b-25f4-4127-b5bc-6b4cf6e785d1.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/Controller/FollowController.class.php" afterPath="$PROJECT_DIR$/Application/Home/Controller/FollowController.class.php" />
@@ -13,17 +17,13 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Follow/followers.html" afterPath="$PROJECT_DIR$/Application/Home/View/Follow/followers.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Follow/following.html" afterPath="$PROJECT_DIR$/Application/Home/View/Follow/following.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/HomePage/profile.html" afterPath="$PROJECT_DIR$/Application/Home/View/HomePage/profile.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/HomePage/profile_modify.html" afterPath="$PROJECT_DIR$/Application/Home/View/HomePage/profile_modify.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Index/login.html" afterPath="$PROJECT_DIR$/Application/Home/View/Index/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Index/new_account.html" afterPath="$PROJECT_DIR$/Application/Home/View/Index/new_account.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Note/note.html" afterPath="$PROJECT_DIR$/Application/Home/View/Note/note.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Public/user_menu.html" afterPath="$PROJECT_DIR$/Application/Home/View/Public/user_menu.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Home/4df600613c22fe9cef8a6106f202261a.php" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Home/4df600613c22fe9cef8a6106f202261a.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Home/ccea6a400660ce54d68cab67b9f68781.php" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Home/ccea6a400660ce54d68cab67b9f68781.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Data/first.sql" afterPath="$PROJECT_DIR$/Application/Runtime/Data/first.sql" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/static/css/style.css" afterPath="$PROJECT_DIR$/Public/static/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/static/js/ueditor/php/config.json" afterPath="$PROJECT_DIR$/Public/static/js/ueditor/php/config.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/static/js/ueditor/ueditor.config.js" afterPath="$PROJECT_DIR$/Public/static/js/ueditor/ueditor.config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/static/js/webuploader/photo_upload.js" afterPath="$PROJECT_DIR$/Public/static/js/webuploader/photo_upload.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Application/Home/View/HomePage/my_share.html" afterPath="$PROJECT_DIR$/Application/Home/View/Follow/search_user.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -55,7 +55,28 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
+    <leaf>
+      <file leaf-file-name="SocialController.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/Home/Controller/SocialController.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="17" column="26" lean-forward="false" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="other_share.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Application/Home/View/Social/other_share.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-330">
+              <caret line="36" column="43" lean-forward="false" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -105,12 +126,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Application/Home/View/index/login.html" />
-        <option value="$PROJECT_DIR$/ThinkPHP/Library/Think/Db/Driver/Sqlite.class.php" />
-        <option value="$PROJECT_DIR$/Application/Home/View/Admin/a.html" />
-        <option value="$PROJECT_DIR$/Application/Home/View/Admin/user_manager.htm" />
-        <option value="$PROJECT_DIR$/Application/Home/View/Public/footer.html" />
-        <option value="$PROJECT_DIR$/Application/Home/View/Public/admin_menu.html" />
         <option value="$PROJECT_DIR$/Application/Home/View/Admin/index.html" />
         <option value="$PROJECT_DIR$/Application/Home/View/Admin/admin_manager.html" />
         <option value="$PROJECT_DIR$/Application/Home/View/Admin/all_emails.html" />
@@ -133,29 +148,35 @@
         <option value="$PROJECT_DIR$/Application/Home/View/Note/new_notebook.html" />
         <option value="$PROJECT_DIR$/Application/Home/View/Index/warning.html" />
         <option value="$PROJECT_DIR$/Application/Home/Controller/IndexController.class.php" />
-        <option value="$PROJECT_DIR$/Application/Home/View/Note/note.html" />
         <option value="$PROJECT_DIR$/Application/Home/View/Note/edit_note.html" />
         <option value="$PROJECT_DIR$/Application/Home/View/Note/new_note.html" />
         <option value="$PROJECT_DIR$/Application/Home/View/Note/note_by_book.html" />
         <option value="$PROJECT_DIR$/Application/Home/View/Note/note_by_time.html" />
         <option value="$PROJECT_DIR$/Application/Home/View/Note/notebooks.html" />
         <option value="$PROJECT_DIR$/Application/Home/View/Note/note_by_tag.html" />
-        <option value="$PROJECT_DIR$/Public/static/css/style.css" />
         <option value="$PROJECT_DIR$/Public/static/js/ueditor/ueditor.config.js" />
-        <option value="$PROJECT_DIR$/Public/static/js/ueditor/php/config.json" />
-        <option value="$PROJECT_DIR$/Application/Home/View/Follow/following.html" />
-        <option value="$PROJECT_DIR$/Application/Runtime/Data/first.sql" />
         <option value="$PROJECT_DIR$/Application/Home/View/Index/login.html" />
         <option value="$PROJECT_DIR$/Application/Home/View/Index/new_account.html" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/77fedb1b-25f4-4127-b5bc-6b4cf6e785d1/console.sql" />
-        <option value="$PROJECT_DIR$/Application/Home/View/Follow/followers.html" />
         <option value="$PROJECT_DIR$/Application/Home/View/HomePage/profile_modify.html" />
         <option value="$PROJECT_DIR$/Public/static/js/webuploader/photo_upload.js" />
-        <option value="$PROJECT_DIR$/Application/Home/View/HomePage/profile.html" />
-        <option value="$PROJECT_DIR$/Application/Home/View/Public/user_menu.html" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/Public/static/js/ueditor/php/config.json" />
         <option value="$PROJECT_DIR$/Application/Home/Controller/HomePageController.class.php" />
-        <option value="$PROJECT_DIR$/Application/Home/Controller/NoteController.class.php" />
+        <option value="$PROJECT_DIR$/Application/Home/View/HomePage/profile.html" />
+        <option value="$PROJECT_DIR$/Application/Home/View/Follow/following.html" />
+        <option value="$PROJECT_DIR$/Application/Home/View/Follow/followers.html" />
         <option value="$PROJECT_DIR$/Application/Home/Controller/FollowController.class.php" />
+        <option value="$PROJECT_DIR$/Application/Home/View/Follow/search_user.html" />
+        <option value="$PROJECT_DIR$/Public/static/css/style.css" />
+        <option value="$PROJECT_DIR$/Application/Home/View/Social/my_share.html" />
+        <option value="$PROJECT_DIR$/Application/Home/View/Social/public_note.html" />
+        <option value="$PROJECT_DIR$/Application/Home/View/Note/note.html" />
+        <option value="$PROJECT_DIR$/Application/Runtime/Data/first.sql" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/77fedb1b-25f4-4127-b5bc-6b4cf6e785d1/console.sql" />
+        <option value="$PROJECT_DIR$/Application/Home/Controller/NoteController.class.php" />
+        <option value="$PROJECT_DIR$/Application/Home/View/Social/other_share.html" />
+        <option value="$PROJECT_DIR$/Application/Home/View/Public/user_menu.html" />
+        <option value="$PROJECT_DIR$/Application/Home/Controller/SocialController.class.php" />
       </list>
     </option>
   </component>
@@ -211,14 +232,30 @@
               <item name="easynote" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Application" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Home" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Conf" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="easynote" type="b2602c69:ProjectViewProjectNode" />
               <item name="easynote" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Application" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Home" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Model" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="View" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="easynote" type="b2602c69:ProjectViewProjectNode" />
+              <item name="easynote" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Home" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="View" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="HomePage" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="easynote" type="b2602c69:ProjectViewProjectNode" />
+              <item name="easynote" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Home" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="View" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Social" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="easynote" type="b2602c69:ProjectViewProjectNode" />
@@ -229,6 +266,13 @@
             <path>
               <item name="easynote" type="b2602c69:ProjectViewProjectNode" />
               <item name="easynote" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Runtime" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Data" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="easynote" type="b2602c69:ProjectViewProjectNode" />
+              <item name="easynote" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Public" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -236,38 +280,6 @@
               <item name="easynote" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Public" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="static" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="easynote" type="b2602c69:ProjectViewProjectNode" />
-              <item name="easynote" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Public" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="static" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="easynote" type="b2602c69:ProjectViewProjectNode" />
-              <item name="easynote" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Public" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="static" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="ueditor" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="easynote" type="b2602c69:ProjectViewProjectNode" />
-              <item name="easynote" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Public" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="static" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="ueditor" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="php" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="easynote" type="b2602c69:ProjectViewProjectNode" />
-              <item name="easynote" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Public" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="static" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="webuploader" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -332,26 +344,27 @@
       <workItem from="1512290132311" duration="5928000" />
       <workItem from="1512369873479" duration="7039000" />
       <workItem from="1512389985707" duration="13498000" />
+      <workItem from="1512449223209" duration="10224000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="144748000" />
+    <option name="totallyTimeSpent" value="154972000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <layout>
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2813212" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28218883" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2813212" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2859442" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22371244" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -377,48 +390,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="das://table:/154647e2/77fedb1b-25f4-4127-b5bc-6b4cf6e785d1/main.user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/154647e2/77fedb1b-25f4-4127-b5bc-6b4cf6e785d1/main.user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/154647e2/77fedb1b-25f4-4127-b5bc-6b4cf6e785d1/main.user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/154647e2/77fedb1b-25f4-4127-b5bc-6b4cf6e785d1/main.user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/154647e2/77fedb1b-25f4-4127-b5bc-6b4cf6e785d1/main.user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/154647e2/77fedb1b-25f4-4127-b5bc-6b4cf6e785d1/main.user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Application/Home/View/Admin/all_emails.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -437,13 +408,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="602">
           <caret line="36" column="59" lean-forward="false" selection-start-line="36" selection-start-column="59" selection-end-line="36" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/HomePage/my_share.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="602">
-          <caret line="36" column="57" lean-forward="false" selection-start-line="36" selection-start-column="57" selection-end-line="36" selection-end-column="57" />
         </state>
       </provider>
     </entry>
@@ -483,13 +447,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://table:/154647e2/77fedb1b-25f4-4127-b5bc-6b4cf6e785d1/main.notebook">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Application/Home/View/Index/warning.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="118">
@@ -498,24 +455,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/Home/View/Note/new_notebook.html" />
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Note/note.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="562">
-          <caret line="116" column="74" lean-forward="false" selection-start-line="116" selection-start-column="74" selection-end-line="116" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Application/Home/View/Note/edit_note.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="496">
           <caret line="72" column="50" lean-forward="false" selection-start-line="72" selection-start-column="50" selection-end-line="72" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/154647e2/77fedb1b-25f4-4127-b5bc-6b4cf6e785d1/main.note">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -548,14 +491,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Note/note_by_book.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="4" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://table:/154647e2/77fedb1b-25f4-4127-b5bc-6b4cf6e785d1/main.user">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -567,15 +502,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1430">
           <caret line="65" column="38" lean-forward="false" selection-start-line="65" selection-start-column="38" selection-end-line="65" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Note/note_by_tag.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="57" column="43" lean-forward="false" selection-start-line="57" selection-start-column="43" selection-end-line="57" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -583,25 +509,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="484">
           <caret line="46" column="55" lean-forward="false" selection-start-line="46" selection-start-column="55" selection-end-line="46" selection-end-column="55" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Public/static/js/ueditor/php/config.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="29" column="25" lean-forward="false" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Public/static/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1458" column="11" lean-forward="false" selection-start-line="1458" selection-start-column="11" selection-end-line="1458" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -616,7 +523,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
           <caret line="38" column="113" lean-forward="false" selection-start-line="38" selection-start-column="113" selection-end-line="38" selection-end-column="113" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -624,46 +530,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="42" column="96" lean-forward="false" selection-start-line="42" selection-start-column="96" selection-end-line="42" selection-end-column="96" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Follow/following.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="94" column="0" lean-forward="true" selection-start-line="94" selection-start-column="0" selection-end-line="108" selection-end-column="9" />
-          <folding>
-            <element signature="e#2669#2675#0" expanded="true" />
-            <marker date="1512393067551" expanded="true" signature="4152:4158" ph=" " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/77fedb1b-25f4-4127-b5bc-6b4cf6e785d1/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="21" lean-forward="false" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Follow/followers.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="113" column="24" lean-forward="false" selection-start-line="113" selection-start-column="24" selection-end-line="113" selection-end-column="24" />
-          <folding>
-            <element signature="e#2792#2798#0" expanded="true" />
-            <element signature="e#3039#3045#0" expanded="true" />
-            <marker date="1512396236258" expanded="true" signature="4566:4572" ph=" " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Runtime/Data/first.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="426">
-          <caret line="116" column="0" lean-forward="false" selection-start-line="116" selection-start-column="0" selection-end-line="117" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -671,7 +537,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-604">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -679,7 +544,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -691,19 +555,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Public/user_menu.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="64" lean-forward="false" selection-start-line="10" selection-start-column="64" selection-end-line="10" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Public/static/js/ueditor/php/Uploader.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
           <caret line="111" column="33" lean-forward="false" selection-start-line="111" selection-start-column="33" selection-end-line="111" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -711,23 +566,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="514">
           <caret line="68" column="51" lean-forward="false" selection-start-line="68" selection-start-column="51" selection-end-line="68" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/Controller/HomePageController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="53" column="25" lean-forward="false" selection-start-line="53" selection-start-column="25" selection-end-line="53" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/HomePage/profile.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="53" column="50" lean-forward="false" selection-start-line="53" selection-start-column="50" selection-end-line="53" selection-end-column="50" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -735,7 +573,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="254">
           <caret line="389" column="7" lean-forward="false" selection-start-line="389" selection-start-column="7" selection-end-line="389" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -747,25 +584,209 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="7" lean-forward="false" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/static/js/ueditor/php/config.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1122">
+          <caret line="51" column="25" lean-forward="false" selection-start-line="51" selection-start-column="25" selection-end-line="51" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/HomePage/profile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="51" column="64" lean-forward="false" selection-start-line="51" selection-start-column="64" selection-end-line="51" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/Controller/HomePageController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="79">
+          <caret line="21" column="39" lean-forward="false" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Note/note_by_tag.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="39">
+          <caret line="48" column="16" lean-forward="true" selection-start-line="48" selection-start-column="16" selection-end-line="53" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Follow/following.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="52" column="124" lean-forward="false" selection-start-line="52" selection-start-column="54" selection-end-line="52" selection-end-column="124" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#foreach#0;n#div#0;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#2762#2768#0" expanded="true" />
+            <marker date="1512452888791" expanded="true" signature="4245:4251" ph=" " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Follow/followers.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="52" column="54" lean-forward="false" selection-start-line="52" selection-start-column="54" selection-end-line="53" selection-end-column="69" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#foreach#0;n#div#0;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#2933#2939#0" expanded="true" />
+            <element signature="e#3180#3186#0" expanded="true" />
+            <marker date="1512453447964" expanded="true" signature="4707:4713" ph=" " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Follow/search_user.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="62" column="69" lean-forward="false" selection-start-line="62" selection-start-column="69" selection-end-line="62" selection-end-column="69" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#foreach#0;n#div#0;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#3347#3353#0" expanded="true" />
+            <element signature="e#3594#3600#0" expanded="true" />
+            <marker date="1512453970832" expanded="true" signature="5127:5133" ph=" " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Application/Home/Controller/FollowController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="65" column="25" lean-forward="false" selection-start-line="65" selection-start-column="25" selection-end-line="65" selection-end-column="25" />
+        <state relative-caret-position="311">
+          <caret line="67" column="29" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="85" selection-end-column="1" />
           <folding>
             <element signature="e#6#90#0#PHP" expanded="true" />
-            <marker date="1512403597794" expanded="true" signature="273:447" ph="SELECT u.use... follow" />
-            <marker date="1512403597794" expanded="true" signature="273:502" ph="SELECT u.use... follow" />
-            <marker date="1512403597794" expanded="true" signature="973:1330" ph="SELECT u.use... follow" />
-            <marker date="1512403597794" expanded="true" signature="973:1334" ph="SELECT u.use... follow" />
-            <marker date="1512403597794" expanded="true" signature="1040:1229" ph="SELECT f1.ui... follow" />
+            <marker date="1512453950665" expanded="true" signature="273:447" ph="SELECT u.use... follow" />
+            <marker date="1512453950665" expanded="true" signature="273:502" ph="SELECT u.use... follow" />
+            <marker date="1512453950665" expanded="true" signature="973:1330" ph="SELECT u.use... follow" />
+            <marker date="1512453950665" expanded="true" signature="973:1334" ph="SELECT u.use... follow" />
+            <marker date="1512453950665" expanded="true" signature="1040:1229" ph="SELECT f1.ui... follow" />
+            <marker date="1512453950665" expanded="true" signature="1901:2200" ph="SELECT * , i... id" />
+            <marker date="1512453950665" expanded="true" signature="1901:2216" ph="SELECT * , i... id" />
+            <marker date="1512453950665" expanded="true" signature="1969:2114" ph="SELECT u.id,... user" />
+            <marker date="1512453950665" expanded="true" signature="1969:2116" ph="SELECT u.id,... user" />
+            <marker date="1512453950665" expanded="true" signature="1969:2140" ph="SELECT u.id,... user" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/static/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="1419" column="16" lean-forward="false" selection-start-line="1419" selection-start-column="16" selection-end-line="1419" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Social/public_note.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Note/note.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-173">
+          <caret line="84" column="80" lean-forward="false" selection-start-line="84" selection-start-column="80" selection-end-line="84" selection-end-column="80" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/77fedb1b-25f4-4127-b5bc-6b4cf6e785d1/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="36" lean-forward="false" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/154647e2/77fedb1b-25f4-4127-b5bc-6b4cf6e785d1/main.share">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/Home/Controller/NoteController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="212" column="25" lean-forward="false" selection-start-line="212" selection-start-column="25" selection-end-line="212" selection-end-column="25" />
+        <state relative-caret-position="-1194">
+          <caret line="131" column="32" lean-forward="false" selection-start-line="131" selection-start-column="32" selection-end-line="131" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Runtime/Data/first.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="404">
+          <caret line="64" column="37" lean-forward="true" selection-start-line="64" selection-start-column="37" selection-end-line="64" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Social/my_share.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Note/note_by_book.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" column="26" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Public/user_menu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="59" column="36" lean-forward="false" selection-start-line="59" selection-start-column="36" selection-end-line="59" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/154647e2/77fedb1b-25f4-4127-b5bc-6b4cf6e785d1/main.notebook">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/154647e2/77fedb1b-25f4-4127-b5bc-6b4cf6e785d1/main.note">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/Controller/SocialController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="17" column="26" lean-forward="false" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Social/other_share.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-330">
+          <caret line="36" column="43" lean-forward="false" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
           <folding />
         </state>
       </provider>

@@ -131,7 +131,10 @@
         <!-- sidebar menu start-->
         <ul class="sidebar-menu" id="nav-accordion">
 
-            <p class="centered"><a href="/index.php/Home/HomePage/../HomePage/profile"><img src="<?php echo ($user["img_url"]); ?>" class="img-circle" width="60"></a></p>
+            <p class="centered"><a href="/index.php/Home/HomePage/../HomePage/profile">
+                <img src="/upload/profile/profile<?php echo ($user["id"]); ?>.jpg" class="img-circle" width="60" height="60"
+                     onerror="this.src='/upload/profile/profile-default.jpg'">
+            </a></p>
             <h5 class="centered"><?php echo ($user["username"]); ?></h5>
 
             <li class="mt">
@@ -167,16 +170,18 @@
                 <ul class="sub">
                     <li  class="[following]"><a href="/index.php/Home/HomePage/../Follow/following">我 的 关 注</a></li>
                     <li  class="[followers]"><a href="/index.php/Home/HomePage/../Follow/followers">谁 关 注 我</a></li>
-                    <li  class="[my_share]"><a href="/index.php/Home/HomePage/myShare">他 人 分 析</a></li>
+                    <li  class="[search]"><a href="/index.php/Home/HomePage/../Follow/searchUser">用 户 搜 索</a></li>
                 </ul>
             </li>
             <li class="sub-menu">
                 <a href="javascript:;" >
                     <i class="fa fa-tasks"></i>
-                    <span>社区</span>
+                    <span>社 区</span>
                 </a>
                 <ul class="sub">
-                    <li><a  href="../Index/form_component.html">lalala</a></li>
+                    <li><a  href="/index.php/Home/HomePage/../Social/publicNote"> 笔 记 圈</a></li>
+                    <li><a  href="/index.php/Home/HomePage/../Social/otherShare"> 好 友 分 享</a></li>
+                    <li><a  href="/index.php/Home/HomePage/../Social/myShare"> 我 的 分 享</a></li>
                 </ul>
             </li>
             <li class="sub-menu">
