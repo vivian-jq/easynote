@@ -13,15 +13,12 @@
     <link href="_CSS_/bootstrap.css" rel="stylesheet">
     <!--external css-->
     <link href="_PUBLIC_/font-awesome/css/font-awesome.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="_CSS_/zabuto_calendar.css">
     <link rel="stylesheet" type="text/css" href="_JS_/gritter/css/jquery.gritter.css" />
     <link rel="stylesheet" type="text/css" href="_PUBLIC_/lineicons/style.css">
 
     <!-- Custom styles for this template -->
     <link href="_CSS_/style.css" rel="stylesheet">
     <link href="_CSS_/style-responsive.css" rel="stylesheet">
-
-    <script src="_JS_/chart-master/Chart.js"></script>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -53,13 +50,13 @@
                                 <div class="share-panel pn">
                                     <div class="share-panel-header" style="display: inline-block">
                                         <div class="photo">
-                                            <img src="/upload/profile/profile{$share.uid}.jpg" width="100px" style="margin-left: -20px"
+                                            <img src="/upload/profile/profile{$share.uid_to}.jpg" width="100px" style="margin-left: -20px"
                                                  onerror="this.src='/upload/profile/profile-default.jpg'">
                                         </div>
 
                                         <div class="details" style="float:left">
                                             <p>
-                                                我向 <a href="#">{$share.username}</a> 分享了一篇笔记：<br>
+                                                <a href="#">{$share.username}</a> 收到了我分享的一篇笔记：<br>
                                                 <i style="font-size: 16px">&nbsp;“{$share.reason}”</i></p>
                                         </div>
 
@@ -83,10 +80,10 @@
 
                                     <div class="share-panel-footer">
                                         <p style="float: left;color: #818182;position: absolute;bottom: 5px">分享时间：{$share.modify_time}</p>
-                                        <div class="share-panel-operator" style="float: right;position:absolute;right: 25px">
-                                            <button class="btn btn-warning"><i class="fa fa-heart"></i>&nbsp;{$share.votes}</button>
-                                            <button class="btn btn-warning"><i class="fa fa-cog">&nbsp;权限</i></button>
-                                            <button class="btn btn-warning">阅读原文&nbsp;<i class="fa fa-angle-right"></i></button>
+                                        <div id="{$share.id}" class="share-panel-operator">
+                                            <button name="{$share.nid}" class="btn btn-warning" onclick="vote(this)"><i class="fa fa-heart"></i>&nbsp;{$share.votes}</button>
+                                            <button name="{$share.share_stat}" class="btn btn-warning" onclick="modify_auth(this)"><i class="fa fa-cog">&nbsp;权限</i></button>
+                                            <button name="{$share.id}" class="btn btn-warning" onclick="more(this)">阅读原文&nbsp;<i class="fa fa-angle-right"></i></button>
                                         </div>
                                     </div>
 
@@ -133,6 +130,57 @@
             </div>
 
 
+            <!-- Modal -->
+            <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="shareModal" class="modal fade">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title"> 修 改 分 享 权 限 </h4>
+                        </div>
+                        <form action="__URL__/modifyAuth" method="post">
+                            <div class="modal-body">
+                                <p>请选择TA的权限</p>
+
+                                <input type="hidden" name="sid" value="">
+
+                                <div class="radio">
+                                    <label>
+                                        <input id="radio4" type="radio" name="share_stat" value="4">
+                                        可以编辑、分享
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input id="radio3" type="radio" name="share_stat" value="3">
+                                        可以阅读、分享
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input id="radio2" type="radio" name="share_stat" value="2">
+                                        可以编辑，不可以分享
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input id="radio1" type="radio" name="share_stat" value="1">
+                                        可以阅读，不可以编辑、分享
+                                    </label>
+                                </div>
+
+                            </div>
+                            <div class="modal-footer">
+                                <button data-dismiss="modal" class="btn btn-default" type="button">取 消</button>
+                                <button class="btn btn-theme" type="submit">确 认</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- modal -->
+
+
         </section>
     </section>
 
@@ -157,6 +205,28 @@
 
 <script>
 
+    function modify_auth(node) {
+        var sid = node.parentNode.id;
+        var stat = node.name;
+        document.getElementById('radio'+stat).setAttribute("checked","");
+        document.getElementsByName('sid').item(0).setAttribute("value",sid);
+
+        $('#shareModal').modal('show')
+    }
+
+    function vote(node) {
+        $.post("__URL__/vote",
+            {
+                nid:node.name
+            },
+            function(data,status){
+                node.innerHTML='<i class="fa fa-heart"></i>&nbsp;'+data;
+            });
+    }
+
+    function more(node) {
+        window.location="__URL__/share/sid/"+node.name;
+    }
 </script>
 
 

@@ -1304,6 +1304,12 @@ PANELS CONFIGURATIONS
     background-color: #FFFFFF;
 }
 
+.share-panel-full{
+    padding: 10px;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
 .share-panel-header .photo{
     width:60px;
     height:60px;
@@ -1325,6 +1331,15 @@ PANELS CONFIGURATIONS
     text-align: right
 }
 
+.share-panel-header i{
+    color: #000000;
+    cursor: pointer;
+}
+
+.share-panel-header i:hover{
+    color: #f0ad4e;
+}
+
 .share-panel-content{
     display:inline-block;
     padding: 10px;
@@ -1336,9 +1351,27 @@ PANELS CONFIGURATIONS
     border-radius: 10px 10px 0 0;
 }
 
-.share-panel-footer{
+.share-panel-content-full{
     display:inline-block;
     margin-top: 10px;
+    padding: 10px;
+    background-color: #F1F1F1;
+    width: 100%;
+    overflow: hidden;
+    border: 2px dashed;
+    border-radius: 10px 10px 0 0;
+}
+
+.share-panel-footer{
+    display:inline-block;
+    margin-top: 50px;
+}
+
+.share-panel-operator{
+    float: right;
+    position:absolute;
+    right: 25px;
+    bottom: 15px
 }
 
 /* Instagram Panel*/

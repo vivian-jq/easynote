@@ -108,12 +108,18 @@ class NoteController extends Controller
         $note = M('note');
         $condition['id']=$nid;
         $data = $note->where($condition)->select();
-        if(count($data)==0||($data[0]['note_stat']==0&&$data[0]['uid']!=session('id'))){
+        if(count($data)==0||$data[0]['uid']!=session('id')){
             $this->redirect('index/warning');
         }
         $data[0]['stat']=($data[0]['note_stat']==1)?'公开':'私有';
         $data[0]['content']=htmlspecialchars_decode($data[0]['content']);
-        $this->assign(['user' => $this->getUser(),'note'=>$data[0]]);
+
+        $Model = new \Think\Model();
+        $sql="SELECT c.*,u.username
+FROM comment c, user u 
+WHERE u.id=c.uid AND c.nid=".$nid.";";
+        $cmts = $Model->query($sql);
+        $this->assign(['user' => $this->getUser(),'note'=>$data[0],'comments'=>$cmts]);
         $this->display('note');
     }
 

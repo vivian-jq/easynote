@@ -63,6 +63,35 @@
                 <div class="note-content-full">{$note.content}</div>
             </div>
 
+            <h3 style="font-size: 18px"><i class="fa fa-comments-o"></i> 评 论 区</h3>
+
+            <div class="col-lg-12">
+                <div class="share-panel-full">
+                    <php>if(count($comments)==0){echo '<p style="text-align: center;font-size: 18px">暂无评论</p>';}</php>
+
+                    <foreach name="comments" item="cmt">
+                        <div class="share-panel-header" style="display: inline-block">
+                            <div class="photo">
+                                <img src="/upload/profile/profile{$cmt.uid}.jpg" width="100px" style="margin-left: -20px"
+                                     onerror="this.src='/upload/profile/profile-default.jpg'">
+                            </div>
+
+                            <div class="details" style="float:left;width: 980px">
+                                <p>
+                                    <a href="#">{$cmt.username}</a> 评论了这篇笔记<br>
+                                    <i style="font-size: 16px">&nbsp;“{$cmt.content}”</i></p>
+                            </div>
+
+                            <div class="title" style="position:relative;float: left">
+
+                                <p style="font-style: italic">评论时间：{$cmt.cmt_time}</p>
+
+                            </div>
+                        </div>
+                        <hr>
+                    </foreach>
+                </div>
+            </div><!-- /col-lg-12 -->
 
 
             <!-- Modal -->

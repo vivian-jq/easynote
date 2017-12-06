@@ -72,22 +72,22 @@ DROP TABLE IF EXISTS `vote`;
 CREATE TABLE `vote`
 (
  id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
- uname VARCHAR(25) NOT NULL,
+ uid INTEGER NOT NULL,
  nid INTEGER NOT NULL,
  vote_time datetime NOT NULL
 );
 
-INSERT INTO vote (uname, nid, vote_time) VALUES
- ('share',1,datetime('now'));
-INSERT INTO vote (uname, nid, vote_time) VALUES
- ('admin',1,datetime('now'));
+INSERT INTO vote (uid, nid, vote_time) VALUES
+ (4,5,datetime('now'));
+INSERT INTO vote (uid, nid, vote_time) VALUES
+ (4,2,datetime('now'));
 
 -- ****************************************************************************************************
 DROP TABLE IF EXISTS `comment`;
 CREATE TABLE `comment`
 (
  id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
- uname VARCHAR(25) NOT NULL,
+ uid INTEGER NOT NULL,
  nid INTEGER NOT NULL,
  content VARCHAR(255) NOT NULL,
  cmt_time datetime NOT NULL

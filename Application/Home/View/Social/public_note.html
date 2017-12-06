@@ -91,10 +91,10 @@
 
                                     <div class="share-panel-footer">
                                         <p style="float: left;color: #818182;position: absolute;bottom: 5px">修改时间：{$note.modify_time}</p>
-                                        <div class="share-panel-operator" style="float: right;position:absolute;right: 25px">
-                                            <button class="btn btn-warning"><i class="fa fa-heart"></i>&nbsp;{$note.votes}</button>
-                                            <button class="btn btn-warning"><i class="fa fa-comment">&nbsp;评论</i></button>
-                                            <button class="btn btn-warning">阅读原文&nbsp;<i class="fa fa-angle-right"></i></button>
+                                        <div id="{$note.id}" class="share-panel-operator" style="float: right;position:absolute;right: 25px">
+                                            <button class="btn btn-warning" onclick="vote(this)"><i class="fa fa-heart"></i>&nbsp;{$note.votes}</button>
+                                            <button class="btn btn-warning" onclick="comment(this)"><i class="fa fa-comment">&nbsp;评论</i></button>
+                                            <button class="btn btn-warning" onclick="more(this)">阅读原文&nbsp;<i class="fa fa-angle-right"></i></button>
                                         </div>
                                     </div>
 
@@ -140,6 +140,31 @@
                 </div><!-- /col-lg-3 -->
             </div>
 
+            <!-- Modal -->
+            <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="commentModal" class="modal fade">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title"> 留 下 你 珍 贵 的 评 论 </h4>
+                        </div>
+                        <form action="__URL__/comment" method="post">
+                            <div class="modal-body">
+                                <input type="hidden" name="nid" value="">
+
+                                <input required type="text" name="comment" placeholder="评论内容" class="form-control placeholder-no-fix">
+
+                            </div>
+                            <div class="modal-footer">
+                                <button data-dismiss="modal" class="btn btn-default" type="button">取 消</button>
+                                <button class="btn btn-theme" type="submit">确 认</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- modal -->
+
 
         </section>
     </section>
@@ -164,6 +189,24 @@
 <script src="_JS_/common-scripts.js"></script>
 
 <script>
+    function vote(node) {
+        $.post("__URL__/vote",
+            {
+                nid:node.parentNode.id
+            },
+            function(data,status){
+                node.innerHTML='<i class="fa fa-heart"></i>&nbsp;'+data;
+            });
+    }
+
+    function comment(node) {
+        document.getElementsByName('nid').item(0).setAttribute("value",node.parentNode.id);
+        $('#commentModal').modal('show');
+    }
+
+    function more(node) {
+        window.location="__URL__/note/nid/"+node.parentNode.id;
+    }
 
 </script>
 
