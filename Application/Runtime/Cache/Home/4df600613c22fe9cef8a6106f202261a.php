@@ -47,79 +47,21 @@
     <div class="nav notify-row" id="top_menu">
         <!--  notification start -->
         <ul class="nav top-menu">
-            <!-- inbox dropdown start-->
-            <li id="header_inbox_bar" class="dropdown">
-                <a data-toggle="dropdown" class="dropdown-toggle" href="../HomePage/index.html#">
-                    <i class="fa fa-envelope-o"></i>
-                    <span class="badge bg-theme">5</span>
+            <!--锁屏-->
+            <li>
+                <a href="/index.php/Home/HomePage/../HomePage/lock" title="锁屏">
+                    <i class="fa fa-unlock"></i>
                 </a>
-                <ul class="dropdown-menu extended inbox">
-                    <div class="notify-arrow notify-arrow-green"></div>
-                    <li>
-                        <p class="green">You have 5 new messages</p>
-                    </li>
-                    <li>
-                        <a href="../HomePage/index.html#">
-                            <span class="photo"><img alt="avatar" src="/Public/images/temp/ui-zac.jpg"></span>
-                            <span class="subject">
-                                    <span class="from">Zac Snider</span>
-                                    <span class="time">Just now</span>
-                                    </span>
-                            <span class="message">
-                                        Hi mate, how is everything?
-                                    </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="../HomePage/index.html#">
-                            <span class="photo"><img alt="avatar" src="/Public/images/temp/ui-divya.jpg"></span>
-                            <span class="subject">
-                                    <span class="from">Divya Manian</span>
-                                    <span class="time">40 mins.</span>
-                                    </span>
-                            <span class="message">
-                                     Hi, I need your help with this.
-                                    </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="../HomePage/index.html#">
-                            <span class="photo"><img alt="avatar" src="/Public/images/temp/ui-danro.jpg"></span>
-                            <span class="subject">
-                                    <span class="from">Dan Rogers</span>
-                                    <span class="time">2 hrs.</span>
-                                    </span>
-                            <span class="message">
-                                        Love your new Dashboard.
-                                    </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="../HomePage/index.html#">
-                            <span class="photo"><img alt="avatar" src="/Public/images/temp/ui-sherman.jpg"></span>
-                            <span class="subject">
-                                    <span class="from">Dj Sherman</span>
-                                    <span class="time">4 hrs.</span>
-                                    </span>
-                            <span class="message">
-                                        Please, answer asap.
-                                    </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="../HomePage/index.html#">See all messages</a>
-                    </li>
-                </ul>
             </li>
-            <!-- inbox dropdown end -->
         </ul>
         <!--  notification end -->
     </div>
     <div class="top-menu">
         <ul class="nav pull-right top-menu">
-            <li><a class="logout" href="/index.php/Home/HomePage/../Index/logout">Logout</a></li>
+            <li><a class="logout" href="/index.php/Home/HomePage/../Index/logout">退 出</a></li>
         </ul>
     </div>
+
 </header>
 <!--header end-->
 	<!-- **********************************************************************************************************************************************************
@@ -389,6 +331,33 @@
 					<?php if(count($votes)==0){echo '<p style="text-align: center;padding:10px 0">暂无点赞</p>';} ?>
 				</div><!-- /col-lg-3 -->
 			</div><! --/row -->
+
+
+			<!-- Modal -->
+			<div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="commentModal" class="modal fade">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h4 class="modal-title"> 留 下 你 珍 贵 的 评 论 </h4>
+						</div>
+						<form action="/index.php/Home/HomePage/../Social/comment" method="post">
+							<div class="modal-body">
+								<input type="hidden" name="nid" value="">
+
+								<input required type="text" name="comment" placeholder="评论内容" class="form-control placeholder-no-fix">
+
+							</div>
+							<div class="modal-footer">
+								<button data-dismiss="modal" class="btn btn-default" type="button">取 消</button>
+								<button class="btn btn-theme" type="submit">确 认</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<!-- modal -->
+
 		</section>
 	</section>
 
@@ -465,6 +434,25 @@
 
     function edit_note(node) {
         window.location="/index.php/Home/HomePage/../Note/editNote/nid/"+node.parentNode.id;
+    }
+
+    function vote(node) {
+        $.post("/index.php/Home/HomePage/../Social/vote",
+            {
+                nid:node.name
+            },
+            function(data,status){
+                node.innerHTML='<i class="fa fa-heart"></i>&nbsp;'+data;
+            });
+    }
+
+    function comment(node) {
+        document.getElementsByName('nid').item(0).setAttribute("value",node.name);
+        $('#commentModal').modal('show');
+    }
+
+    function more(node) {
+        window.location="/index.php/Home/HomePage/../Social/share/sid/"+node.name;
     }
 </script>
 

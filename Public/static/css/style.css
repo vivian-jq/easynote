@@ -1,16 +1,8 @@
-/*
-Template Name: DASHGUM FREE - Bootstrap 3.2 Admin Theme
-Template Version: 1.0
-Author: Carlos Alvarez
-Website: http://blacktie.co
-Premium: http://www.gridgum.com
-*/
-
 /* BASIC THEME CONFIGURATION */
 body {
     color: #797979;
 	background: #f2f2f2;
-    font-family: 'Ruda', sans-serif;
+    font-family: Microsoft YaHei ,MicrosoftJhengHei,'Ruda', sans-serif;
     padding: 0px !important;
     margin: 0px !important;
     font-size:13px;
@@ -1424,6 +1416,22 @@ PANELS CONFIGURATIONS
     cursor: pointer;
 }
 
+
+.notebook-operate {
+    text-align: center;
+    padding-top: 15px;
+}
+
+.notebook-operate i {
+    color: #b6b6b6;
+    margin: 0 10px;
+}
+
+.notebook-operate i:hover {
+    color: #424a5d;
+    cursor: pointer;
+}
+
 .note-panel-title{
     text-align: right;
     border-right: solid 5px;
@@ -1493,7 +1501,7 @@ PANELS CONFIGURATIONS
 	border-radius: 100%;
 }
 
-/* Soptify Panel */
+/* Follow Panel */
 .follow-panel {
 	background: no-repeat center top;
 	margin-top: -15px;
@@ -1542,63 +1550,6 @@ PANELS CONFIGURATIONS
 	margin-top: 5px;
 }
 
-/* BLOG PANEL */
-#blog-bg {
-	background: url(../img/blog-bg.jpg) no-repeat center top;
-	margin-top: -15px;
-	background-attachment: relative;
-	background-position: center center;
-	min-height: 150px;
-	width: 100%;
-    -webkit-background-size: 100%;
-    -moz-background-size: 100%;
-    -o-background-size: 100%;
-    background-size: 100%;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-#blog-bg .badge {
-	position: absolute;
-	top: 20px;
-	left: 35px;
-}
-.badge-popular {
-	background: #3498db;
-	width: 70px;
-	height: 70px;
-	line-height: 70px;
-	font-size: 13px;
-	color: #fff;
-	text-align: center;
-	border-radius: 100%;
-}
-.blog-title {
-	background: rgba(0,0,0,0.5);
-	bottom: 100px;
-	padding: 6px;
-	color: white;
-	font-weight: 700;
-	position: absolute;
-	display: block;
-	width: 120px;
-}
-.blog-text {
-	margin-left: 8px;
-	margin-right: 8px;
-	margin-top: 15px;
-	font-size: 12px;
-}
-
-/* Calendar Configuration */
-#calendar {
-	color: white;
-	padding: 0px !important;
-}
-.calendar-month-header {
-	background: #43b1a9;
-}
 
 /* TODO PANEL */
 .steps{
@@ -1666,8 +1617,7 @@ PANELS CONFIGURATIONS
   background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAHCAYAAAA1WQxeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAGFJREFUeNpinHLMhgEHKADia0xQThIQs6JJ9gPxZhYQAcS6QHwDiI8hSYJAC0gBPxDLAvFcIJ6JJJkDxFNBVtgBcQ8Qa6BLghgwN4A4a9ElQYAFSj8C4mwg3o8sCQIAAQYA78QTYqnPZuEAAAAASUVORK5CYII=') no-repeat center center;
 }
 
-/* PROFILE PANELS */
-/* Profile 01*/
+/* NOTEBOOK PANEL*/
 .notebook {
 	background:  no-repeat center top;
 	margin-top: -15px;
@@ -1715,105 +1665,7 @@ PANELS CONFIGURATIONS
 	font-size: 15px;
 }
 
-/* Profile 02*/
-#profile-02 {
-	background: url(../img/profile-02.jpg) no-repeat center top;
-	margin-top: -15px;
-	background-attachment: relative;
-	background-position: center center;
-	min-height: 200px;
-	width: 100%;
-    -webkit-background-size: 100%;
-    -moz-background-size: 100%;
-    -o-background-size: 100%;
-    background-size: 100%;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-#profile-02 .user {
-	padding-top: 40px;
-	text-align: center;
-}
-#profile-02 h4 {
-	color: white;
-	margin:0px;
-	padding-top: 8px;
-}
-.pr2-social a {
-	color: #cdcdcd;
-}
-.pr2-social a:hover {
-	color: #68dff0;
-}
-.pr2-social i {
-	margin-top: 15px;
-	margin-right: 12px;
-	font-size: 20px;
-}
 
-
-/*spark line*/
-.chart {
-    display: inline-block;
-    text-align: center;
-    width: 100%;
-}
-.chart .heading {
-    text-align: left;
-}
-.chart .heading span {
-    display: block;
-}
-.panel.green-chart .chart-tittle {
-    font-size: 16px;
-    padding: 15px;
-    display: inline-block;
-    font-weight:normal;
-    background: #99c262;
-    width: 100%;
-    -webkit-border-radius: 0px 0px 4px 4px;
-    border-radius: 0px 0px 4px 4px;
-}
-#barchart {
-    margin-bottom: -15px;
-    display: inline-block;
-}
-.panel.green-chart .chart-tittle .value {
-    float: right;
-    color: #c0f080;
-}
-.panel.green-chart {
-    background: #a9d96c;
-    color: #fff;
-}
-.panel.terques-chart {
-    background: transparent;
-    color: #797979;
-}
-.panel.terques-chart .chart-tittle .value {
-    float: right;
-    color: #fff;
-}
-.panel.terques-chart .chart-tittle .value a {
-    color: #2f2f2f;
-    font-size: 12px;
-}
-.panel.terques-chart .chart-tittle .value a:hover, .panel.terques-chart .chart-tittle .value a.active {
-    color: #68dff0;
-    font-size: 12px;
-}
-.panel.terques-chart .chart-tittle {
-    font-size: 16px;
-    padding: 15px;
-    display: inline-block;
-    font-weight:normal;
-    background: #39b7ac;
-    width: 100%;
-    -webkit-border-radius: 0px 0px 4px 4px;
-    border-radius: 0px 0px 4px 4px;
-}
 .inline-block {
     display: inline-block;
 }
@@ -1828,28 +1680,7 @@ PANELS CONFIGURATIONS
 
 
 
-/* Calendar Events - Calendar.html*/
-.external-event {
-	cursor: move;
-	display: inline-block !important;
-	margin-bottom: 7px !important;
-	margin-right: 7px !important;
-	padding: 10px;
-}
 
-.drop-after {
-	padding-top: 15px;
-	margin-top: 15px;
-	border-top: 1px solid #ccc;
-}
-
-.fc-state-default, .fc-state-default .fc-button-inner {
-	background: #f2f2f2;
-}
-
-.fc-state-active .fc-button-inner {
-	background: #FFFFFF;
-}
 
 /* Gallery Configuration */
 .photo-wrapper {
@@ -2244,41 +2075,6 @@ label {
     background: #2A3542;
 }
 
-
-/*easy pie chart*/
-.easy-pie-chart {
-    display: inline-block;
-    padding: 30px 0;
-}
-
-.chart-info, .chart-info .increase, .chart-info .decrease {
-    display: inline-block;
-}
-
-.chart-info {
-    width: 100%;
-    margin-bottom:5px;
-}
-
-.chart-position {
-    margin-top: 70px;
-}
-
-.chart-info span {
-    margin: 0 3px;
-}
-
-.chart-info .increase {
-    background: #ff6c60;
-    width: 10px;
-    height: 10px;
-}
-
-.chart-info .decrease {
-    background: #f2f2f2;
-    width: 10px;
-    height: 10px;
-}
 
 .panel-footer.revenue-foot {
     background-color: #e6e7ec;

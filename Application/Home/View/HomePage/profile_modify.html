@@ -54,7 +54,7 @@
                         <div class="col-md-6">
 
 
-                            <h5><i class="fa fa-sort-down"></i> 头 像</h5>
+                            <h5><i class="fa fa-user-circle"></i> 头 像</h5>
 
                             <div id="uploader" class="wu-example">
                                 <div class="queueList">
@@ -79,47 +79,47 @@
                                     </div>
                                     <div class="btns">
 
-                                        <div class="uploadBtn state-pedding">开始上传</div>
+                                        <div class="uploadBtn state-pedding">确认上传</div>
                                     </div>
                                 </div>
                             </div>
 
 
-                            <h5><i class="fa fa-sort-down"></i> 用 户 名</h5>
-                            <input type="text" name="username" value="{$user.username}" class="form-control"  autofocus>
+                            <h5><i class="fa fa-address-card-o"></i> 用 户 名</h5>
+                            <input required type="text" name="username" value="{$user.username}" class="form-control"  autofocus>
                             <br>
 
-                            <h5><i class="fa fa-sort-down"></i> 密 码</h5>
-                            <input type="password" name="password1" class="form-control" placeholder="6-10位字母与数字混合">
+                            <h5><i class="fa fa-lock"></i> 原 密 码</h5>
+                            <input type="password" name="password" class="form-control" placeholder="若无密码修改，可不填">
                             <br>
 
-                            <h5><i class="fa fa-sort-down"></i> 确 认 密 码</h5>
+                            <h5><i class="fa fa-unlock-alt"></i> 密 码</h5>
+                            <input type="password" name="password1" class="form-control" placeholder="若无密码修改，可不填">
+                            <br>
+
+                            <h5><i class="fa fa-unlock-alt"></i> 确 认 密 码</h5>
                             <input type="password" name="password2" class="form-control" placeholder="若无密码修改，可不填">
                             <br>
 
-                            <h5><i class="fa fa-sort-down"></i> 手 机 号</h5>
-                            <input type="text" name="username" value="{$user.tel}" class="form-control" autofocus>
+                            <h5><i class="fa fa-phone"></i> 手 机 号</h5>
+                            <input type="tel" name="tel" value="{$user.tel}" class="form-control" autofocus>
                             <br>
                         </div>
                         <!--第一列-->
 
                         <div class="col-md-6">
-                            <h5><i class="fa fa-sort-down"></i> 邮 箱</h5>
-                            <input type="text" name="username" value="{$user.mailbox}" class="form-control" autofocus>
+                            <h5><i class="fa fa-envelope-o"></i> 邮 箱</h5>
+                            <input type="email" name="mailbox" value="{$user.mailbox}" class="form-control" autofocus>
                             <br>
 
-                            <h5><i class="fa fa-sort-down"></i> 介 绍</h5>
-                            <textarea class="form-control" name="username" value="{$user.introduction}" rows="20" maxlength="150" wrap="hard" placeholder="写点介绍吧~" >{$user.introduction}</textarea>
+                            <h5><i class="fa fa-commenting-o"></i> 介 绍</h5>
+                            <textarea class="form-control" name="introduction" value="{$user.introduction}" rows="20" maxlength="150" wrap="hard" placeholder="写点介绍吧~" >{$user.introduction}</textarea>
                             <br>
 
 
                         </div>
                         <!--第二列-->
                     </div>
-
-                    <button type="button" class="btn btn-theme04 dropdown-toggle" data-toggle="dropdown">
-                        Action <span class="caret"></span>
-                    </button>
 
                     <button class="btn btn-theme" type="submit" > 保 存 </button>
                     <button class="btn btn-warning" type="button" onclick="window.location='__URL__/profile'" > 取 消 </button>

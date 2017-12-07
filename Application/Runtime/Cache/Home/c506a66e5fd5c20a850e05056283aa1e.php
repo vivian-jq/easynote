@@ -44,79 +44,21 @@
     <div class="nav notify-row" id="top_menu">
         <!--  notification start -->
         <ul class="nav top-menu">
-            <!-- inbox dropdown start-->
-            <li id="header_inbox_bar" class="dropdown">
-                <a data-toggle="dropdown" class="dropdown-toggle" href="../HomePage/index.html#">
-                    <i class="fa fa-envelope-o"></i>
-                    <span class="badge bg-theme">5</span>
+            <!--锁屏-->
+            <li>
+                <a href="/index.php/Home/Admin/../HomePage/lock" title="锁屏">
+                    <i class="fa fa-unlock"></i>
                 </a>
-                <ul class="dropdown-menu extended inbox">
-                    <div class="notify-arrow notify-arrow-green"></div>
-                    <li>
-                        <p class="green">You have 5 new messages</p>
-                    </li>
-                    <li>
-                        <a href="../HomePage/index.html#">
-                            <span class="photo"><img alt="avatar" src="/Public/images/temp/ui-zac.jpg"></span>
-                            <span class="subject">
-                                    <span class="from">Zac Snider</span>
-                                    <span class="time">Just now</span>
-                                    </span>
-                            <span class="message">
-                                        Hi mate, how is everything?
-                                    </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="../HomePage/index.html#">
-                            <span class="photo"><img alt="avatar" src="/Public/images/temp/ui-divya.jpg"></span>
-                            <span class="subject">
-                                    <span class="from">Divya Manian</span>
-                                    <span class="time">40 mins.</span>
-                                    </span>
-                            <span class="message">
-                                     Hi, I need your help with this.
-                                    </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="../HomePage/index.html#">
-                            <span class="photo"><img alt="avatar" src="/Public/images/temp/ui-danro.jpg"></span>
-                            <span class="subject">
-                                    <span class="from">Dan Rogers</span>
-                                    <span class="time">2 hrs.</span>
-                                    </span>
-                            <span class="message">
-                                        Love your new Dashboard.
-                                    </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="../HomePage/index.html#">
-                            <span class="photo"><img alt="avatar" src="/Public/images/temp/ui-sherman.jpg"></span>
-                            <span class="subject">
-                                    <span class="from">Dj Sherman</span>
-                                    <span class="time">4 hrs.</span>
-                                    </span>
-                            <span class="message">
-                                        Please, answer asap.
-                                    </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="../HomePage/index.html#">See all messages</a>
-                    </li>
-                </ul>
             </li>
-            <!-- inbox dropdown end -->
         </ul>
         <!--  notification end -->
     </div>
     <div class="top-menu">
         <ul class="nav pull-right top-menu">
-            <li><a class="logout" href="/index.php/Home/Admin/logout">Logout</a></li>
+            <li><a class="logout" href="/index.php/Home/Admin/../Index/logout">退 出</a></li>
         </ul>
     </div>
+
 </header>
 <!--header end-->
     <!-- **********************************************************************************************************************************************************
@@ -133,32 +75,19 @@
 
             <!--photo end-->
 
-
-            <li class="sub-menu">
-                <a class="[manager]" href="javascript:;" >
-                    <i class="fa fa-cogs"></i>
-                    <span>成 员 管 理</span>
+            <li class="mt">
+                <a class=[user_manager] href="/index.php/Home/Admin/userManager">
+                    <i class="fa fa-home"></i>
+                    <span>用 户 管 理</span>
                 </a>
-                <ul class="sub">
-                    <li class="[user_manager]"><a  href="/index.php/Home/Admin/userManager">用 户</a></li>
-                    <li class="[admin_manager]"><a  href="/index.php/Home/Admin/adminManager">管 理 员</a></li>
-                </ul>
             </li>
-            <!--user end-->
 
-
-            <li class="sub-menu">
-                <a class="active" href="javascript:;" >
-                    <i class="fa fa-envelope"></i>
-                    <span>邮 件 审 批</span>
+            <li class="mt">
+                <a class=[admin_manager] href="/index.php/Home/Admin/adminManager">
+                    <i class="fa fa-home"></i>
+                    <span>管 理 员 管 理</span>
                 </a>
-                <ul class="sub">
-                    <li class="active"><a  href="/index.php/Home/Admin/allEmails">全 部 邮 件</a></li>
-                    <li class="[unread_emails]"><a  href="/index.php/Home/Admin/unReadEmails">未 读 邮 件</a></li>
-                    <li class="[read_emails]"><a  href="/index.php/Home/Admin/readEmails">已 读 邮 件</a></li>
-                </ul>
             </li>
-            <!--email end-->
 
         </ul>
         <!-- sidebar menu end-->

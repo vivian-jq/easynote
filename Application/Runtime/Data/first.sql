@@ -3,19 +3,19 @@ CREATE TABLE user
 (
  id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
  username VARCHAR(25) DEFAULT '',
- password TINYTEXT,
- tel INT(11) DEFAULT NULL,
- exp INT(11) NOT NULL,
- introduction TEXT DEFAULT NULL,
- mailbox TINYTEXT DEFAULT NULL
+ password TINYTEXT NOT NULL ,
+ tel INT(11) DEFAULT NULL ,
+ introduction TEXT DEFAULT '',
+ mailbox TINYTEXT DEFAULT '',
+ auth tinyint(1) NOT NULL DEFAULT '1'
 );
 
-INSERT INTO user ( username, password, tel, exp, introduction, mailbox)
-VALUES ('test','098f6bcd4621d373cade4e832627b4f6',15151515151,10,'hello world','1818181881@qq.com');
-INSERT INTO user ( username, password, tel, exp, introduction, mailbox)
-VALUES ('admin','21232f297a57a5a743894a0e4a801fc3',15151515151,10,'hello admin','admin81881@qq.com');
-INSERT INTO user ( username, password, tel, exp, introduction, mailbox)
-VALUES ('share','098f6bcd4621d373cade4e832627b4f6',15151515151,10,'hello world','18232381881@qq.com');
+INSERT INTO user ( username, password, tel, introduction, mailbox)
+VALUES ('test','098f6bcd4621d373cade4e832627b4f6',15151515151,'hello world','1818181881@qq.com');
+INSERT INTO user ( username, password, tel, introduction, mailbox)
+VALUES ('admin','21232f297a57a5a743894a0e4a801fc3',15151515151,'hello admin','admin81881@qq.com');
+INSERT INTO user ( username, password, tel, introduction, mailbox)
+VALUES ('share','098f6bcd4621d373cade4e832627b4f6',15151515151,'hello world','18232381881@qq.com');
 
 -- ****************************************************************************************************
 DROP TABLE IF EXISTS `notebook`;

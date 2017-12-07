@@ -101,6 +101,7 @@ FROM comment c, user u
 WHERE u.id=c.uid AND c.nid=".$nid.";";
         $cmts = $Model->query($sql);
         $data[0]['share_stat']=$stat;
+        $data[0]['nid']=$nid;
         $this->assign(['user' => $this->getUser(),'share'=>$data[0], 'comments'=>$cmts]);
         $this->display('share');
     }

@@ -244,20 +244,21 @@
       <DataType>INT(11)|0</DataType>
       <DefaultExpression>NULL</DefaultExpression>
     </column>
-    <column id="62" parent="13" name="exp">
+    <column id="62" parent="13" name="introduction">
       <Position>4</Position>
-      <DataType>INT(11)|0</DataType>
-      <DefaultExpression>0</DefaultExpression>
-    </column>
-    <column id="63" parent="13" name="introduction">
-      <Position>5</Position>
       <DataType>TEXT|0</DataType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
     </column>
-    <column id="64" parent="13" name="mailbox">
-      <Position>6</Position>
+    <column id="63" parent="13" name="mailbox">
+      <Position>5</Position>
       <DataType>TINYTEXT|0</DataType>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="64" parent="13" name="auth">
+      <Position>6</Position>
+      <DataType>TINYINT|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>1</DefaultExpression>
     </column>
     <key id="65" parent="13">
       <ColNames>id</ColNames>

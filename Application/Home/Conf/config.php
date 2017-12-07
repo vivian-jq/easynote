@@ -9,5 +9,6 @@ return array(
         '_CSS_'     => '/Public/static/css',
         '_IMG_'     => '/Public/images',
         '_PUBLIC_' => '/Public/static'
-    )
+    ),
+    'LOG_RECORD' => false
 );

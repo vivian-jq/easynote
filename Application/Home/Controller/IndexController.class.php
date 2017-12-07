@@ -52,7 +52,7 @@ class IndexController extends Controller {
         if($data){
             if($data[0]['password']==md5($password)){
                 session('id',$data[0]['id']);
-                if($username=='admin') {
+                if($data[0]['auth']>1) {
                     $this->redirect('Admin/index');
                 }
                 $this->redirect('HomePage/index');

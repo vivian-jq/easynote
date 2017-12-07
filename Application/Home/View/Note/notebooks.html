@@ -59,16 +59,17 @@
                         <php>$book=$books[$i];</php>
                         <! -- NOTEBOOK PANEL -->
                         <div class="col-lg-4 col-md-4 col-sm-4 mb">
-                            <div class="content-panel pn">
+                            <div class="content-panel pn" id="{$book.id}">
                                 <div class="notebook" style="background-image: url(_IMG_/my/notebook.jpg)">
                                     <h3>{$book.title}</h3>
                                     <h6>创建时间：{$book.create_time}</h6>
                                 </div>
-                                <div class="notebook-more centered" id="{$book.id}" onclick="more(this)">
+                                <div class="notebook-more centered" onclick="more(this)">
                                     <p>查 看 所 有 笔 记</p>
                                 </div>
-                                <div class="centered">
-                                    <h6>修改时间：{$book.modify_time}</h6>
+                                <div class="notebook-operate">
+                                    <i class="fa fa-edit fa-2x" onclick="edit_book(this)"></i>
+                                    <i class="fa fa-trash-o fa-2x" onclick="delete_book(this)"></i>
                                 </div>
                             </div><! --/content-panel -->
                         </div><! --/col-md-4 -->
@@ -86,6 +87,33 @@
                             </div>
                         </form>
                     </div><!-- /col-md-4 -->
+                </div>
+            </div>
+
+            <!-- Modal -->
+            <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="titleModal" class="modal fade">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title"> 修 改 笔 记 本 名 称 </h4>
+                        </div>
+                        <form action="__URL__/updateBook" method="post">
+                            <div class="modal-body">
+                                <input type="hidden" name="id">
+                                <p>请输入新的笔记本名称：</p>
+                                <input required type="text" name="title" class="form-control" placeholder="名 称">
+
+                            </div>
+                            <div class="modal-footer">
+                                <button data-dismiss="modal" class="btn btn-default" type="button">取 消</button>
+                                <button id="share-button" class="btn btn-theme" type="submit">确 认</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- modal -->
 
 
         </section>
@@ -112,7 +140,7 @@
 
 <script>
     function more(node) {
-        window.location.href="__URL__/notebook/bid/"+node.id;
+        window.location.href="__URL__/notebook/bid/"+node.parentNode.id;
     }
 
     function modify() {
@@ -125,6 +153,18 @@
     function cancel() {
         document.getElementById("change-part").innerHTML=
             "<p>再建一个笔记本吧~</p>";
+    }
+
+    function delete_book(node) {
+        if(window.confirm("删除是不可恢复的，你确认要删除这本笔记吗？")){
+            window.location.href="__URL__/deleteBook/bid/"+node.parentNode.parentNode.id;
+        }
+
+    }
+
+    function edit_book(node) {
+        document.getElementsByName('id').item(0).setAttribute('value',node.parentNode.parentNode.id);
+        $('#titleModal').modal('show');
     }
 
 </script>

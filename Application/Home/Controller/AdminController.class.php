@@ -11,28 +11,32 @@ use Think\Controller;
 
 class AdminController extends Controller
 {
-    public function index($id){
+    public function index(){
 
-        return $this->display();
-    }
-
-    public function allEmails(){
-        return $this->display('all_emails');
-    }
-
-    public function unReadEmails(){
-        return $this->display('unread_emails');
-    }
-
-    public function readEmails(){
-        return $this->display('read_emails');
+        $this->userManager();
     }
 
     public function userManager(){
-        return $this->display('user_manager');
+        $this->assign(['user' => $this->getUser()]);
+        return $this->display('users_manager');
     }
 
     public function adminManager(){
+
+        $this->assign(['user' => $this->getUser()]);
         return $this->display('admin_manager');
+    }
+
+
+    private function getUser(){
+        $id = session('id');
+        if($id==0)
+            return $this->redirect("Index/index");
+        $User = M('User');
+        $condition['id'] = $id;
+        $data = ($User->where($condition)->select());
+
+        $user = $data[0];
+        return $user;
     }
 }

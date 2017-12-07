@@ -58,9 +58,27 @@ class NoteController extends Controller
         $notebook = M('notebook');
         $notebook->add($data);
         $this->noteByBook();
+    }
 
+    public function updateBook(){
+        $book = M('notebook');
+        $condition['id']=I('post.id');
+        $data['title']=I('post.title');
+        $data['modify_time']=date('Y-m-d H:i:s',time());
 
+        $book->where($condition)->save($data);
+        $this->noteByBook();
+    }
 
+    public function deleteBook($bid){
+        $book = M('notebook');
+        $condition['id']=$bid;
+        $data = $book->where($condition)->select();
+        if($bid==''||count($data)==0||$data[0]['uid']!=session('id')){
+            $this->redirect('index/warning');
+        }
+        $book->where($condition)->delete();
+        $this->noteByBook();
     }
 
     public function noteByBook($title=""){
@@ -182,9 +200,10 @@ WHERE u.id=c.uid AND c.nid=".$nid.";";
         }
     }
 
-    public function noteByTime(){
+    public function noteByTime($title=""){
         $note = M('note');
         $condition['uid']=session('id');
+        $condition['title']=array('like','%'.$title.'%');
         $data=($note->where($condition)->order('modify_time desc')->select());
 
         $this->assign(['user' => $this->getUser(),'notes'=>$data]);
@@ -234,6 +253,11 @@ WHERE u.id=c.uid AND c.nid=".$nid.";";
     public function searchByTag(){
         $tag=I('post.tag');
         $this->noteByTag($tag);
+    }
+
+    public function searchByTitle(){
+        $title=I('post.title');
+        $this->noteByTime($title);
     }
 
     private function getUser(){

@@ -7,37 +7,27 @@
         <!-- sidebar menu start-->
         <ul class="sidebar-menu" id="nav-accordion">
 
-            <p class="centered"><a href="profile.html"><img src="_IMG_/temp/ui-sam.jpg" class="img-circle" width="60"></a></p>
-            <h5 class="centered">Marcel Newman</h5>
+            <p class="centered"><a href="__URL__/../HomePage/profile">
+                <img src="__ROOT__/upload/profile/profile{$user.id}.jpg" class="img-circle" width="60" height="60"
+                     onerror="this.src='__ROOT__/upload/profile/profile-default.jpg'">
+            </a></p>
+            <h5 class="centered">{$user.username}</h5>
 
             <!--photo end-->
 
-
-            <li class="sub-menu">
-                <a class="[manager]" href="javascript:;" >
-                    <i class="fa fa-cogs"></i>
-                    <span>成 员 管 理</span>
+            <li class="mt">
+                <a class=[user_manager] href="__URL__/userManager">
+                    <i class="fa fa-home"></i>
+                    <span>用 户 管 理</span>
                 </a>
-                <ul class="sub">
-                    <li class="[user_manager]"><a  href="__URL__/userManager">用 户</a></li>
-                    <li class="[admin_manager]"><a  href="__URL__/adminManager">管 理 员</a></li>
-                </ul>
             </li>
-            <!--user end-->
 
-
-            <li class="sub-menu">
-                <a class="[email]" href="javascript:;" >
-                    <i class="fa fa-envelope"></i>
-                    <span>邮 件 审 批</span>
+            <li class="mt">
+                <a class=[admin_manager] href="__URL__/adminManager">
+                    <i class="fa fa-home"></i>
+                    <span>管 理 员 管 理</span>
                 </a>
-                <ul class="sub">
-                    <li class="[all_emails]"><a  href="__URL__/allEmails">全 部 邮 件</a></li>
-                    <li class="[unread_emails]"><a  href="__URL__/unReadEmails">未 读 邮 件</a></li>
-                    <li class="[read_emails]"><a  href="__URL__/readEmails">已 读 邮 件</a></li>
-                </ul>
             </li>
-            <!--email end-->
 
         </ul>
         <!-- sidebar menu end-->

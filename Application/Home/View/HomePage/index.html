@@ -237,6 +237,33 @@
 					<php>if(count($votes)==0){echo '<p style="text-align: center;padding:10px 0">暂无点赞</p>';}</php>
 				</div><!-- /col-lg-3 -->
 			</div><! --/row -->
+
+
+			<!-- Modal -->
+			<div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="commentModal" class="modal fade">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h4 class="modal-title"> 留 下 你 珍 贵 的 评 论 </h4>
+						</div>
+						<form action="__URL__/../Social/comment" method="post">
+							<div class="modal-body">
+								<input type="hidden" name="nid" value="">
+
+								<input required type="text" name="comment" placeholder="评论内容" class="form-control placeholder-no-fix">
+
+							</div>
+							<div class="modal-footer">
+								<button data-dismiss="modal" class="btn btn-default" type="button">取 消</button>
+								<button class="btn btn-theme" type="submit">确 认</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<!-- modal -->
+
 		</section>
 	</section>
 
@@ -304,6 +331,25 @@
 
     function edit_note(node) {
         window.location="__URL__/../Note/editNote/nid/"+node.parentNode.id;
+    }
+
+    function vote(node) {
+        $.post("__URL__/../Social/vote",
+            {
+                nid:node.name
+            },
+            function(data,status){
+                node.innerHTML='<i class="fa fa-heart"></i>&nbsp;'+data;
+            });
+    }
+
+    function comment(node) {
+        document.getElementsByName('nid').item(0).setAttribute("value",node.name);
+        $('#commentModal').modal('show');
+    }
+
+    function more(node) {
+        window.location="__URL__/../Social/share/sid/"+node.name;
     }
 </script>
 

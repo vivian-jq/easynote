@@ -44,6 +44,14 @@
         <section class="wrapper site-min-height">
 
             <div class="col-lg-12 main-chart">
+
+                <form action="__URL__/searchByTitle" method="post">
+                    <div class="col-sm-11">
+                        <input type="text" name="title" class="form-control round-form" placeholder="输入待查找的关键词">
+                    </div>
+                    <button type="submit" class="btn btn-round btn-info"><i class="fa fa-search"></i></button>
+                </form>
+
                 <div class="row">
                     <php>$date=date("Y-m-d",strtotime($notes[0]['modify_time']));
                         echo '<h3><i class="fa fa-angle-right"></i> '.$date.'</h3>';</php>

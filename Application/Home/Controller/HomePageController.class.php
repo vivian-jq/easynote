@@ -69,19 +69,66 @@ ORDER BY v.vote_time LIMIT 5;";
     }
 
     public function saveProfile(){
-//        return $this->display('profile');
+        $user = M('user');
+        $condition['id']=session('id');
+
+        $data['username']=I('post.username');
+        $password_old=I('post.password');
+        $data['tel']=intval(I('post.tel'));
+        $data['mailbox']=I('post.mailbox');
+        $data['introduction']=I('post.introduction');
+
+        if($password_old==''){
+            $user->where($condition)->save($data);
+            $this->success('更新成功','profile',1);
+        }else if(I('post.password1')==I('post.password2')){
+            if($user->where($condition)->select()[0]['password']==md5($password_old)){
+                $data['password']=md5(I('post.password1'));
+                $user->where($condition)->save($data);
+                $this->success('更新成功','profile',1);
+            }else{
+                $this->error('原密码错误，更新失败','javascript:history.back(-1);',1);
+            }
+
+        }else{
+            $this->error('两次密码不一致，更新失败','javascript:history.back(-1);',1);
+        }
     }
 
     public function profile(){
         $this->assign(['user' => $this->getUser()]);
-        return $this->display('profile');
+        $this->display('profile');
     }
 
     public function profileModify(){
         $this->assign(['user' => $this->getUser()]);
-        return $this->display('profile_modify');
+        $this->display('profile_modify');
     }
-//$user['img_url'] = "/upload/profile".$id.".jpg";
+
+    public function lock(){
+        session('uid',session('id'));
+        session('id',0);
+        $this->assign(['uid' => session('uid')]);
+        $this->display('lock_screen');
+    }
+
+    public function unlock(){
+        $user = M('User');
+        $condition['id'] = I('post.id');
+        $condition['password']=md5(I('post.password'));
+        $data = ($user->where($condition)->select());
+
+        if(count($data)==0){
+            $this->error('密码错误');
+        }else{
+            session('id',I('post.id'));
+            if($data[0]['auth']>1){
+                $this->redirect('Admin/index');
+            }else{
+                $this->index();
+            }
+        }
+    }
 
     private function getUser(){
         $id = session('id');
