@@ -112,8 +112,8 @@
 
                             <div class="details" style="float:left">
                                 <p>
-                                    <a href="#">{$cmt.username}</a> 评论了这篇笔记<br>
-                                    <i style="font-size: 16px">&nbsp;“{$cmt.content}”</i></p>
+                                    <a href="#">{$cmt.username}</a> 评论了这篇笔记</p>
+                                <p style="font-size: 16px;font-style: italic;">&nbsp;“{$cmt.content}”</p>
                             </div>
 
                             <div class="title" >
@@ -152,6 +152,64 @@
             </div>
             <!-- modal -->
 
+            <!-- Modal -->
+            <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="shareModal" class="modal fade">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title"> 分 享 </h4>
+                        </div>
+                        <form action="__URL__/../Note/shareNote" method="post">
+                            <div class="modal-body">
+                                <p>请输入TA的ID：</p>
+                                <input type="text" name="uid" class="form-control" onchange="validate(this)">
+
+                                <br>
+                                <p>请输入分享理由:</p>
+                                <input type="text" name="reason" value="快来看看吧" autocomplete="off"
+                                       class="form-control placeholder-no-fix">
+                                <input type="hidden" name="nid" value="{$note.id}">
+
+                                <br>
+                                <p>请选择TA的权限</p>
+
+                                <div class="radio">
+                                    <label>
+                                        <input id="radio4" type="radio" name="share_stat" value="4">
+                                        可以编辑、分享
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input id="radio3" type="radio" name="share_stat" value="3" checked>
+                                        可以阅读、分享
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input id="radio2" type="radio" name="share_stat" value="2">
+                                        可以编辑，不可以分享
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input id="radio1" type="radio" name="share_stat" value="1">
+                                        可以阅读，不可以编辑、分享
+                                    </label>
+                                </div>
+
+                            </div>
+                            <div class="modal-footer">
+                                <button data-dismiss="modal" class="btn btn-default" type="button">取 消</button>
+                                <button disabled id="share-button" class="btn btn-theme" type="submit">分 享</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- modal -->
+
 
         </section>
     </section>
@@ -176,6 +234,8 @@
 <script src="_JS_/common-scripts.js"></script>
 
 <script>
+
+
     function vote(node) {
         $.post("__URL__/vote",
             {
@@ -191,9 +251,39 @@
         $('#commentModal').modal('show');
     }
 
+    function edit_note() {
+        window.location="__URL__/editNote/nid/"+{$share.nid};
+    }
+
+    function share_note() {
+        var stat = {$share.share_stat};
+        if(stat==3){
+            document.getElementById('radio4').setAttribute("disabled","");
+            document.getElementById('radio2').setAttribute("disabled","");
+        }
+        $('#shareModal').modal('show')
+    }
+
+    function validate(node) {
+        var button = document.getElementById("share-button");
+        if(node.value==""){
+            button.setAttribute("disabled","true");
+        }
+        else{
+            $.post("__URL__/../Note/validate",
+                {
+                    uid:node.value
+                },
+                function(data,status){
+                    if(data=="true")
+                        button.removeAttribute("disabled");
+                    else{
+                        alert("该用户不存在")
+                        button.setAttribute("disabled","true");
+                    }
+                });
+
+        }
+    }
+
 </script>
-
-
-</body>
-</html>
-

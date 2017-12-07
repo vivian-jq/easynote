@@ -41,104 +41,66 @@
     <!--main content start-->
     <section id="main-content">
         <section class="wrapper site-min-height">
-            <div class="row">
-                <div class="col-lg-9 main-chart">
-                    <h3><i class="fa fa-angle-right"></i> 笔 记 圈</h3>
-                    <br>
+            <h3><i class="fa fa-angle-right"></i> 笔 记 圈</h3>
+            <br>
 
-                    <form action="__URL__/searchNote" method="post">
-                        <div class="col-sm-11">
-                            <input type="text" name="key" class="form-control round-form" placeholder="输入笔记关键词">
-                        </div>
-                        <button type="submit" class="btn btn-round btn-info"><i class="fa fa-search"></i></button>
-                    </form>
+            <form action="__URL__/searchNote" method="post">
+                <div class="col-sm-11">
+                    <input type="text" name="key" class="form-control round-form" placeholder="输入笔记关键词">
+                </div>
+                <button type="submit" class="btn btn-round btn-info"><i class="fa fa-search"></i></button>
+            </form>
 
-                    <br>
+            <br>
 
-                    <foreach name="notes" item="note">
-                        <! -- SHARE PANEL -->
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="share-panel pn">
-                                    <div class="share-panel-header" style="display: inline-block">
-                                        <div class="photo">
-                                            <img src="/upload/profile/profile{$note.uid}.jpg" width="100px" style="margin-left: -20px"
-                                                 onerror="this.src='/upload/profile/profile-default.jpg'">
-                                        </div>
+            <foreach name="notes" item="note">
+                <! -- SHARE PANEL -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="share-panel pn">
+                            <div class="share-panel-header" style="display: inline-block">
+                                <div class="photo">
+                                    <img src="/upload/profile/profile{$note.uid}.jpg" width="100px" style="margin-left: -20px"
+                                         onerror="this.src='/upload/profile/profile-default.jpg'">
+                                </div>
 
-                                        <div class="details" style="float:left">
-                                            <p>
-                                                <a href="#">{$note.username}</a> 公开了一篇笔记<br>
-                                        </div>
+                                <div class="details" style="float:left">
+                                    <p>
+                                        <a href="#">{$note.username}</a> 公开了一篇笔记<br>
+                                </div>
 
-                                        <div class="title" >
-                                            <p style="font-size: 16px;font-weight: bold">《{$note.title}》</p>
+                                <div class="title" >
+                                    <p style="font-size: 16px;font-weight: bold">《{$note.title}》</p>
 
-                                            <php>$alltags = explode("；",$note['tags'])</php>
-                                            <foreach name="alltags" item="tag">
-                                                <span class="label label-info" style="font-size: 12px;margin-right: 5px">{$tag}</span>
-                                            </foreach>
-
-                                        </div>
-
-                                    </div>
-                                    <br>
-
-                                    <div class="share-panel-content">
-                                        {$note.content|htmlspecialchars_decode}
-                                    </div>
-                                    <br>
-
-                                    <div class="share-panel-footer">
-                                        <p style="float: left;color: #818182;position: absolute;bottom: 5px">修改时间：{$note.modify_time}</p>
-                                        <div id="{$note.id}" class="share-panel-operator" style="float: right;position:absolute;right: 25px">
-                                            <button class="btn btn-warning" onclick="vote(this)"><i class="fa fa-heart"></i>&nbsp;{$note.votes}</button>
-                                            <button class="btn btn-warning" onclick="comment(this)"><i class="fa fa-comment">&nbsp;评论</i></button>
-                                            <button class="btn btn-warning" onclick="more(this)">阅读原文&nbsp;<i class="fa fa-angle-right"></i></button>
-                                        </div>
-                                    </div>
+                                    <php>$alltags = explode("；",$note['tags'])</php>
+                                    <foreach name="alltags" item="tag">
+                                        <span class="label label-info" style="font-size: 12px;margin-right: 5px">{$tag}</span>
+                                    </foreach>
 
                                 </div>
 
-                            </div></div><!-- /col-lg-12 -->
-                        <br>
-                    </foreach>
+                            </div>
+                            <br>
 
+                            <div class="share-panel-content">
+                                {$note.content|htmlspecialchars_decode}
+                            </div>
+                            <br>
 
-                </div>
+                            <div class="share-panel-footer">
+                                <p style="float: left;color: #818182;position: absolute;bottom: 5px">修改时间：{$note.modify_time}</p>
+                                <div id="{$note.id}" class="share-panel-operator" style="float: right;position:absolute;right: 25px">
+                                    <button class="btn btn-warning" onclick="vote(this)"><i class="fa fa-heart"></i>&nbsp;{$note.votes}</button>
+                                    <button class="btn btn-warning" onclick="comment(this)"><i class="fa fa-comment">&nbsp;评论</i></button>
+                                    <button class="btn btn-warning" onclick="more(this)">阅读原文&nbsp;<i class="fa fa-angle-right"></i></button>
+                                </div>
+                            </div>
 
-                <div class="col-lg-3 ds">
-                    <!--COMPLETED ACTIONS DONUTS CHART-->
-                    <h3>NOTIFICATIONS</h3>
-
-                    <!-- First Action -->
-                    <div class="desc">
-                        <div class="thumb">
-                            <span class="badge bg-theme"><i class="fa fa-clock-o"></i></span>
                         </div>
-                        <div class="details">
-                            <p><muted>2 Minutes Ago</muted><br/>
-                                <a href="#">James Brown</a> subscribed to your newsletter.<br/>
-                            </p>
-                        </div>
-                    </div>
 
-                    <!-- USERS ONLINE SECTION -->
-                    <h3>TEAM MEMBERS</h3>
-                    <!-- First Member -->
-                    <div class="desc">
-                        <div class="thumb">
-                            <img class="img-circle" src="assets/img/ui-divya.jpg" width="35px" height="35px" align="">
-                        </div>
-                        <div class="details">
-                            <p><a href="#">DIVYA MANIAN</a><br/>
-                                <muted>Available</muted>
-                            </p>
-                        </div>
-                    </div>
-
-                </div><!-- /col-lg-3 -->
-            </div>
+                    </div></div><!-- /col-lg-12 -->
+                <br>
+            </foreach>
 
             <!-- Modal -->
             <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="commentModal" class="modal fade">

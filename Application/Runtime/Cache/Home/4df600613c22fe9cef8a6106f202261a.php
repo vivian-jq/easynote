@@ -1,39 +1,39 @@
 <?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="Dashboard">
-    <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="Dashboard">
+	<meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
 
-    <title>DASHGUM - FREE Bootstrap Admin Template</title>
+	<title>DASHGUM - FREE Bootstrap Admin Template</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="/Public/static/css/bootstrap.css" rel="stylesheet">
-    <!--external css-->
-    <link href="/Public/static/font-awesome/css/font-awesome.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="/Public/static/css/zabuto_calendar.css">
-    <link rel="stylesheet" type="text/css" href="/Public/static/js/gritter/css/jquery.gritter.css" />
-    <link rel="stylesheet" type="text/css" href="/Public/static/lineicons/style.css">    
-    
-    <!-- Custom styles for this template -->
-    <link href="/Public/static/css/style.css" rel="stylesheet">
-    <link href="/Public/static/css/style-responsive.css" rel="stylesheet">
+	<!-- Bootstrap core CSS -->
+	<link href="/Public/static/css/bootstrap.css" rel="stylesheet">
+	<!--external css-->
+	<link href="/Public/static/font-awesome/css/font-awesome.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="/Public/static/css/zabuto_calendar.css">
+	<link rel="stylesheet" type="text/css" href="/Public/static/js/gritter/css/jquery.gritter.css" />
+	<link rel="stylesheet" type="text/css" href="/Public/static/lineicons/style.css">
 
-    <script src="/Public/static/js/chart-master/Chart.js"></script>
-    
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
+	<!-- Custom styles for this template -->
+	<link href="/Public/static/css/style.css" rel="stylesheet">
+	<link href="/Public/static/css/style-responsive.css" rel="stylesheet">
 
-  <body>
+	<script src="/Public/static/js/chart-master/Chart.js"></script>
 
-  <section id="container" >
-      <!-- **********************************************************************************************************************************************************
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+
+<section id="container" >
+	<!-- **********************************************************************************************************************************************************
     TOP BAR CONTENT & NOTIFICATIONS
     *********************************************************************************************************************************************************** -->
 <!--header start-->
@@ -122,7 +122,7 @@
     </div>
 </header>
 <!--header end-->
-	  <!-- **********************************************************************************************************************************************************
+	<!-- **********************************************************************************************************************************************************
       MAIN SIDEBAR MENU
       *********************************************************************************************************************************************************** -->
 <!--sidebar start-->
@@ -139,21 +139,21 @@
 
             <li class="mt">
                 <a class=active href="/index.php/Home/HomePage/../HomePage/index">
-                    <i class="fa fa-dashboard"></i>
+                    <i class="fa fa-home"></i>
                     <span>主 页</span>
                 </a>
             </li>
 
             <li class="sub-menu">
                 <a class="[new]" href="/index.php/Home/HomePage/../Note/newNote" >
-                    <i class="fa fa-desktop"></i>
+                    <i class="fa fa-magic"></i>
                     <span>快 速 开 始</span>
                 </a>
             </li>
 
             <li class="sub-menu">
                 <a class="[mynote]" href="javascript:;" >
-                    <i class="fa fa-cogs"></i>
+                    <i class="fa fa-book"></i>
                     <span>我 的 笔 记</span>
                 </a>
                 <ul class="sub">
@@ -164,7 +164,7 @@
             </li>
             <li class="sub-menu">
                 <a class="[friend]" href="javascript:;" >
-                    <i class="fa fa-book"></i>
+                    <i class="fa fa-users"></i>
                     <span>关 注</span>
                 </a>
                 <ul class="sub">
@@ -175,7 +175,7 @@
             </li>
             <li class="sub-menu">
                 <a class="[social]" href="javascript:;" >
-                    <i class="fa fa-tasks"></i>
+                    <i class="fa fa-globe"></i>
                     <span>社 区</span>
                 </a>
                 <ul class="sub">
@@ -185,14 +185,13 @@
                 </ul>
             </li>
             <li class="sub-menu">
-                <a href="javascript:;" >
-                    <i class="fa fa-th"></i>
-                    <span>等 级 评 分</span>
+                <a class="[message]" href="javascript:;" >
+                    <i class="fa fa-star"></i>
+                    <span>动 态</span>
                 </a>
                 <ul class="sub">
-                    <li><a  href="#">等 级 查 看</a></li>
-                    <li><a  href="#">笔 记 评 分</a></li>
-                    <li><a  href="#">其 他 数 据</a></li>
+                    <li  class="[my_comment]"><a  href="/index.php/Home/HomePage/../Social/myComment">我 的 评 论</a></li>
+                    <li  class="[other_comment]"><a  href="/index.php/Home/HomePage/../Social/otherComment">好 友 评 论</a></li>
                 </ul>
             </li>
 
@@ -201,381 +200,200 @@
     </div>
 </aside>
 <!--sidebar end-->
-      
-      <!-- **********************************************************************************************************************************************************
-      MAIN CONTENT
-      *********************************************************************************************************************************************************** -->
-      <!--main content start-->
-      <section id="main-content">
-          <section class="wrapper">
 
-              <div class="row">
-                  <div class="col-lg-9 main-chart">
-                  
-                  	<div class="row mtbox">
-                  		<div class="col-md-2 col-sm-2 col-md-offset-1 box0">
-                  			<div class="box1">
-					  			<span class="li_heart"></span>
-					  			<h3>933</h3>
-                  			</div>
-					  			<p>933 People liked your page the last 24hs. Whoohoo!</p>
-                  		</div>
-                  		<div class="col-md-2 col-sm-2 box0">
-                  			<div class="box1">
-					  			<span class="li_cloud"></span>
-					  			<h3>+48</h3>
-                  			</div>
-					  			<p>48 New files were added in your cloud storage.</p>
-                  		</div>
-                  		<div class="col-md-2 col-sm-2 box0">
-                  			<div class="box1">
-					  			<span class="li_stack"></span>
-					  			<h3>23</h3>
-                  			</div>
-					  			<p>You have 23 unread messages in your inbox.</p>
-                  		</div>
-                  		<div class="col-md-2 col-sm-2 box0">
-                  			<div class="box1">
-					  			<span class="li_news"></span>
-					  			<h3>+10</h3>
-                  			</div>
-					  			<p>More than 10 news were added in your reader.</p>
-                  		</div>
-                  		<div class="col-md-2 col-sm-2 box0">
-                  			<div class="box1">
-					  			<span class="li_data"></span>
-					  			<h3>OK!</h3>
-                  			</div>
-					  			<p>Your server is working perfectly. Relax & enjoy.</p>
-                  		</div>
-                  	
-                  	</div><!-- /row mt -->	
-                  
-                      
-                      <div class="row mt">
-                      <!-- SERVER STATUS PANELS -->
-                      	<div class="col-md-4 col-sm-4 mb">
-                      		<div class="white-panel pn donut-chart">
-                      			<div class="white-header">
-						  			<h5>SERVER LOAD</h5>
-                      			</div>
-								<div class="row">
-									<div class="col-sm-6 col-xs-6 goleft">
-										<p><i class="fa fa-database"></i> 70%</p>
-									</div>
-	                      		</div>
-								<canvas id="serverstatus01" height="120" width="120"></canvas>
-								<script>
-									var doughnutData = [
-											{
-												value: 70,
-												color:"#68dff0"
-											},
-											{
-												value : 30,
-												color : "#fdfdfd"
-											}
-										];
-										var myDoughnut = new Chart(document.getElementById("serverstatus01").getContext("2d")).Doughnut(doughnutData);
-								</script>
-	                      	</div><! --/grey-panel -->
-                      	</div><!-- /col-md-4-->
-                      	
+	<!-- **********************************************************************************************************************************************************
+    MAIN CONTENT
+    *********************************************************************************************************************************************************** -->
+	<!--main content start-->
+	<section id="main-content">
+		<section class="wrapper">
 
-                      	<div class="col-md-4 col-sm-4 mb">
-                      		<div class="white-panel pn">
-                      			<div class="white-header">
-						  			<h5>TOP PRODUCT</h5>
-                      			</div>
-								<div class="row">
-									<div class="col-sm-6 col-xs-6 goleft">
-										<p><i class="fa fa-heart"></i> 122</p>
-									</div>
-									<div class="col-sm-6 col-xs-6"></div>
-	                      		</div>
-	                      		<div class="centered">
-										<img src="/Public/images/temp/product.png" width="120">
-	                      		</div>
-                      		</div>
-                      	</div><!-- /col-md-4 -->
-                      	
-						<div class="col-md-4 mb">
-							<!-- WHITE PANEL - TOP USER -->
-							<div class="white-panel pn">
-								<div class="white-header">
-									<h5>TOP USER</h5>
-								</div>
-								<p><img src="/Public/images/temp/ui-zac.jpg" class="img-circle" width="80"></p>
-								<p><b>Zac Snider</b></p>
-								<div class="row">
-									<div class="col-md-6">
-										<p class="small mt">MEMBER SINCE</p>
-										<p>2012</p>
-									</div>
-									<div class="col-md-6">
-										<p class="small mt">TOTAL SPEND</p>
-										<p>$ 47,60</p>
-									</div>
-								</div>
-							</div>
-						</div><!-- /col-md-4 -->
-                      	
+			<div class="row">
+				<div class="col-lg-9">
 
-                    </div><!-- /row -->
-                    
-                    				
-					<div class="row">
-						<!-- TWITTER PANEL -->
-						<div class="col-md-4 mb">
-                      		<div class="darkblue-panel pn">
-                      			<div class="darkblue-header">
-						  			<h5>DROPBOX STATICS</h5>
-                      			</div>
-								<canvas id="serverstatus02" height="120" width="120"></canvas>
-								<script>
-									var doughnutData = [
-											{
-												value: 60,
-												color:"#68dff0"
-											},
-											{
-												value : 40,
-												color : "#444c57"
-											}
-										];
-										var myDoughnut = new Chart(document.getElementById("serverstatus02").getContext("2d")).Doughnut(doughnutData);
-								</script>
-								<p>April 17, 2014</p>
-								<footer>
-									<div class="pull-left">
-										<h5><i class="fa fa-hdd-o"></i> 17 GB</h5>
-									</div>
-									<div class="pull-right">
-										<h5>60% Used</h5>
-									</div>
-								</footer>
-                      		</div><! -- /darkblue panel -->
-						</div><!-- /col-md-4 -->
-						
-						
-						<div class="col-md-4 mb">
-							<!-- INSTAGRAM PANEL -->
-							<div class="instagram-panel pn">
-								<i class="fa fa-instagram fa-4x"></i>
-								<p>@THISISYOU<br/>
-									5 min. ago
-								</p>
-								<p><i class="fa fa-comment"></i> 18 | <i class="fa fa-heart"></i> 49</p>
+					<div class="row" style="padding-top: 10px">
+						<div class="border-head" style="padding-bottom: 20px">
+							<h3><i class="fa fa-database"></i> 基本数据</h3>
+						</div>
+
+						<div class="col-md-2 col-sm-2 col-md-offset-1 box0">
+							<div class="box1">
+								<i class="fa fa-file-o fa-4x"></i>
+								<h3><?php echo ($numbers["notes"]); ?></h3>
 							</div>
-						</div><!-- /col-md-4 -->
-						
-						<div class="col-md-4 col-sm-4 mb">
-							<!-- REVENUE PANEL -->
-							<div class="darkblue-panel pn">
-								<div class="darkblue-header">
-									<h5>REVENUE</h5>
-								</div>
-								<div class="chart mt">
-									<div class="sparkline" data-type="line" data-resize="true" data-height="75" data-width="90%" data-line-width="1" data-line-color="#fff" data-spot-color="#fff" data-fill-color="" data-highlight-line-color="#fff" data-spot-radius="4" data-data="[200,135,667,333,526,996,564,123,890,464,655]"></div>
-								</div>
-								<p class="mt"><b>$ 17,980</b><br/>Month Income</p>
+							<p>你已经写过 <?php echo ($numbers["notes"]); ?> 篇笔记了<br>再接再厉!</p>
+						</div>
+
+						<div class="col-md-2 col-sm-2 box0">
+							<div class="box1">
+								<i class="fa fa-book fa-4x"></i>
+								<h3><?php echo ($numbers["books"]); ?></h3>
 							</div>
-						</div><!-- /col-md-4 -->
-						
-					</div><!-- /row -->
-					
+							<p>你已经有 <?php echo ($numbers["books"]); ?> 个笔记本了<br>继续积累吧!</p>
+						</div>
+
+						<div class="col-md-2 col-sm-2 box0">
+							<div class="box1">
+								<i class="fa fa-heart-o fa-4x"></i>
+								<h3>+<?php echo ($numbers["votes"]); ?></h3>
+							</div>
+							<p>有 <?php echo ($numbers["votes"]); ?> 人赞过你的笔记<br>人气越来越旺!</p>
+						</div>
+
+						<div class="col-md-2 col-sm-2 box0">
+							<div class="box1">
+								<i class="fa fa-comments-o fa-4x"></i>
+								<h3>+<?php echo ($numbers["comments"]); ?></h3>
+							</div>
+							<p>有 <?php echo ($numbers["comments"]); ?> 人评论过你的笔记<br>赶紧去看看吧!</p>
+						</div>
+
+						<div class="col-md-2 col-sm-2 box0">
+							<div class="box1">
+								<i class="fa fa-users fa-4x"></i>
+								<h3>+<?php echo ($numbers["followers"]); ?></h3>
+							</div>
+							<p>有 <?php echo ($numbers["followers"]); ?> 人关注了你<br>继续加油哦!</p>
+						</div>
+
+					</div><!-- /row mt -->
+
+
 					<div class="row mt">
-                      <!--CUSTOM CHART START -->
-                      <div class="border-head">
-                          <h3>VISITS</h3>
-                      </div>
-                      <div class="custom-bar-chart">
-                          <ul class="y-axis">
-                              <li><span>10.000</span></li>
-                              <li><span>8.000</span></li>
-                              <li><span>6.000</span></li>
-                              <li><span>4.000</span></li>
-                              <li><span>2.000</span></li>
-                              <li><span>0</span></li>
-                          </ul>
-                          <div class="bar">
-                              <div class="title">JAN</div>
-                              <div class="value tooltips" data-original-title="8.500" data-toggle="tooltip" data-placement="top">85%</div>
-                          </div>
-                          <div class="bar ">
-                              <div class="title">FEB</div>
-                              <div class="value tooltips" data-original-title="5.000" data-toggle="tooltip" data-placement="top">50%</div>
-                          </div>
-                          <div class="bar ">
-                              <div class="title">MAR</div>
-                              <div class="value tooltips" data-original-title="6.000" data-toggle="tooltip" data-placement="top">60%</div>
-                          </div>
-                          <div class="bar ">
-                              <div class="title">APR</div>
-                              <div class="value tooltips" data-original-title="4.500" data-toggle="tooltip" data-placement="top">45%</div>
-                          </div>
-                          <div class="bar">
-                              <div class="title">MAY</div>
-                              <div class="value tooltips" data-original-title="3.200" data-toggle="tooltip" data-placement="top">32%</div>
-                          </div>
-                          <div class="bar ">
-                              <div class="title">JUN</div>
-                              <div class="value tooltips" data-original-title="6.200" data-toggle="tooltip" data-placement="top">62%</div>
-                          </div>
-                          <div class="bar">
-                              <div class="title">JUL</div>
-                              <div class="value tooltips" data-original-title="7.500" data-toggle="tooltip" data-placement="top">75%</div>
-                          </div>
-                      </div>
-                      <!--custom chart end-->
-					</div><!-- /row -->	
-					
-                  </div><!-- /col-lg-9 END SECTION MIDDLE -->
-                  
-                  
-      <!-- **********************************************************************************************************************************************************
-      RIGHT SIDEBAR CONTENT
-      *********************************************************************************************************************************************************** -->                  
-                  
-                  <div class="col-lg-3 ds">
-                    <!--COMPLETED ACTIONS DONUTS CHART-->
-						<h3>NOTIFICATIONS</h3>
-                                        
-                      <!-- First Action -->
-                      <div class="desc">
-                      	<div class="thumb">
-                      		<span class="badge bg-theme"><i class="fa fa-clock-o"></i></span>
-                      	</div>
-                      	<div class="details">
-                      		<p><muted>2 Minutes Ago</muted><br/>
-                      		   <a href="#">James Brown</a> subscribed to your newsletter.<br/>
-                      		</p>
-                      	</div>
-                      </div>
-                      <!-- Second Action -->
-                      <div class="desc">
-                      	<div class="thumb">
-                      		<span class="badge bg-theme"><i class="fa fa-clock-o"></i></span>
-                      	</div>
-                      	<div class="details">
-                      		<p><muted>3 Hours Ago</muted><br/>
-                      		   <a href="#">Diana Kennedy</a> purchased a year subscription.<br/>
-                      		</p>
-                      	</div>
-                      </div>
-                      <!-- Third Action -->
-                      <div class="desc">
-                      	<div class="thumb">
-                      		<span class="badge bg-theme"><i class="fa fa-clock-o"></i></span>
-                      	</div>
-                      	<div class="details">
-                      		<p><muted>7 Hours Ago</muted><br/>
-                      		   <a href="#">Brandon Page</a> purchased a year subscription.<br/>
-                      		</p>
-                      	</div>
-                      </div>
-                      <!-- Fourth Action -->
-                      <div class="desc">
-                      	<div class="thumb">
-                      		<span class="badge bg-theme"><i class="fa fa-clock-o"></i></span>
-                      	</div>
-                      	<div class="details">
-                      		<p><muted>11 Hours Ago</muted><br/>
-                      		   <a href="#">Mark Twain</a> commented your post.<br/>
-                      		</p>
-                      	</div>
-                      </div>
-                      <!-- Fifth Action -->
-                      <div class="desc">
-                      	<div class="thumb">
-                      		<span class="badge bg-theme"><i class="fa fa-clock-o"></i></span>
-                      	</div>
-                      	<div class="details">
-                      		<p><muted>18 Hours Ago</muted><br/>
-                      		   <a href="#">Daniel Pratt</a> purchased a wallet in your store.<br/>
-                      		</p>
-                      	</div>
-                      </div>
+						<!-- SERVER STATUS PANELS -->
 
-                       <!-- USERS ONLINE SECTION -->
-						<h3>TEAM MEMBERS</h3>
-                      <!-- First Member -->
-                      <div class="desc">
-                      	<div class="thumb">
-                      		<img class="img-circle" src="/Public/images/temp/ui-divya.jpg" width="35px" height="35px" align="">
-                      	</div>
-                      	<div class="details">
-                      		<p><a href="#">DIVYA MANIAN</a><br/>
-                      		   <muted>Available</muted>
-                      		</p>
-                      	</div>
-                      </div>
-                      <!-- Second Member -->
-                      <div class="desc">
-                      	<div class="thumb">
-                      		<img class="img-circle" src="/Public/images/temp/ui-sherman.jpg" width="35px" height="35px" align="">
-                      	</div>
-                      	<div class="details">
-                      		<p><a href="#">DJ SHERMAN</a><br/>
-                      		   <muted>I am Busy</muted>
-                      		</p>
-                      	</div>
-                      </div>
-                      <!-- Third Member -->
-                      <div class="desc">
-                      	<div class="thumb">
-                      		<img class="img-circle" src="/Public/images/temp/ui-danro.jpg" width="35px" height="35px" align="">
-                      	</div>
-                      	<div class="details">
-                      		<p><a href="#">DAN ROGERS</a><br/>
-                      		   <muted>Available</muted>
-                      		</p>
-                      	</div>
-                      </div>
-                      <!-- Fourth Member -->
-                      <div class="desc">
-                      	<div class="thumb">
-                      		<img class="img-circle" src="/Public/images/temp/ui-zac.jpg" width="35px" height="35px" align="">
-                      	</div>
-                      	<div class="details">
-                      		<p><a href="#">Zac Sniders</a><br/>
-                      		   <muted>Available</muted>
-                      		</p>
-                      	</div>
-                      </div>
-                      <!-- Fifth Member -->
-                      <div class="desc">
-                      	<div class="thumb">
-                      		<img class="img-circle" src="/Public/images/temp/ui-sam.jpg" width="35px" height="35px" align="">
-                      	</div>
-                      	<div class="details">
-                      		<p><a href="#">Marcel Newman</a><br/>
-                      		   <muted>Available</muted>
-                      		</p>
-                      	</div>
-                      </div>
+						<div class="border-head">
+							<h3><i class="fa fa-clock-o"></i> 最近修改的笔记<a href="/index.php/Home/HomePage/../Note/noteByTime"> >>></a></h3>
+						</div>
 
-                        <!-- CALENDAR-->
-                        <div id="calendar" class="mb">
-                            <div class="panel green-panel no-margin">
-                                <div class="panel-body">
-                                    <div id="date-popover" class="popover top" style="cursor: pointer; disadding: block; margin-left: 33%; margin-top: -50px; width: 175px;">
-                                        <div class="arrow"></div>
-                                        <h3 class="popover-title" style="disadding: none;"></h3>
-                                        <div id="date-popover-content" class="popover-content"></div>
-                                    </div>
-                                    <div id="my-calendar"></div>
-                                </div>
-                            </div>
-                        </div><!-- / calendar -->
-                      
-                  </div><!-- /col-lg-3 -->
-              </div><! --/row -->
-          </section>
-      </section>
+						<?php if(is_array($notes)): foreach($notes as $key=>$note): ?><! -- NOTE PANEL -->
+							<div class="col-lg-4 col-md-4 col-sm-4 mb">
 
-      <!--main content end-->
-      <!--footer start-->
+								<div class="note-panel-sm pn" onmouseenter="appear(this)" onmouseleave="disapper(this)">
+									<div class="note-panel-title">
+										<p><?php echo ($note["title"]); ?></p>
+										<p style="font-size: 15px">上次修改：<?php echo ($note["modify_time"]); ?></p>
+									</div>
+
+									<div class="note-panel-content">
+										<p><i class="fa fa-heart"></i> <?php echo ($note["votes"]); ?></p>
+									</div>
+
+									<div id="<?php echo ($note["id"]); ?>" class="note-operate pull-down" hidden >
+										<i class="fa fa-eye fa-2x" onclick="show_note(this)"></i>
+										<i class="fa fa-edit fa-2x" onclick="edit_note(this)"></i>
+										<i class="fa fa-trash-o fa-2x" onclick="delete_note(this)"></i>
+									</div>
+
+								</div>
+							</div><!-- /col-md-4 --><?php endforeach; endif; ?>
+
+					</div>
+
+					<div class="row mt">
+						<!--CUSTOM CHART START -->
+						<div class="border-head">
+							<h3><i class="fa fa-globe"></i> 好友分享<a href="/index.php/Home/HomePage/../Social/otherShare"> >>></a></h3>
+						</div>
+
+						<?php if(is_array($shares)): foreach($shares as $key=>$share): ?><! -- SHARE PANEL -->
+								<div class="col-lg-12 mb">
+									<div class="share-panel pn">
+										<div class="share-panel-header" style="display: inline-block">
+											<div class="photo">
+												<img src="/upload/profile/profile<?php echo ($share["uid_from"]); ?>.jpg" width="100px" style="margin-left: -20px"
+													 onerror="this.src='/upload/profile/profile-default.jpg'">
+											</div>
+
+											<div class="details" style="float:left">
+												<p>
+													<a href="#"><?php echo ($share["username"]); ?></a>&nbsp;给你分享了一篇笔记：</p>
+												<p style="font-size: 16px;font-style: italic;">&nbsp;“<?php echo ($share["reason"]); ?>”</p>
+											</div>
+
+											<div class="title" >
+												<p style="font-size: 16px;font-weight: bold">《<?php echo ($share["title"]); ?>》</p>
+
+												<?php $alltags = explode("；",$share['tags']) ?>
+												<?php if(is_array($alltags)): foreach($alltags as $key=>$tag): ?><span class="label label-info" style="font-size: 12px;margin-right: 5px"><?php echo ($tag); ?></span><?php endforeach; endif; ?>
+
+											</div>
+
+										</div>
+										<br>
+
+										<div class="share-panel-content">
+											<?php echo (htmlspecialchars_decode($share["content"])); ?>
+										</div>
+										<br>
+
+										<div class="share-panel-footer">
+											<p style="float: left;color: #818182;position: absolute;bottom: 5px">分享时间：<?php echo ($share["modify_time"]); ?></p>
+											<div class="share-panel-operator">
+												<button name="<?php echo ($share["nid"]); ?>" class="btn btn-warning" onclick="vote(this)"><i class="fa fa-heart"></i>&nbsp;<?php echo ($share["votes"]); ?></button>
+												<button name="<?php echo ($share["nid"]); ?>" class="btn btn-warning" onclick="comment(this)"><i class="fa fa-comment">&nbsp;评论</i></button>
+												<button name="<?php echo ($share["id"]); ?>" class="btn btn-warning" onclick="more(this)">阅读原文&nbsp;<i class="fa fa-angle-right"></i></button>
+											</div>
+										</div>
+
+									</div>
+
+								</div><!-- /col-lg-12 -->
+							<br><?php endforeach; endif; ?>
+
+						<!--custom chart end-->
+					</div><!-- /row -->
+
+				</div><!-- /col-lg-9 END SECTION MIDDLE -->
+
+
+				<!-- **********************************************************************************************************************************************************
+                RIGHT SIDEBAR CONTENT
+                *********************************************************************************************************************************************************** -->
+
+				<div class="col-lg-3 ds">
+					<!-- COMMENT PANEL -->
+					<h3>好友评论</h3>
+
+					<?php if(is_array($comments)): foreach($comments as $key=>$comment): ?><div class="desc">
+							<div class="thumb">
+								<img src="/upload/profile/profile<?php echo ($comment["uid"]); ?>.jpg" width="80px" style="margin-left: -15px"
+									 onerror="this.src='/upload/profile/profile-default.jpg'">
+							</div>
+							<div class="details">
+								<p><muted><?php echo ($comment["cmt_time"]); ?></muted><br/>
+									<a href="#"><?php echo ($comment["username"]); ?></a> 评论了<strong>《<?php echo ($comment["title"]); ?>》</strong>：<?php echo ($comment["content"]); ?><br/>
+								</p>
+							</div>
+						</div><?php endforeach; endif; ?>
+
+					<?php if(count($comments)==0){echo '<p style="text-align: center;padding:10px 0">暂无评论</p>';} else {echo '<p style="text-align: center;padding:10px 0"><a style="color: #ff865c" href="/index.php/Home/HomePage/../Social/otherComment">>> 前往评论区</a></p>';} ?>
+
+
+
+					<!-- VOTE PANEL -->
+					<h3>好友点赞</h3>
+
+					<?php if(is_array($votes)): foreach($votes as $key=>$vote): ?><div class="desc">
+							<div class="thumb">
+								<img src="/upload/profile/profile<?php echo ($vote["uid"]); ?>.jpg" width="80px" style="margin-left: -15px"
+									 onerror="this.src='/upload/profile/profile-default.jpg'">
+							</div>
+							<div class="details">
+								<p><muted><?php echo ($vote["vote_time"]); ?></muted><br/>
+									<a href="#"><?php echo ($comment["username"]); ?></a> 点赞了<strong>《<?php echo ($vote["title"]); ?>》</strong><br/>
+								</p>
+							</div>
+						</div><?php endforeach; endif; ?>
+
+					<?php if(count($votes)==0){echo '<p style="text-align: center;padding:10px 0">暂无点赞</p>';} ?>
+				</div><!-- /col-lg-3 -->
+			</div><! --/row -->
+		</section>
+	</section>
+
+	<!--main content end-->
+	<!--footer start-->
 <footer class="site-footer">
     <div class="text-center">
         copyright@151250160 <a href="#" target="_blank">吴静琦</a>
@@ -585,35 +403,35 @@
     </div>
 </footer>
 <!--footer end-->
-  </section>
+</section>
 
-    <!-- js placed at the end of the document so the pages load faster -->
-    <script src="/Public/static/js/jquery.js"></script>
-    <script src="/Public/static/js/jquery-1.8.3.min.js"></script>
-    <script src="/Public/static/js/bootstrap.min.js"></script>
-    <script class="include" type="text/javascript" src="/Public/static/js/jquery.dcjqaccordion.2.7.js"></script>
-    <script src="/Public/static/js/jquery.scrollTo.min.js"></script>
-    <script src="/Public/static/js/jquery.nicescroll.js" type="text/javascript"></script>
-    <script src="/Public/static/js/jquery.sparkline.js"></script>
+<!-- js placed at the end of the document so the pages load faster -->
+<script src="/Public/static/js/jquery.js"></script>
+<script src="/Public/static/js/jquery-1.8.3.min.js"></script>
+<script src="/Public/static/js/bootstrap.min.js"></script>
+<script class="include" type="text/javascript" src="/Public/static/js/jquery.dcjqaccordion.2.7.js"></script>
+<script src="/Public/static/js/jquery.scrollTo.min.js"></script>
+<script src="/Public/static/js/jquery.nicescroll.js" type="text/javascript"></script>
+<script src="/Public/static/js/jquery.sparkline.js"></script>
 
 
-    <!--common script for all pages-->
-    <script src="/Public/static/js/common-scripts.js"></script>
-    
-    <script type="text/javascript" src="/Public/static/js/gritter/js/jquery.gritter.js"></script>
-    <script type="text/javascript" src="/Public/static/js/gritter-conf.js"></script>
+<!--common script for all pages-->
+<script src="/Public/static/js/common-scripts.js"></script>
 
-    <!--script for this page-->
-    <script src="/Public/static/js/sparkline-chart.js"></script>    
-	<script src="/Public/static/js/zabuto_calendar.js"></script>	
-	
-	<script type="text/javascript">
-        $(document).ready(function () {
+<script type="text/javascript" src="/Public/static/js/gritter/js/jquery.gritter.js"></script>
+<script type="text/javascript" src="/Public/static/js/gritter-conf.js"></script>
+
+<!--script for this page-->
+<script src="/Public/static/js/sparkline-chart.js"></script>
+<script src="/Public/static/js/zabuto_calendar.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
         var unique_id = $.gritter.add({
             // (string | mandatory) the heading of the notification
-            title: 'Welcome to Dashgum!',
+            title: '欢迎使用easynote!',
             // (string | mandatory) the text inside the notification
-            text: 'Hover me to enable the Close Button. You can hide the left sidebar clicking on the button next to the logo. Free version for <a href="http://blacktie.co" target="_blank" style="color:#ffd777">BlackTie.co</a>.',
+            text: '你可以隐藏左侧的导航栏，也可以在离开的时候锁屏。祝你使用愉快！<br>（本提示可以关闭）',
             // (string | optional) the image to display on the left
             image: '/Public/images/temp/ui-sam.jpg',
             // (bool | optional) if you want it to fade out on its own or just sit there
@@ -625,44 +443,32 @@
         });
 
         return false;
-        });
-	</script>
-	
-	<script type="application/javascript">
-        $(document).ready(function () {
-            $("#date-popover").popover({html: true, trigger: "manual"});
-            $("#date-popover").hide();
-            $("#date-popover").click(function (e) {
-                $(this).hide();
-            });
-        
-            $("#my-calendar").zabuto_calendar({
-                action: function () {
-                    return myDateFunction(this.id, false);
-                },
-                action_nav: function () {
-                    return myNavFunction(this.id);
-                },
-                ajax: {
-                    url: "show_data.php?action=1",
-                    modal: true
-                },
-                legend: [
-                    {type: "text", label: "Special event", badge: "00"},
-                    {type: "block", label: "Regular event", }
-                ]
-            });
-        });
-        
-        
-        function myNavFunction(id) {
-            $("#date-popover").hide();
-            var nav = $("#" + id).data("navigation");
-            var to = $("#" + id).data("to");
-            console.log('nav ' + nav + ' to: ' + to.month + '/' + to.year);
-        }
-    </script>
-  
+    });
 
-  </body>
+    function appear(node) {
+        node.getElementsByClassName("note-operate").item(0).removeAttribute("hidden");
+    }
+
+    function disapper(node) {
+        node.getElementsByClassName("note-operate").item(0).setAttribute("hidden","");
+    }
+
+    function delete_note(node) {
+        if(window.confirm("删除是不可恢复的，你确认要删除这篇笔记吗？")){
+            window.location="/index.php/Home/HomePage/../Note/deleteNote/nid/"+node.parentNode.id;
+        }
+    }
+
+    function show_note(node) {
+        window.location="/index.php/Home/HomePage/../Note/note/nid/"+node.parentNode.id;
+    }
+
+    function edit_note(node) {
+        window.location="/index.php/Home/HomePage/../Note/editNote/nid/"+node.parentNode.id;
+    }
+</script>
+
+
+
+</body>
 </html>

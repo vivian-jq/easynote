@@ -2,19 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9c1523c5-92d2-4e12-a2d4-84e410c90bcf" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Home/View/Social/share.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/77fedb1b-25f4-4127-b5bc-6b4cf6e785d1/_metadata_/metadata" afterPath="$PROJECT_DIR$/.idea/dataSources/77fedb1b-25f4-4127-b5bc-6b4cf6e785d1/_metadata_/metadata" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/77fedb1b-25f4-4127-b5bc-6b4cf6e785d1/_metadata_/metadata.values.at" afterPath="$PROJECT_DIR$/.idea/dataSources/77fedb1b-25f4-4127-b5bc-6b4cf6e785d1/_metadata_/metadata.values.at" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Home/View/Social/edit_share.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Home/View/Social/my_comment.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Home/View/Social/other_comment.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Data/easynote.db" afterPath="$PROJECT_DIR$/Application/Runtime/Data/easynote.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/77fedb1b-25f4-4127-b5bc-6b4cf6e785d1.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/77fedb1b-25f4-4127-b5bc-6b4cf6e785d1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/images/temp/login-bg.jpg" afterPath="$PROJECT_DIR$/Public/images/temp/login-bg.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/Controller/HomePageController.class.php" afterPath="$PROJECT_DIR$/Application/Home/Controller/HomePageController.class.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/Controller/NoteController.class.php" afterPath="$PROJECT_DIR$/Application/Home/Controller/NoteController.class.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/Controller/SocialController.class.php" afterPath="$PROJECT_DIR$/Application/Home/Controller/SocialController.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Note/note.html" afterPath="$PROJECT_DIR$/Application/Home/View/Note/note.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/HomePage/index.html" afterPath="$PROJECT_DIR$/Application/Home/View/HomePage/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Public/user_menu.html" afterPath="$PROJECT_DIR$/Application/Home/View/Public/user_menu.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Social/my_share.html" afterPath="$PROJECT_DIR$/Application/Home/View/Social/my_share.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Social/other_share.html" afterPath="$PROJECT_DIR$/Application/Home/View/Social/other_share.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Social/public_note.html" afterPath="$PROJECT_DIR$/Application/Home/View/Social/public_note.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Data/first.sql" afterPath="$PROJECT_DIR$/Application/Runtime/Data/first.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Social/share.html" afterPath="$PROJECT_DIR$/Application/Home/View/Social/share.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Home/4df600613c22fe9cef8a6106f202261a.php" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Home/4df600613c22fe9cef8a6106f202261a.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/static/css/style.css" afterPath="$PROJECT_DIR$/Public/static/css/style.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -43,54 +46,98 @@
         <item name="easynote.db" type="e3449647:DbNodeDescriptor" />
         <item name="main" type="e3449647:DbNodeDescriptor" />
       </path>
-      <path>
-        <item name="" type="eadb38e5:DatabaseStructure$Root" />
-        <item name="easynote.db" type="e3449647:DbNodeDescriptor" />
-        <item name="main" type="e3449647:DbNodeDescriptor" />
-        <item name="note" type="e3449647:DbNodeDescriptor" />
-      </path>
     </expand>
     <select />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="NoteController.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/Home/Controller/NoteController.class.php">
+      <file leaf-file-name="HomePageController.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/Home/Controller/HomePageController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="121" column="84" lean-forward="false" selection-start-line="121" selection-start-column="84" selection-end-line="121" selection-end-column="84" />
+            <state relative-caret-position="264">
+              <caret line="56" column="46" lean-forward="false" selection-start-line="56" selection-start-column="46" selection-end-line="56" selection-end-column="46" />
               <folding>
-                <marker date="1512570832808" expanded="true" signature="3625:3698" ph="SELECT c.*,u... comment" />
+                <marker date="1512639225756" expanded="true" signature="290:359" ph="SELECT sum(n... note" />
+                <marker date="1512639225756" expanded="true" signature="453:506" ph="SELECT count... notebook" />
+                <marker date="1512639225756" expanded="true" signature="617:712" ph="SELECT count... comment" />
+                <marker date="1512639225756" expanded="true" signature="812:870" ph="SELECT count... follow" />
+                <marker date="1512639225756" expanded="true" signature="996:1052" ph="SELECT * FRO... note" />
+                <marker date="1512639225756" expanded="true" signature="996:1074" ph="SELECT * FRO... note" />
+                <marker date="1512639225756" expanded="true" signature="996:1082" ph="SELECT * FRO... note" />
+                <marker date="1512639225756" expanded="true" signature="1139:1341" ph="SELECT s.*, share" />
+                <marker date="1512639225756" expanded="true" signature="1400:1582" ph="SELECT c.*,n... comment" />
+                <marker date="1512639225756" expanded="true" signature="1638:1818" ph="SELECT v.*,n... vote" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SocialController.class.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SocialController.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Application/Home/Controller/SocialController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="52" column="8" lean-forward="false" selection-start-line="52" selection-start-column="8" selection-end-line="52" selection-end-column="36" />
+            <state relative-caret-position="211">
+              <caret line="142" column="8" lean-forward="false" selection-start-line="142" selection-start-column="8" selection-end-line="146" selection-end-column="36" />
               <folding>
-                <marker date="1512570366216" expanded="true" signature="271:444" ph="SELECT * FRO... share" />
-                <marker date="1512570366216" expanded="true" signature="271:472" ph="SELECT * FRO... share" />
-                <marker date="1512570366216" expanded="true" signature="713:870" ph="SELECT s.*, share" />
-                <marker date="1512570366216" expanded="true" signature="713:875" ph="SELECT s.*, share" />
-                <marker date="1512570366216" expanded="true" signature="1242:1315" ph="SELECT c.*,u... comment" />
-                <marker date="1512570366216" expanded="true" signature="1242:1336" ph="SELECT c.*,u... comment" />
-                <marker date="1512570366216" expanded="true" signature="1590:1646" ph="SELECT n.uid... note" />
-                <marker date="1512570366216" expanded="true" signature="1590:1669" ph="SELECT n.uid... note" />
-                <marker date="1512570366216" expanded="true" signature="1836:1909" ph="SELECT c.*,u... comment" />
-                <marker date="1512570366216" expanded="true" signature="3100:3222" ph="SELECT * FRO... share" />
-                <marker date="1512570366216" expanded="true" signature="3100:3254" ph="SELECT * FRO... share" />
-                <marker date="1512570366216" expanded="true" signature="3100:3274" ph="SELECT * FRO... share" />
-                <marker date="1512570366216" expanded="true" signature="3100:3302" ph="SELECT * FRO... share" />
-                <marker date="1512570366216" expanded="true" signature="3897:3963" ph="SELECT * FRO... note" />
-                <marker date="1512570366216" expanded="true" signature="3897:3966" ph="SELECT * FRO... note" />
-                <marker date="1512570366216" expanded="true" signature="3897:3979" ph="SELECT * FRO... note" />
-                <marker date="1512570366216" expanded="true" signature="3897:3991" ph="SELECT * FRO... note" />
-                <marker date="1512570366216" expanded="true" signature="3897:4024" ph="SELECT * FRO... note" />
-                <marker date="1512570366216" expanded="true" signature="4073:4206" ph="SELECT * FRO... note" />
+                <marker date="1512634990313" expanded="true" signature="271:444" ph="SELECT * FRO... share" />
+                <marker date="1512634990313" expanded="true" signature="271:472" ph="SELECT * FRO... share" />
+                <marker date="1512634990313" expanded="true" signature="528:537" ph="SELECT c.cmt... comment" />
+                <marker date="1512634990313" expanded="true" signature="528:710" ph="SELECT c.*,n... comment" />
+                <marker date="1512634990313" expanded="true" signature="766:946" ph="SELECT v.*,n... vote" />
+                <marker date="1512634990313" expanded="true" signature="830:946" ph="SELECT v.vot... vote" />
+                <marker date="1512634990313" expanded="true" signature="1226:1408" ph="SELECT c.*,n... comment" />
+                <marker date="1512634990313" expanded="true" signature="1655:1812" ph="SELECT s.*, share" />
+                <marker date="1512634990313" expanded="true" signature="1655:1817" ph="SELECT s.*, share" />
+                <marker date="1512634990313" expanded="true" signature="2184:2257" ph="SELECT c.*,u... comment" />
+                <marker date="1512634990313" expanded="true" signature="2184:2278" ph="SELECT c.*,u... comment" />
+                <marker date="1512634990313" expanded="true" signature="2532:2588" ph="SELECT n.uid... note" />
+                <marker date="1512634990313" expanded="true" signature="2532:2611" ph="SELECT n.uid... note" />
+                <marker date="1512634990313" expanded="true" signature="3146:3219" ph="SELECT c.*,u... comment" />
+                <marker date="1512634990313" expanded="true" signature="4414:4536" ph="SELECT * FRO... share" />
+                <marker date="1512634990313" expanded="true" signature="4414:4568" ph="SELECT * FRO... share" />
+                <marker date="1512634990313" expanded="true" signature="4414:4588" ph="SELECT * FRO... share" />
+                <marker date="1512634990313" expanded="true" signature="4414:4616" ph="SELECT * FRO... share" />
+                <marker date="1512634990313" expanded="true" signature="4672:4679" ph="SELECT c.*,n... comment" />
+                <marker date="1512634990313" expanded="true" signature="4672:4744" ph="SELECT c.*,n... comment" />
+                <marker date="1512634990313" expanded="true" signature="4672:4791" ph="SELECT c.*,n... comment" />
+                <marker date="1512634990313" expanded="true" signature="4672:4820" ph="SELECT a.*,n... comment" />
+                <marker date="1512634990313" expanded="true" signature="4876:5022" ph="SELECT v.*,n... vote" />
+                <marker date="1512634990313" expanded="true" signature="5300:5448" ph="SELECT c.*,n... comment" />
+                <marker date="1512634990313" expanded="true" signature="6044:6110" ph="SELECT * FRO... note" />
+                <marker date="1512634990313" expanded="true" signature="6044:6113" ph="SELECT * FRO... note" />
+                <marker date="1512634990313" expanded="true" signature="6044:6126" ph="SELECT * FRO... note" />
+                <marker date="1512634990313" expanded="true" signature="6044:6138" ph="SELECT * FRO... note" />
+                <marker date="1512634990313" expanded="true" signature="6044:6171" ph="SELECT * FRO... note" />
+                <marker date="1512634990313" expanded="true" signature="6220:6353" ph="SELECT * FRO... note" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Application/Home/View/HomePage/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="261">
+              <caret line="49" column="73" lean-forward="false" selection-start-line="49" selection-start-column="73" selection-end-line="49" selection-end-column="73" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#foreach#0;n#div#2;n#div#0;n#div#0;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#foreach#0;n#div#2;n#div#0;n#div#0;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#foreach#0;n#div#2;n#div#0;n#div#0;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#5092#5098#0" expanded="true" />
+                <element signature="n#style#0;n#p#1;n#div#1;n#div#0;n#div#0;n#div#0;n#foreach#0;n#div#2;n#div#0;n#div#0;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#5172#5178#0" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#div#2;n#div#0;n#div#0;n#div#0;n#foreach#0;n#div#2;n#div#0;n#div#0;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#foreach#0;n#div#2;n#div#0;n#div#0;n#div#0;n#foreach#0;n#div#2;n#div#0;n#div#0;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#div#2;n#div#0;n#div#0;n#foreach#0;n#div#2;n#div#0;n#div#0;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#6056#6062#0" expanded="true" />
+                <element signature="e#6199#6205#0" expanded="true" />
+                <element signature="e#6309#6315#0" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#foreach#0;n#div#1;n#div#0;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#php#0;n#div#1;n#div#0;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#1;n#php#0;n#div#1;n#div#0;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#p#1;n#php#0;n#div#1;n#div#0;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#foreach#1;n#div#1;n#div#0;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#php#1;n#div#1;n#div#0;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -99,8 +146,8 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Public/static/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="1327" column="4" lean-forward="false" selection-start-line="1327" selection-start-column="4" selection-end-line="1328" selection-end-column="16" />
+            <state relative-caret-position="326">
+              <caret line="815" column="20" lean-forward="false" selection-start-line="815" selection-start-column="20" selection-end-line="815" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -146,8 +193,8 @@
       <find>show</find>
       <find>new-</find>
       <find>spo</find>
-      <find>thumb</find>
       <find>note</find>
+      <find>thumb</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -156,13 +203,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Application/Home/View/Admin/admin_manager.html" />
-        <option value="$PROJECT_DIR$/Application/Home/View/Admin/all_emails.html" />
-        <option value="$PROJECT_DIR$/Application/Home/View/Admin/read_emails.html" />
         <option value="$PROJECT_DIR$/Application/Home/View/Admin/unread_emails.html" />
         <option value="$PROJECT_DIR$/Application/Home/View/Admin/user_manager.html" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/77fedb1b-25f4-4127-b5bc-6b4cf6e785d1/console_1.sql" />
-        <option value="$PROJECT_DIR$/Application/Home/View/HomePage/index.html" />
         <option value="$PROJECT_DIR$/Application/Home/View/HomePage/note_by_book.html" />
         <option value="$PROJECT_DIR$/Application/Home/View/HomePage/note_by_time.html" />
         <option value="$PROJECT_DIR$/Application/Home/View/HomePage/friends.html" />
@@ -190,23 +233,27 @@
         <option value="$PROJECT_DIR$/Public/static/js/webuploader/photo_upload.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/Public/static/js/ueditor/php/config.json" />
-        <option value="$PROJECT_DIR$/Application/Home/Controller/HomePageController.class.php" />
         <option value="$PROJECT_DIR$/Application/Home/View/HomePage/profile.html" />
         <option value="$PROJECT_DIR$/Application/Home/View/Follow/following.html" />
         <option value="$PROJECT_DIR$/Application/Home/View/Follow/followers.html" />
         <option value="$PROJECT_DIR$/Application/Home/Controller/FollowController.class.php" />
         <option value="$PROJECT_DIR$/Application/Home/View/Follow/search_user.html" />
-        <option value="$PROJECT_DIR$/Application/Home/View/Public/user_menu.html" />
         <option value="$PROJECT_DIR$/Application/Runtime/Data/first.sql" />
-        <option value="$PROJECT_DIR$/Public/static/css/style.css" />
-        <option value="$PROJECT_DIR$/Application/Home/View/Social/other_share.html" />
-        <option value="$PROJECT_DIR$/Application/Home/Controller/SocialController.class.php" />
-        <option value="$PROJECT_DIR$/Application/Home/View/Social/public_note.html" />
-        <option value="$PROJECT_DIR$/Application/Home/View/Social/share.html" />
-        <option value="$PROJECT_DIR$/Application/Home/View/Social/my_share.html" />
-        <option value="$PROJECT_DIR$/Application/Home/Controller/NoteController.class.php" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/77fedb1b-25f4-4127-b5bc-6b4cf6e785d1/console.sql" />
         <option value="$PROJECT_DIR$/Application/Home/View/Note/note.html" />
+        <option value="$PROJECT_DIR$/Public/static/css/style.css" />
+        <option value="$PROJECT_DIR$/Application/Home/View/Social/public_note.html" />
+        <option value="$PROJECT_DIR$/Application/Home/View/Public/user_menu.html" />
+        <option value="$PROJECT_DIR$/Application/Home/View/Social/other_comment.html" />
+        <option value="$PROJECT_DIR$/Application/Home/View/Social/my_comment.html" />
+        <option value="$PROJECT_DIR$/Application/Home/View/Social/edit_share.html" />
+        <option value="$PROJECT_DIR$/Application/Home/Controller/SocialController.class.php" />
+        <option value="$PROJECT_DIR$/Application/Home/Controller/NoteController.class.php" />
+        <option value="$PROJECT_DIR$/Application/Home/View/Social/share.html" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/77fedb1b-25f4-4127-b5bc-6b4cf6e785d1/console.sql" />
+        <option value="$PROJECT_DIR$/Application/Home/Controller/HomePageController.class.php" />
+        <option value="$PROJECT_DIR$/Application/Home/View/Social/my_share.html" />
+        <option value="$PROJECT_DIR$/Application/Home/View/Social/other_share.html" />
+        <option value="$PROJECT_DIR$/Application/Home/View/HomePage/index.html" />
       </list>
     </option>
   </component>
@@ -284,14 +331,6 @@
               <item name="Application" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Home" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="View" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Note" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="easynote" type="b2602c69:ProjectViewProjectNode" />
-              <item name="easynote" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Application" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Home" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="View" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Social" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -316,8 +355,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -381,18 +420,18 @@
       <workItem from="1512546690370" duration="1772000" />
       <workItem from="1512548807505" duration="4785000" />
       <workItem from="1512564796193" duration="6640000" />
+      <workItem from="1512627152745" duration="12975000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="181659000" />
+    <option name="totallyTimeSpent" value="194634000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2813212" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30311158" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2813212" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30740345" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22371244" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -427,21 +466,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Public/static/js/jquery.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Public/static/js/menu.js" />
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Public/admin_menu.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="22" column="38" lean-forward="false" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Public/static/css/webuploader.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="293">
@@ -479,13 +503,6 @@
             <element signature="e#1927#1933#1" expanded="false" />
             <element signature="n#style#0;n#select#0;n#form#0;n#div#0;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/HomePage/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="456" column="8" lean-forward="false" selection-start-line="456" selection-start-column="8" selection-end-line="479" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -603,14 +620,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/Controller/HomePageController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="79">
-          <caret line="21" column="39" lean-forward="false" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Application/Home/View/Follow/following.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="245">
@@ -629,21 +638,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="62" column="69" lean-forward="false" selection-start-line="62" selection-start-column="69" selection-end-line="62" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Note/note_by_book.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="17" column="26" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Public/user_menu.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="59" column="36" lean-forward="false" selection-start-line="59" selection-start-column="36" selection-end-line="59" selection-end-column="36" />
         </state>
       </provider>
     </entry>
@@ -680,33 +674,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://table:/154647e2/77fedb1b-25f4-4127-b5bc-6b4cf6e785d1/main.note">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://table:/154647e2/77fedb1b-25f4-4127-b5bc-6b4cf6e785d1/main.vote">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Note/edit_note.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="72" column="50" lean-forward="false" selection-start-line="72" selection-start-column="50" selection-end-line="72" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Public/static/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="1327" column="4" lean-forward="false" selection-start-line="1327" selection-start-column="4" selection-end-line="1328" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -715,47 +686,6 @@
         <state relative-caret-position="514">
           <caret line="124" column="8" lean-forward="true" selection-start-line="124" selection-start-column="8" selection-end-line="124" selection-end-column="63" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/154647e2/77fedb1b-25f4-4127-b5bc-6b4cf6e785d1/main.share">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Social/my_share.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="58" column="89" lean-forward="false" selection-start-line="58" selection-start-column="89" selection-end-line="58" selection-end-column="89" />
-          <folding>
-            <marker date="1512570596885" expanded="true" signature="10205:10211" ph=" " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Social/other_share.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="183" column="4" lean-forward="false" selection-start-line="183" selection-start-column="4" selection-end-line="200" selection-end-column="5" />
-          <folding>
-            <element signature="n#style#0;n#i#0;n#p#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#foreach#0;n#div#0;n#div#0;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#4728#4734#0" expanded="true" />
-            <marker date="1512569563771" expanded="true" signature="8645:8651" ph=" " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Social/public_note.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2828">
-          <caret line="206" column="25" lean-forward="false" selection-start-line="206" selection-start-column="25" selection-end-line="206" selection-end-column="25" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#foreach#0;n#div#0;n#div#0;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#5184#5190#0" expanded="true" />
-            <marker date="1512570473842" expanded="true" signature="9126:9132" ph=" " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -770,38 +700,98 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="624">
           <caret line="98" column="19" lean-forward="false" selection-start-line="98" selection-start-column="19" selection-end-line="98" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/77fedb1b-25f4-4127-b5bc-6b4cf6e785d1/console.sql">
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Social/public_note.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" column="12" lean-forward="false" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/Controller/NoteController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="121" column="84" lean-forward="false" selection-start-line="121" selection-start-column="84" selection-end-line="121" selection-end-column="84" />
+        <state relative-caret-position="531">
+          <caret line="102" column="22" lean-forward="false" selection-start-line="102" selection-start-column="22" selection-end-line="102" selection-end-column="22" />
           <folding>
-            <marker date="1512570832808" expanded="true" signature="3625:3698" ph="SELECT c.*,u... comment" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#foreach#0;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#4768#4774#0" expanded="true" />
+            <marker date="1512630729835" expanded="true" signature="7256:7262" ph=" " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Public/user_menu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="69" column="91" lean-forward="false" selection-start-line="69" selection-start-column="91" selection-end-line="69" selection-end-column="91" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Social/other_comment.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="40" column="12" lean-forward="false" selection-start-line="40" selection-start-column="12" selection-end-line="61" selection-end-column="37" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#foreach#0;n#div#0;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#foreach#0;n#div#0;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#0;n#div#1;n#div#0;n#foreach#0;n#div#0;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#0;n#php#0;n#div#0;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Social/my_comment.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="54" column="98" lean-forward="false" selection-start-line="54" selection-start-column="98" selection-end-line="54" selection-end-column="98" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#foreach#0;n#div#0;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#foreach#0;n#div#0;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#0;n#div#1;n#div#0;n#foreach#0;n#div#0;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#0;n#php#0;n#div#0;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Note/edit_note.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="557">
+          <caret line="135" column="0" lean-forward="true" selection-start-line="135" selection-start-column="0" selection-end-line="135" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Social/edit_share.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1569">
+          <caret line="101" column="24" lean-forward="true" selection-start-line="101" selection-start-column="24" selection-end-line="101" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/154647e2/77fedb1b-25f4-4127-b5bc-6b4cf6e785d1/main.note">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/154647e2/77fedb1b-25f4-4127-b5bc-6b4cf6e785d1/main.share">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/Home/View/Note/note.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="78" column="76" lean-forward="false" selection-start-line="78" selection-start-column="76" selection-end-line="78" selection-end-column="76" />
+        <state relative-caret-position="1169">
+          <caret line="193" column="4" lean-forward="true" selection-start-line="193" selection-start-column="4" selection-end-line="213" selection-end-column="5" />
           <folding>
-            <element signature="n#style#0;n#h3#1;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#php#0;n#div#0;n#div#2;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#foreach#0;n#div#0;n#div#2;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#foreach#0;n#div#0;n#div#2;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#2;n#div#0;n#foreach#0;n#div#0;n#div#2;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#1;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#0;n#php#0;n#div#0;n#div#2;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#foreach#0;n#div#0;n#div#2;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#foreach#0;n#div#0;n#div#2;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#foreach#0;n#div#0;n#div#2;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#0;n#div#2;n#div#0;n#foreach#0;n#div#0;n#div#2;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -809,7 +799,7 @@
     <entry file="file://$PROJECT_DIR$/Application/Home/View/Social/share.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="470">
-          <caret line="127" column="37" lean-forward="true" selection-start-line="101" selection-start-column="12" selection-end-line="127" selection-end-column="37" />
+          <caret line="114" column="79" lean-forward="false" selection-start-line="114" selection-start-column="79" selection-end-line="114" selection-end-column="79" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -822,36 +812,174 @@
             <element signature="n#style#0;n#p#0;n#php#0;n#div#0;n#div#2;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#foreach#0;n#div#0;n#div#2;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#0;n#foreach#0;n#div#0;n#div#2;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#1;n#div#1;n#div#0;n#foreach#0;n#div#0;n#div#2;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#p#0;n#div#2;n#div#0;n#foreach#0;n#div#0;n#div#2;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1512570562324" expanded="true" signature="8127:8133" ph=" " />
+            <marker date="1512636009506" expanded="true" signature="11199:11205" ph=" " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/static/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="815" column="20" lean-forward="false" selection-start-line="815" selection-start-column="20" selection-end-line="815" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/77fedb1b-25f4-4127-b5bc-6b4cf6e785d1/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Note/note_by_book.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1262">
+          <caret line="101" column="4" lean-forward="false" selection-start-line="101" selection-start-column="4" selection-end-line="121" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/Controller/NoteController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2692">
+          <caret line="185" column="8" lean-forward="false" selection-start-line="185" selection-start-column="8" selection-end-line="187" selection-end-column="78" />
+          <folding>
+            <marker date="1512635758343" expanded="true" signature="3625:3698" ph="SELECT c.*,u... comment" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/Controller/HomePageController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="56" column="46" lean-forward="false" selection-start-line="56" selection-start-column="46" selection-end-line="56" selection-end-column="46" />
+          <folding>
+            <marker date="1512639225756" expanded="true" signature="290:359" ph="SELECT sum(n... note" />
+            <marker date="1512639225756" expanded="true" signature="453:506" ph="SELECT count... notebook" />
+            <marker date="1512639225756" expanded="true" signature="617:712" ph="SELECT count... comment" />
+            <marker date="1512639225756" expanded="true" signature="812:870" ph="SELECT count... follow" />
+            <marker date="1512639225756" expanded="true" signature="996:1052" ph="SELECT * FRO... note" />
+            <marker date="1512639225756" expanded="true" signature="996:1074" ph="SELECT * FRO... note" />
+            <marker date="1512639225756" expanded="true" signature="996:1082" ph="SELECT * FRO... note" />
+            <marker date="1512639225756" expanded="true" signature="1139:1341" ph="SELECT s.*, share" />
+            <marker date="1512639225756" expanded="true" signature="1400:1582" ph="SELECT c.*,n... comment" />
+            <marker date="1512639225756" expanded="true" signature="1638:1818" ph="SELECT v.*,n... vote" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/Home/Controller/SocialController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="52" column="8" lean-forward="false" selection-start-line="52" selection-start-column="8" selection-end-line="52" selection-end-column="36" />
+        <state relative-caret-position="211">
+          <caret line="142" column="8" lean-forward="false" selection-start-line="142" selection-start-column="8" selection-end-line="146" selection-end-column="36" />
           <folding>
-            <marker date="1512570366216" expanded="true" signature="271:444" ph="SELECT * FRO... share" />
-            <marker date="1512570366216" expanded="true" signature="271:472" ph="SELECT * FRO... share" />
-            <marker date="1512570366216" expanded="true" signature="713:870" ph="SELECT s.*, share" />
-            <marker date="1512570366216" expanded="true" signature="713:875" ph="SELECT s.*, share" />
-            <marker date="1512570366216" expanded="true" signature="1242:1315" ph="SELECT c.*,u... comment" />
-            <marker date="1512570366216" expanded="true" signature="1242:1336" ph="SELECT c.*,u... comment" />
-            <marker date="1512570366216" expanded="true" signature="1590:1646" ph="SELECT n.uid... note" />
-            <marker date="1512570366216" expanded="true" signature="1590:1669" ph="SELECT n.uid... note" />
-            <marker date="1512570366216" expanded="true" signature="1836:1909" ph="SELECT c.*,u... comment" />
-            <marker date="1512570366216" expanded="true" signature="3100:3222" ph="SELECT * FRO... share" />
-            <marker date="1512570366216" expanded="true" signature="3100:3254" ph="SELECT * FRO... share" />
-            <marker date="1512570366216" expanded="true" signature="3100:3274" ph="SELECT * FRO... share" />
-            <marker date="1512570366216" expanded="true" signature="3100:3302" ph="SELECT * FRO... share" />
-            <marker date="1512570366216" expanded="true" signature="3897:3963" ph="SELECT * FRO... note" />
-            <marker date="1512570366216" expanded="true" signature="3897:3966" ph="SELECT * FRO... note" />
-            <marker date="1512570366216" expanded="true" signature="3897:3979" ph="SELECT * FRO... note" />
-            <marker date="1512570366216" expanded="true" signature="3897:3991" ph="SELECT * FRO... note" />
-            <marker date="1512570366216" expanded="true" signature="3897:4024" ph="SELECT * FRO... note" />
-            <marker date="1512570366216" expanded="true" signature="4073:4206" ph="SELECT * FRO... note" />
+            <marker date="1512634990313" expanded="true" signature="271:444" ph="SELECT * FRO... share" />
+            <marker date="1512634990313" expanded="true" signature="271:472" ph="SELECT * FRO... share" />
+            <marker date="1512634990313" expanded="true" signature="528:537" ph="SELECT c.cmt... comment" />
+            <marker date="1512634990313" expanded="true" signature="528:710" ph="SELECT c.*,n... comment" />
+            <marker date="1512634990313" expanded="true" signature="766:946" ph="SELECT v.*,n... vote" />
+            <marker date="1512634990313" expanded="true" signature="830:946" ph="SELECT v.vot... vote" />
+            <marker date="1512634990313" expanded="true" signature="1226:1408" ph="SELECT c.*,n... comment" />
+            <marker date="1512634990313" expanded="true" signature="1655:1812" ph="SELECT s.*, share" />
+            <marker date="1512634990313" expanded="true" signature="1655:1817" ph="SELECT s.*, share" />
+            <marker date="1512634990313" expanded="true" signature="2184:2257" ph="SELECT c.*,u... comment" />
+            <marker date="1512634990313" expanded="true" signature="2184:2278" ph="SELECT c.*,u... comment" />
+            <marker date="1512634990313" expanded="true" signature="2532:2588" ph="SELECT n.uid... note" />
+            <marker date="1512634990313" expanded="true" signature="2532:2611" ph="SELECT n.uid... note" />
+            <marker date="1512634990313" expanded="true" signature="3146:3219" ph="SELECT c.*,u... comment" />
+            <marker date="1512634990313" expanded="true" signature="4414:4536" ph="SELECT * FRO... share" />
+            <marker date="1512634990313" expanded="true" signature="4414:4568" ph="SELECT * FRO... share" />
+            <marker date="1512634990313" expanded="true" signature="4414:4588" ph="SELECT * FRO... share" />
+            <marker date="1512634990313" expanded="true" signature="4414:4616" ph="SELECT * FRO... share" />
+            <marker date="1512634990313" expanded="true" signature="4672:4679" ph="SELECT c.*,n... comment" />
+            <marker date="1512634990313" expanded="true" signature="4672:4744" ph="SELECT c.*,n... comment" />
+            <marker date="1512634990313" expanded="true" signature="4672:4791" ph="SELECT c.*,n... comment" />
+            <marker date="1512634990313" expanded="true" signature="4672:4820" ph="SELECT a.*,n... comment" />
+            <marker date="1512634990313" expanded="true" signature="4876:5022" ph="SELECT v.*,n... vote" />
+            <marker date="1512634990313" expanded="true" signature="5300:5448" ph="SELECT c.*,n... comment" />
+            <marker date="1512634990313" expanded="true" signature="6044:6110" ph="SELECT * FRO... note" />
+            <marker date="1512634990313" expanded="true" signature="6044:6113" ph="SELECT * FRO... note" />
+            <marker date="1512634990313" expanded="true" signature="6044:6126" ph="SELECT * FRO... note" />
+            <marker date="1512634990313" expanded="true" signature="6044:6138" ph="SELECT * FRO... note" />
+            <marker date="1512634990313" expanded="true" signature="6044:6171" ph="SELECT * FRO... note" />
+            <marker date="1512634990313" expanded="true" signature="6220:6353" ph="SELECT * FRO... note" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Social/my_share.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="117" column="113" lean-forward="false" selection-start-line="117" selection-start-column="113" selection-end-line="117" selection-end-column="113" />
+          <folding>
+            <element signature="n#style#0;n#p#1;n#div#1;n#div#0;n#div#0;n#div#0;n#foreach#0;n#div#0;n#div#0;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#foreach#0;n#div#1;n#div#0;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#php#0;n#div#1;n#div#0;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#1;n#php#0;n#div#1;n#div#0;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#p#1;n#php#0;n#div#1;n#div#0;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#foreach#1;n#div#1;n#div#0;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#php#1;n#div#1;n#div#0;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1512639858182" expanded="true" signature="11025:11031" ph=" " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Social/other_share.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="866">
+          <caret line="120" column="129" lean-forward="false" selection-start-line="120" selection-start-column="129" selection-end-line="120" selection-end-column="129" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#foreach#0;n#div#0;n#div#0;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#foreach#0;n#div#0;n#div#0;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#foreach#0;n#div#0;n#div#0;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#2947#2953#0" expanded="true" />
+            <element signature="n#style#0;n#p#1;n#div#1;n#div#0;n#div#0;n#div#0;n#foreach#0;n#div#0;n#div#0;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#3055#3061#0" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#2;n#div#0;n#div#0;n#div#0;n#foreach#0;n#div#0;n#div#0;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#foreach#0;n#div#2;n#div#0;n#div#0;n#div#0;n#foreach#0;n#div#0;n#div#0;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#2;n#div#0;n#div#0;n#foreach#0;n#div#0;n#div#0;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#4392#4398#0" expanded="true" />
+            <element signature="e#4563#4569#0" expanded="true" />
+            <element signature="e#4701#4707#0" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#foreach#0;n#div#1;n#div#0;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#php#0;n#div#1;n#div#0;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#1;n#php#0;n#div#1;n#div#0;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#p#1;n#php#0;n#div#1;n#div#0;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#foreach#1;n#div#1;n#div#0;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#php#1;n#div#1;n#div#0;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1512639858203" expanded="true" signature="9458:9464" ph=" " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/HomePage/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="49" column="73" lean-forward="false" selection-start-line="49" selection-start-column="73" selection-end-line="49" selection-end-column="73" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#foreach#0;n#div#2;n#div#0;n#div#0;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#foreach#0;n#div#2;n#div#0;n#div#0;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#foreach#0;n#div#2;n#div#0;n#div#0;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#5092#5098#0" expanded="true" />
+            <element signature="n#style#0;n#p#1;n#div#1;n#div#0;n#div#0;n#div#0;n#foreach#0;n#div#2;n#div#0;n#div#0;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#5172#5178#0" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#2;n#div#0;n#div#0;n#div#0;n#foreach#0;n#div#2;n#div#0;n#div#0;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#foreach#0;n#div#2;n#div#0;n#div#0;n#div#0;n#foreach#0;n#div#2;n#div#0;n#div#0;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#2;n#div#0;n#div#0;n#foreach#0;n#div#2;n#div#0;n#div#0;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#6056#6062#0" expanded="true" />
+            <element signature="e#6199#6205#0" expanded="true" />
+            <element signature="e#6309#6315#0" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#foreach#0;n#div#1;n#div#0;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#php#0;n#div#1;n#div#0;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#1;n#php#0;n#div#1;n#div#0;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#p#1;n#php#0;n#div#1;n#div#0;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#foreach#1;n#div#1;n#div#0;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#php#1;n#div#1;n#div#0;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

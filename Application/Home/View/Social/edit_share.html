@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Dashboard">
+    <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+
+    <title>EASYNOTE - Make Notes Simple</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="_CSS_/bootstrap.css" rel="stylesheet">
+    <!--external css-->
+    <link href="_PUBLIC_/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="_PUBLIC_/lineicons/style.css">
+
+    <!-- Custom styles for this template -->
+    <link href="_CSS_/style.css" rel="stylesheet">
+    <link href="_CSS_/style-responsive.css" rel="stylesheet">
+
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <![endif]-->
+</head>
+
+<body>
+
+<section id="container" >
+    <include file="Public/header"/>
+    <include file="Public/user_menu" mynote="active"/>
+    <!-- **********************************************************************************************************************************************************
+    MAIN CONTENT
+    *********************************************************************************************************************************************************** -->
+    <!--main content start-->
+    <section id="main-content">
+        <section class="wrapper site-min-height">
+            <div class="">
+
+                <form class="form-new-note" action="__URL__/updateNote" method="post">
+                    <input type="hidden" name="id" value="{$note.id}">
+                    <br>
+                    <input required type="text" name="title" class="form-control" placeholder="标题" value="{$note.title}">
+
+                    <br>
+                    <input type="text" name="tags" class="form-control" placeholder="标签" onchange="show_labels()" value="{$note.tags}">
+                    <span class="help-block">&nbsp;<i class="fa fa-angle-up"></i> 每个标签之间用中文<code>；</code>隔开</span>
+
+                    <div class="note-labels">
+                        <php>$tags=explode('；',$note['tags']);</php>
+                        <for start="0" end="count($tags)" step="1">
+                            <php>$tag=$tags[$i];</php>
+                            <span class="label label-info">{$tag}</span>
+                        </for>
+                    </div>
+                    <br>
+
+                    <!--编辑器-->
+                    <script id="editor" name="content" type="text/plain">{$note.content}</script>
+                    <br>
+
+
+                    <button class="btn btn-theme" type="submit"> 保 存 </button>
+                    <button class="btn btn-warning" type="button" onclick="window.history.back()" > 取 消 </button>
+                </form>
+
+            </div>
+
+        </section>
+    </section>
+
+    <!--main content end-->
+    <include file="Public/footer" />
+</section>
+<!-- js placed at the end of the document so the pages load faster -->
+<script src="_JS_/jquery.js"></script>
+<script src="_JS_/jquery-1.8.3.min.js"></script>
+<script src="_JS_/bootstrap.min.js"></script>
+<script class="include" type="text/javascript" src="_JS_/jquery.dcjqaccordion.2.7.js"></script>
+<script src="_JS_/jquery.scrollTo.min.js"></script>
+<script src="_JS_/jquery.nicescroll.js" type="text/javascript"></script>
+<script src="_JS_/jquery.sparkline.js"></script>
+
+
+
+<script src="assets/js/form-component.js"></script>
+
+<!--common script for all pages-->
+<script src="_JS_/common-scripts.js"></script>
+
+<!-- 配置文件 -->
+<script type="text/javascript" src="_JS_/ueditor/ueditor.config.js"></script>
+<!-- 编辑器源码文件 -->
+<script type="text/javascript" src="_JS_/ueditor/ueditor.all.js"></script>
+<!-- 实例化编辑器 -->
+<script type="text/javascript">
+    var ue = UE.getEditor('editor');
+
+    function show_labels() {
+        var label_long = document.getElementsByName('tags').item(0).value;
+        var labels = label_long.split('；');
+        var node = document.getElementsByClassName('note-labels').item(0);
+
+        while(node.hasChildNodes()){
+            node.removeChild(node.firstChild);
+        }
+
+        for(var i = 0;i<labels.length;i++){
+            var temp = document.createElement("span");
+            temp.appendChild(document.createTextNode(labels[i]));
+            temp.className="label label-info";
+            node.appendChild(temp);
+        }
+    }
+
+
+
+</script>
+
+</body>
+</html>

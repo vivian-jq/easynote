@@ -127,17 +127,11 @@ WHERE u.id=c.uid AND c.nid=".$nid.";";
         $note = M('note');
         $condition['id']=$nid;
         $data = $note->where($condition)->select();
-        if(count($data)==0){
+
+        if(count($data)==0||$data[0]['uid']!=session('id')){
             $this->redirect('index/warning');
-        }else if($data[0]['uid']!=session('id')&&$data[0]['note_stat']==0){
-            //非原作者
-            $share = M('share');
-            $condition3['uid_to']=session('id');
-            $condition3['nid']=$nid;
-            $confirm = $share->where($condition3)->where('share_stat=2 OR share_stat=4')->select();
-            if(count($confirm)==0)
-                $this->redirect('index/warning');
         }
+
         $data[0]['stat']=($data[0]['note_stat']==1)?'':'checked';
         $data[0]['content']=htmlspecialchars_decode($data[0]['content']);
 
@@ -166,7 +160,6 @@ WHERE u.id=c.uid AND c.nid=".$nid.";";
         $data['uid_from'] = session('id');
         $data['nid'] = I('post.nid');
         $data['uid_to'] = I('post.uid');
-        $data['reason'] = I('post.reason');
         $data['reason'] = I('post.reason');
         $data['share_time'] = date('Y-m-d H:i:s',time());
         $data['share_stat'] = I('post.share_stat');

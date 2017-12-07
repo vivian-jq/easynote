@@ -45,8 +45,7 @@
 
                     <foreach name="shares" item="share">
                         <! -- SHARE PANEL -->
-                        <div class="row">
-                            <div class="col-lg-12">
+                            <div class="col-lg-12 mb">
                                 <div class="share-panel pn">
                                     <div class="share-panel-header" style="display: inline-block">
                                         <div class="photo">
@@ -56,8 +55,8 @@
 
                                         <div class="details" style="float:left">
                                             <p>
-                                                <a href="#">{$share.username}</a> 收到了我分享的一篇笔记：<br>
-                                                <i style="font-size: 16px">&nbsp;“{$share.reason}”</i></p>
+                                                <a href="#">{$share.username}</a> 收到了我分享的一篇笔记：</p>
+                                                <p style="font-size: 16px;font-style: italic;">&nbsp;“{$share.reason}”</p>
                                         </div>
 
                                         <div class="title" >
@@ -89,7 +88,7 @@
 
                                 </div>
 
-                            </div></div><!-- /col-lg-12 -->
+                            </div><!-- /col-lg-12 -->
                         <br>
                     </foreach>
 
@@ -97,35 +96,48 @@
                 </div>
 
                 <div class="col-lg-3 ds">
-                    <!--COMPLETED ACTIONS DONUTS CHART-->
-                    <h3>NOTIFICATIONS</h3>
+                    <!-- COMMENT PANEL -->
+                    <h3>好友评论</h3>
 
-                    <!-- First Action -->
-                    <div class="desc">
-                        <div class="thumb">
-                            <span class="badge bg-theme"><i class="fa fa-clock-o"></i></span>
-                        </div>
-                        <div class="details">
-                            <p><muted>2 Minutes Ago</muted><br/>
-                                <a href="#">James Brown</a> subscribed to your newsletter.<br/>
-                            </p>
-                        </div>
-                    </div>
+                    <foreach name="comments" item="comment">
 
-                    <!-- USERS ONLINE SECTION -->
-                    <h3>TEAM MEMBERS</h3>
-                    <!-- First Member -->
-                    <div class="desc">
-                        <div class="thumb">
-                            <img class="img-circle" src="assets/img/ui-divya.jpg" width="35px" height="35px" align="">
+                        <div class="desc">
+                            <div class="thumb">
+                                <img src="/upload/profile/profile{$comment.uid}.jpg" width="80px" style="margin-left: -15px"
+                                     onerror="this.src='/upload/profile/profile-default.jpg'">
+                            </div>
+                            <div class="details">
+                                <p><muted>{$comment.cmt_time}</muted><br/>
+                                    <a href="#">{$comment.username}</a> 评论了<strong>《{$comment.title}》</strong>：{$comment.content}<br/>
+                                </p>
+                            </div>
                         </div>
-                        <div class="details">
-                            <p><a href="#">DIVYA MANIAN</a><br/>
-                                <muted>Available</muted>
-                            </p>
-                        </div>
-                    </div>
+                    </foreach>
 
+                    <php>if(count($comments)==0){echo '<p style="text-align: center;padding:10px 0">暂无评论</p>';}
+                        else {echo '<p style="text-align: center;padding:10px 0"><a style="color: #ff865c" href="__URL__/../Social/otherComment">>> 前往评论区</a></p>';}</php>
+
+
+
+                    <!-- VOTE PANEL -->
+                    <h3>好友点赞</h3>
+
+                    <foreach name="votes" item="vote">
+
+                        <div class="desc">
+                            <div class="thumb">
+                                <img src="/upload/profile/profile{$vote.uid}.jpg" width="80px" style="margin-left: -15px"
+                                     onerror="this.src='/upload/profile/profile-default.jpg'">
+                            </div>
+                            <div class="details">
+                                <p><muted>{$vote.vote_time}</muted><br/>
+                                    <a href="#">{$comment.username}</a> 点赞了<strong>《{$vote.title}》</strong><br/>
+                                </p>
+                            </div>
+                        </div>
+                    </foreach>
+
+                    <php>if(count($votes)==0){echo '<p style="text-align: center;padding:10px 0">暂无点赞</p>';}</php>
                 </div><!-- /col-lg-3 -->
             </div>
 
@@ -228,8 +240,4 @@
         window.location="__URL__/share/sid/"+node.name;
     }
 </script>
-
-
-</body>
-</html>
 

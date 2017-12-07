@@ -799,15 +799,17 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
 }
 
 .ds .thumb {
-	width: 30px;
-	margin: 0 10px 0 20px;
+	width: 50px;
+    height: 50px;
+	margin: 0 10px 0 5px;
 	display: block;
 	float: left;
+    overflow: hidden;
 }
 
 .ds .details {
-	width: 170px;
 	float: left;
+    width: 230px;
 }
 
 .ds > .desc p {
