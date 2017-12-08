@@ -1,13 +1,13 @@
 <?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="">
-	<meta name="author" content="Dashboard">
-	<meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+	<meta name="description" content="一个用来记笔记的网站">
+	<meta name="author" content="jqwu">
+	<meta name="keyword" content="jqwu,easynote, note, 笔记">
 
-	<title>DASHGUM - FREE Bootstrap Admin Template</title>
+	<title>EASYNOTE - Make Notes Simple</title>
 
 	<!-- Bootstrap core CSS -->
 	<link href="/Public/static/css/bootstrap.css" rel="stylesheet">

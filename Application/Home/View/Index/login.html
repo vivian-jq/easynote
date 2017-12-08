@@ -1,81 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="Dashboard">
+<html lang="zh">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="一个用来记笔记的网站">
+	<meta name="author" content="jqwu">
+	<meta name="keyword" content="jqwu,easynote, note, 笔记">
 
-    <title>EASYNOTE - Make Notes Simple</title>
+	<title>EASYNOTE - Make Notes Simple</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="_CSS_/bootstrap.css" rel="stylesheet">
-    <!--external css-->
-    <link href="_PUBLIC_/font-awesome/css/font-awesome.css" rel="stylesheet" />
-        
-    <!-- Custom styles for this template -->
-    <link href="_CSS_/style.css" rel="stylesheet">
-    <link href="_CSS_/style-responsive.css" rel="stylesheet">
+	<!-- Bootstrap core CSS -->
+	<link href="_CSS_/bootstrap.css" rel="stylesheet">
+	<!--external css-->
+	<link href="_PUBLIC_/font-awesome/css/font-awesome.css" rel="stylesheet" />
 
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
+	<!-- Custom styles for this template -->
+	<link href="_CSS_/style.css" rel="stylesheet">
+	<link href="_CSS_/style-responsive.css" rel="stylesheet">
 
-  <body>
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
 
-      <!-- **********************************************************************************************************************************************************
-      MAIN CONTENT
-      *********************************************************************************************************************************************************** -->
+<body>
 
-	  <div id="login-page">
-	  	<div class="container">
-	  	
-		      <form class="form-login" action="__URL__/login" method="post">
-		        <h2 class="form-login-heading">EASY NOTE</h2>
-		        <div class="login-wrap">
-		            <input type="text" name="username" value="{$username}" class="form-control" placeholder="用 户 名" autofocus>
-		            <br>
-		            <input type="password" name="password" class="form-control" placeholder="密 码">
-		            <br>
-		            <button class="btn btn-theme btn-block" type="submit" ><i class="fa fa-lock">
-					</i> 登&nbsp&nbsp陆</button>
+<!-- **********************************************************************************************************************************************************
+MAIN CONTENT
+*********************************************************************************************************************************************************** -->
 
-					<br>
-					<div class="alert alert-danger alert-dismissable {$hideWarn}">
-						<button type="button" class="close" data-dismiss="alert"
-								aria-hidden="true">
-							&times;
-						</button>
-						{$warning}
-					</div>
-		            <div class="registration">
-		                还没有注册账户？<br/>
-		                <a class="" href="__URL__/newAccount">
-		                    注册一个吧
-		                </a>
-		            </div>
-		
-		        </div>
-		
-		      </form>	  	
-	  	
-	  	</div>
-	  </div>
+<div id="login-page">
+	<div class="container">
 
-    <!-- js placed at the end of the document so the pages load faster -->
-    <script src="_JS_/jquery.js"></script>
-    <script src="_JS_/bootstrap.min.js"></script>
+		<form class="form-login" action="__URL__/login" method="post">
+			<h2 class="form-login-heading">EASY NOTE</h2>
+			<div class="login-wrap">
+				<input type="text" name="username" value="{$username}" class="form-control" placeholder="用 户 名" autofocus>
+				<br>
+				<input type="password" name="password" class="form-control" placeholder="密 码">
+				<br>
+				<button class="btn btn-theme btn-block" type="submit" ><i class="fa fa-lock">
+				</i> 登&nbsp&nbsp陆</button>
 
-    <!--BACKSTRETCH-->
-    <!-- You can use an image of whatever size. This script will stretch to fit in any screen size.-->
-    <script type="text/javascript" src="_JS_/jquery.backstretch.min.js"></script>
-    <script>
-        $.backstretch("_IMG_/temp/login-bg.jpg", {speed: 500});
-    </script>
+				<br>
+				<div class="alert alert-danger alert-dismissable {$hideWarn}">
+					<button type="button" class="close" data-dismiss="alert"
+							aria-hidden="true">
+						&times;
+					</button>
+					{$warning}
+				</div>
+				<div class="registration">
+					还没有注册账户？<br/>
+					<a class="" href="__URL__/newAccount">
+						注册一个吧
+					</a>
+				</div>
+
+			</div>
+
+		</form>
+
+	</div>
+</div>
+
+<!-- js placed at the end of the document so the pages load faster -->
+<script src="_JS_/jquery.js"></script>
+<script src="_JS_/bootstrap.min.js"></script>
+
+<!--BACKSTRETCH-->
+<!-- You can use an image of whatever size. This script will stretch to fit in any screen size.-->
+<script type="text/javascript" src="_JS_/jquery.backstretch.min.js"></script>
+<script>
+    $.backstretch("_IMG_/temp/login-bg.jpg", {speed: 500});
+</script>
 
 
-  </body>
+</body>
 </html>

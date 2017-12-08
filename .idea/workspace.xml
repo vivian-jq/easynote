@@ -2,14 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9c1523c5-92d2-4e12-a2d4-84e410c90bcf" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Home/View/Admin/profile.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Home/View/Admin/profile_modify.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Data/easynote.db" afterPath="$PROJECT_DIR$/Application/Runtime/Data/easynote.db" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/Controller/AdminController.class.php" afterPath="$PROJECT_DIR$/Application/Home/Controller/AdminController.class.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Admin/admin_manager.html" afterPath="$PROJECT_DIR$/Application/Home/View/Admin/admin_manager.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Admin/profile.html" afterPath="$PROJECT_DIR$/Application/Home/View/Admin/profile.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Admin/profile_modify.html" afterPath="$PROJECT_DIR$/Application/Home/View/Admin/profile_modify.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Admin/users_manager.html" afterPath="$PROJECT_DIR$/Application/Home/View/Admin/users_manager.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Public/admin_menu.html" afterPath="$PROJECT_DIR$/Application/Home/View/Public/admin_menu.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Follow/followers.html" afterPath="$PROJECT_DIR$/Application/Home/View/Follow/followers.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Follow/following.html" afterPath="$PROJECT_DIR$/Application/Home/View/Follow/following.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Follow/search_user.html" afterPath="$PROJECT_DIR$/Application/Home/View/Follow/search_user.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/HomePage/index.html" afterPath="$PROJECT_DIR$/Application/Home/View/HomePage/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/HomePage/lock_screen.html" afterPath="$PROJECT_DIR$/Application/Home/View/HomePage/lock_screen.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/HomePage/profile.html" afterPath="$PROJECT_DIR$/Application/Home/View/HomePage/profile.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/HomePage/profile_modify.html" afterPath="$PROJECT_DIR$/Application/Home/View/HomePage/profile_modify.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Index/login.html" afterPath="$PROJECT_DIR$/Application/Home/View/Index/login.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Index/new_account.html" afterPath="$PROJECT_DIR$/Application/Home/View/Index/new_account.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Index/warning.html" afterPath="$PROJECT_DIR$/Application/Home/View/Index/warning.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Note/edit_note.html" afterPath="$PROJECT_DIR$/Application/Home/View/Note/edit_note.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Note/new_note.html" afterPath="$PROJECT_DIR$/Application/Home/View/Note/new_note.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Note/note.html" afterPath="$PROJECT_DIR$/Application/Home/View/Note/note.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Note/note_by_book.html" afterPath="$PROJECT_DIR$/Application/Home/View/Note/note_by_book.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Note/note_by_tag.html" afterPath="$PROJECT_DIR$/Application/Home/View/Note/note_by_tag.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Note/note_by_time.html" afterPath="$PROJECT_DIR$/Application/Home/View/Note/note_by_time.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Note/notebooks.html" afterPath="$PROJECT_DIR$/Application/Home/View/Note/notebooks.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Social/edit_share.html" afterPath="$PROJECT_DIR$/Application/Home/View/Social/edit_share.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Social/my_comment.html" afterPath="$PROJECT_DIR$/Application/Home/View/Social/my_comment.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Social/my_share.html" afterPath="$PROJECT_DIR$/Application/Home/View/Social/my_share.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Social/other_comment.html" afterPath="$PROJECT_DIR$/Application/Home/View/Social/other_comment.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Social/other_share.html" afterPath="$PROJECT_DIR$/Application/Home/View/Social/other_share.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Social/public_note.html" afterPath="$PROJECT_DIR$/Application/Home/View/Social/public_note.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Social/share.html" afterPath="$PROJECT_DIR$/Application/Home/View/Social/share.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Home/4df600613c22fe9cef8a6106f202261a.php" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Home/4df600613c22fe9cef8a6106f202261a.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -48,52 +70,36 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="AdminController.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/Home/Controller/AdminController.class.php">
+      <file leaf-file-name="note.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/Home/View/Note/note.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="778">
-              <caret line="117" column="5" lean-forward="false" selection-start-line="117" selection-start-column="5" selection-end-line="117" selection-end-column="5" />
+            <state relative-caret-position="408">
+              <caret line="175" column="0" lean-forward="false" selection-start-line="175" selection-start-column="0" selection-end-line="176" selection-end-column="66" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="profile_modify.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Application/Home/View/Admin/profile_modify.html">
+      <file leaf-file-name="share.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/Home/View/Social/share.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="38" column="31" lean-forward="false" selection-start-line="38" selection-start-column="31" selection-end-line="38" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HomePageController.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/Home/Controller/HomePageController.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="122">
-              <caret line="70" column="4" lean-forward="false" selection-start-line="70" selection-start-column="4" selection-end-line="95" selection-end-column="5" />
+            <state relative-caret-position="-5026">
+              <caret line="59" column="130" lean-forward="false" selection-start-line="59" selection-start-column="130" selection-end-line="59" selection-end-column="130" />
               <folding>
-                <marker date="1512654234050" expanded="true" signature="290:359" ph="SELECT sum(n... note" />
-                <marker date="1512654234050" expanded="true" signature="453:506" ph="SELECT count... notebook" />
-                <marker date="1512654234050" expanded="true" signature="617:712" ph="SELECT count... comment" />
-                <marker date="1512654234050" expanded="true" signature="812:870" ph="SELECT count... follow" />
-                <marker date="1512654234050" expanded="true" signature="996:1052" ph="SELECT * FRO... note" />
-                <marker date="1512654234050" expanded="true" signature="996:1074" ph="SELECT * FRO... note" />
-                <marker date="1512654234050" expanded="true" signature="996:1082" ph="SELECT * FRO... note" />
-                <marker date="1512654234050" expanded="true" signature="1139:1341" ph="SELECT s.*, share" />
-                <marker date="1512654234050" expanded="true" signature="1400:1582" ph="SELECT c.*,n... comment" />
-                <marker date="1512654234050" expanded="true" signature="1638:1818" ph="SELECT v.*,n... vote" />
+                <element signature="n#style#0;n#i#0;n#div#2;n#div#0;n#div#0;n#div#0;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#i#1;n#php#0;n#div#2;n#div#0;n#div#0;n#div#0;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <marker date="1512742064184" expanded="true" signature="11527:11533" ph=" " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin_menu.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/Home/View/Public/admin_menu.html">
+      <file leaf-file-name="header.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Application/Home/View/Public/header.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="9" column="48" lean-forward="false" selection-start-line="9" selection-start-column="48" selection-end-line="9" selection-end-column="48" />
+            <state relative-caret-position="418">
+              <caret line="19" column="17" lean-forward="false" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -153,53 +159,53 @@
         <option value="$PROJECT_DIR$/Application/Home/View/HomePage/new_note.html" />
         <option value="$PROJECT_DIR$/Public/static/css/webuploader.css" />
         <option value="$PROJECT_DIR$/Application/Home/View/Note/new_notebook.html" />
-        <option value="$PROJECT_DIR$/Application/Home/View/Index/warning.html" />
-        <option value="$PROJECT_DIR$/Application/Home/View/Note/edit_note.html" />
-        <option value="$PROJECT_DIR$/Application/Home/View/Note/new_note.html" />
-        <option value="$PROJECT_DIR$/Application/Home/View/Note/note_by_book.html" />
-        <option value="$PROJECT_DIR$/Application/Home/View/Note/note_by_tag.html" />
-        <option value="$PROJECT_DIR$/Application/Home/View/Index/login.html" />
-        <option value="$PROJECT_DIR$/Application/Home/View/Index/new_account.html" />
         <option value="$PROJECT_DIR$/Public/static/js/webuploader/photo_upload.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/Public/static/js/ueditor/php/config.json" />
-        <option value="$PROJECT_DIR$/Application/Home/View/Follow/following.html" />
-        <option value="$PROJECT_DIR$/Application/Home/View/Follow/followers.html" />
         <option value="$PROJECT_DIR$/Application/Home/Controller/FollowController.class.php" />
-        <option value="$PROJECT_DIR$/Application/Home/View/Follow/search_user.html" />
-        <option value="$PROJECT_DIR$/Application/Home/View/Note/note.html" />
-        <option value="$PROJECT_DIR$/Application/Home/View/Social/public_note.html" />
         <option value="$PROJECT_DIR$/Application/Home/View/Public/user_menu.html" />
-        <option value="$PROJECT_DIR$/Application/Home/View/Social/other_comment.html" />
-        <option value="$PROJECT_DIR$/Application/Home/View/Social/my_comment.html" />
-        <option value="$PROJECT_DIR$/Application/Home/View/Social/edit_share.html" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/77fedb1b-25f4-4127-b5bc-6b4cf6e785d1/console.sql" />
-        <option value="$PROJECT_DIR$/Application/Home/View/Social/my_share.html" />
-        <option value="$PROJECT_DIR$/Application/Home/View/Social/other_share.html" />
-        <option value="$PROJECT_DIR$/Application/Home/View/Note/note_by_time.html" />
-        <option value="$PROJECT_DIR$/Application/Home/View/HomePage/index.html" />
-        <option value="$PROJECT_DIR$/Application/Home/View/Social/share.html" />
-        <option value="$PROJECT_DIR$/Application/Home/View/HomePage/profile.html" />
-        <option value="$PROJECT_DIR$/Application/Home/View/HomePage/profile_modify.html" />
         <option value="$PROJECT_DIR$/Application/Home/Controller/NoteController.class.php" />
-        <option value="$PROJECT_DIR$/Application/Home/View/Note/notebooks.html" />
         <option value="$PROJECT_DIR$/Application/Home/Controller/SocialController.class.php" />
         <option value="$PROJECT_DIR$/Application/Home/View/Public/error.html" />
         <option value="$PROJECT_DIR$/Public/static/js/ueditor/ueditor.config.js" />
         <option value="$PROJECT_DIR$/Public/static/css/style.css" />
-        <option value="$PROJECT_DIR$/Application/Home/View/Public/header.html" />
         <option value="$PROJECT_DIR$/Application/Home/Conf/config.php" />
         <option value="$PROJECT_DIR$/Application/Runtime/Data/first.sql" />
         <option value="$PROJECT_DIR$/Application/Home/Controller/IndexController.class.php" />
         <option value="$PROJECT_DIR$/Application/Home/View/Admin/user_manager.html" />
         <option value="$PROJECT_DIR$/Application/Home/Controller/HomePageController.class.php" />
-        <option value="$PROJECT_DIR$/Application/Home/View/HomePage/lock_screen.html" />
-        <option value="$PROJECT_DIR$/Application/Home/View/Admin/users_manager.html" />
-        <option value="$PROJECT_DIR$/Application/Home/View/Admin/admin_manager.html" />
         <option value="$PROJECT_DIR$/Application/Home/View/Public/admin_menu.html" />
         <option value="$PROJECT_DIR$/Application/Home/Controller/AdminController.class.php" />
+        <option value="$PROJECT_DIR$/Application/Home/View/Index/login.html" />
+        <option value="$PROJECT_DIR$/Application/Home/View/Index/new_account.html" />
+        <option value="$PROJECT_DIR$/Application/Home/View/Index/warning.html" />
+        <option value="$PROJECT_DIR$/Application/Home/View/Note/edit_note.html" />
+        <option value="$PROJECT_DIR$/Application/Home/View/Note/new_note.html" />
+        <option value="$PROJECT_DIR$/Application/Home/View/Note/note_by_book.html" />
+        <option value="$PROJECT_DIR$/Application/Home/View/Note/note_by_tag.html" />
+        <option value="$PROJECT_DIR$/Application/Home/View/Note/note_by_time.html" />
+        <option value="$PROJECT_DIR$/Application/Home/View/Note/notebooks.html" />
+        <option value="$PROJECT_DIR$/Application/Home/View/HomePage/index.html" />
+        <option value="$PROJECT_DIR$/Application/Home/View/HomePage/lock_screen.html" />
+        <option value="$PROJECT_DIR$/Application/Home/View/HomePage/profile.html" />
+        <option value="$PROJECT_DIR$/Application/Home/View/HomePage/profile_modify.html" />
+        <option value="$PROJECT_DIR$/Application/Home/View/Follow/following.html" />
+        <option value="$PROJECT_DIR$/Application/Home/View/Follow/followers.html" />
+        <option value="$PROJECT_DIR$/Application/Home/View/Follow/search_user.html" />
+        <option value="$PROJECT_DIR$/Application/Home/View/Admin/admin_manager.html" />
         <option value="$PROJECT_DIR$/Application/Home/View/Admin/profile.html" />
         <option value="$PROJECT_DIR$/Application/Home/View/Admin/profile_modify.html" />
+        <option value="$PROJECT_DIR$/Application/Home/View/Admin/users_manager.html" />
+        <option value="$PROJECT_DIR$/Application/Home/View/Social/edit_share.html" />
+        <option value="$PROJECT_DIR$/Application/Home/View/Social/my_comment.html" />
+        <option value="$PROJECT_DIR$/Application/Home/View/Social/my_share.html" />
+        <option value="$PROJECT_DIR$/Application/Home/View/Social/other_comment.html" />
+        <option value="$PROJECT_DIR$/Application/Home/View/Social/other_share.html" />
+        <option value="$PROJECT_DIR$/Application/Home/View/Social/public_note.html" />
+        <option value="$PROJECT_DIR$/Application/Home/View/Note/note.html" />
+        <option value="$PROJECT_DIR$/Application/Home/View/Social/share.html" />
+        <option value="$PROJECT_DIR$/Application/Home/View/Public/header.html" />
       </list>
     </option>
   </component>
@@ -231,7 +237,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -255,13 +261,6 @@
               <item name="easynote" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Application" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Home" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="easynote" type="b2602c69:ProjectViewProjectNode" />
-              <item name="easynote" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Application" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Home" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="View" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -270,15 +269,7 @@
               <item name="Application" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Home" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="View" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Admin" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="easynote" type="b2602c69:ProjectViewProjectNode" />
-              <item name="easynote" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Application" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Home" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="View" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="HomePage" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Note" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="easynote" type="b2602c69:ProjectViewProjectNode" />
@@ -292,7 +283,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -362,16 +353,17 @@
       <workItem from="1512627152745" duration="12975000" />
       <workItem from="1512644570369" duration="9774000" />
       <workItem from="1512692147142" duration="5374000" />
+      <workItem from="1512736914963" duration="4571000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="209782000" />
+    <option name="totallyTimeSpent" value="214353000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3159871" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32027897" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22371244" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -407,62 +399,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Public/static/js/ueditor/php/Uploader.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="111" column="33" lean-forward="false" selection-start-line="111" selection-start-column="33" selection-end-line="111" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Public/static/js/webuploader/photo_upload.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="389" column="7" lean-forward="false" selection-start-line="389" selection-start-column="7" selection-end-line="389" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="7" lean-forward="false" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Public/static/js/ueditor/php/config.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1122">
-          <caret line="51" column="25" lean-forward="false" selection-start-line="51" selection-start-column="25" selection-end-line="51" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Follow/following.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="52" column="124" lean-forward="false" selection-start-line="52" selection-start-column="54" selection-end-line="52" selection-end-column="124" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Follow/followers.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="52" column="54" lean-forward="false" selection-start-line="52" selection-start-column="54" selection-end-line="53" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Follow/search_user.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="62" column="69" lean-forward="false" selection-start-line="62" selection-start-column="69" selection-end-line="62" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/154647e2/77fedb1b-25f4-4127-b5bc-6b4cf6e785d1/main.notebook">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Application/Home/Controller/FollowController.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="409">
@@ -496,42 +432,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Social/public_note.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="531">
-          <caret line="102" column="22" lean-forward="false" selection-start-line="102" selection-start-column="22" selection-end-line="102" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Social/other_comment.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="40" column="12" lean-forward="false" selection-start-line="40" selection-start-column="12" selection-end-line="61" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Social/my_comment.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="54" column="98" lean-forward="false" selection-start-line="54" selection-start-column="98" selection-end-line="54" selection-end-column="98" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Note/edit_note.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="557">
-          <caret line="135" column="0" lean-forward="true" selection-start-line="135" selection-start-column="0" selection-end-line="135" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Social/edit_share.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1569">
-          <caret line="101" column="24" lean-forward="true" selection-start-line="101" selection-start-column="24" selection-end-line="101" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://table:/154647e2/77fedb1b-25f4-4127-b5bc-6b4cf6e785d1/main.note">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -550,57 +450,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Note/note_by_tag.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="497">
-          <caret line="48" column="16" lean-forward="true" selection-start-line="48" selection-start-column="16" selection-end-line="53" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Note/note_by_time.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="47" column="45" lean-forward="false" selection-start-line="47" selection-start-column="45" selection-end-line="47" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Social/other_share.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="195" column="4" lean-forward="true" selection-start-line="195" selection-start-column="4" selection-end-line="212" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/HomePage/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="249" column="56" lean-forward="false" selection-start-line="249" selection-start-column="56" selection-end-line="249" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/HomePage/profile.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="536">
-          <caret line="65" column="48" lean-forward="false" selection-start-line="65" selection-start-column="48" selection-end-line="65" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Note/note_by_book.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="110" column="8" lean-forward="false" selection-start-line="110" selection-start-column="8" selection-end-line="112" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Note/notebooks.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2806">
-          <caret line="158" column="47" lean-forward="false" selection-start-line="158" selection-start-column="47" selection-end-line="158" selection-end-column="47" />
         </state>
       </provider>
     </entry>
@@ -636,32 +485,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Public/header.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="25" column="67" lean-forward="false" selection-start-line="25" selection-start-column="67" selection-end-line="25" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Application/Home/Conf/config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
           <caret line="13" column="2" lean-forward="false" selection-start-line="13" selection-start-column="2" selection-end-line="13" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Social/share.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/HomePage/profile_modify.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="99" column="58" lean-forward="false" selection-start-line="99" selection-start-column="58" selection-end-line="99" selection-end-column="58" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -670,24 +497,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="193">
           <caret line="9" column="12" lean-forward="true" selection-start-line="9" selection-start-column="12" selection-end-line="13" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/HomePage/lock_screen.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="858">
-          <caret line="39" column="17" lean-forward="false" selection-start-line="39" selection-start-column="17" selection-end-line="39" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Social/my_share.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="144" column="12" lean-forward="false" selection-start-line="144" selection-start-column="12" selection-end-line="189" selection-end-column="26" />
-          <folding>
-            <marker date="1512639858182" expanded="true" signature="11025:11031" ph=" " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -738,22 +547,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Note/note.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="628">
-          <caret line="135" column="38" lean-forward="true" selection-start-line="115" selection-start-column="32" selection-end-line="135" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Admin/users_manager.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1861">
-          <caret line="134" column="4" lean-forward="false" selection-start-line="134" selection-start-column="4" selection-end-line="149" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://table:/154647e2/77fedb1b-25f4-4127-b5bc-6b4cf6e785d1/main.user">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -765,29 +558,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
           <caret line="12" column="44" lean-forward="false" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Admin/admin_manager.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="738">
-          <caret line="65" column="139" lean-forward="false" selection-start-line="65" selection-start-column="139" selection-end-line="65" selection-end-column="139" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Public/admin_menu.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="48" lean-forward="false" selection-start-line="9" selection-start-column="48" selection-end-line="9" selection-end-column="48" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/Home/Controller/HomePageController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
+        <state relative-caret-position="1430">
           <caret line="70" column="4" lean-forward="false" selection-start-line="70" selection-start-column="4" selection-end-line="95" selection-end-column="5" />
           <folding>
             <marker date="1512654234050" expanded="true" signature="290:359" ph="SELECT sum(n... note" />
@@ -804,26 +580,277 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Admin/profile.html">
+    <entry file="file://$PROJECT_DIR$/Application/Home/Controller/AdminController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="36" column="31" lean-forward="false" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
+        <state relative-caret-position="382">
+          <caret line="117" column="5" lean-forward="false" selection-start-line="117" selection-start-column="5" selection-end-line="117" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/Controller/AdminController.class.php">
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Index/new_account.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="778">
-          <caret line="117" column="5" lean-forward="false" selection-start-line="117" selection-start-column="5" selection-end-line="117" selection-end-column="5" />
+        <state relative-caret-position="198">
+          <caret line="9" column="47" lean-forward="false" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Index/warning.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="47" lean-forward="false" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Note/edit_note.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="47" lean-forward="false" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Note/new_note.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="47" lean-forward="false" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Note/note_by_book.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="47" lean-forward="false" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Note/notebooks.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="57" lean-forward="false" selection-start-line="7" selection-start-column="57" selection-end-line="7" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Note/note_by_time.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="47" lean-forward="false" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Note/note_by_tag.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="47" lean-forward="false" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/HomePage/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="47" lean-forward="false" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
+          <folding>
+            <marker date="1512740417679" expanded="true" signature="12070:12076" ph=" " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/HomePage/lock_screen.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="60" lean-forward="false" selection-start-line="7" selection-start-column="60" selection-end-line="7" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/HomePage/profile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="47" lean-forward="false" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/HomePage/profile_modify.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="47" lean-forward="false" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Follow/following.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="60" lean-forward="false" selection-start-line="7" selection-start-column="60" selection-end-line="7" selection-end-column="60" />
+          <folding>
+            <marker date="1512740417595" expanded="true" signature="4205:4211" ph=" " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Follow/followers.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="60" lean-forward="false" selection-start-line="7" selection-start-column="60" selection-end-line="7" selection-end-column="60" />
+          <folding>
+            <marker date="1512740417942" expanded="true" signature="4667:4673" ph=" " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Follow/search_user.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="47" lean-forward="false" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
+          <folding>
+            <marker date="1512740417880" expanded="true" signature="5073:5079" ph=" " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Admin/admin_manager.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="47" lean-forward="false" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Admin/profile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="47" lean-forward="false" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/Home/View/Admin/profile_modify.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="38" column="31" lean-forward="false" selection-start-line="38" selection-start-column="31" selection-end-line="38" selection-end-column="31" />
+        <state relative-caret-position="198">
+          <caret line="9" column="47" lean-forward="false" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Admin/users_manager.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="47" lean-forward="false" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Public/admin_menu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="48" lean-forward="false" selection-start-line="9" selection-start-column="48" selection-end-line="9" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Social/edit_share.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="47" lean-forward="false" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Social/my_comment.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="47" lean-forward="false" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Social/other_comment.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="47" lean-forward="false" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Social/other_share.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="47" lean-forward="false" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
+          <folding>
+            <marker date="1512740417711" expanded="true" signature="9415:9421" ph=" " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Social/public_note.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="47" lean-forward="false" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
+          <folding>
+            <marker date="1512740417726" expanded="true" signature="7213:7219" ph=" " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Index/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="9" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Social/my_share.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="47" lean-forward="false" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
+          <folding>
+            <marker date="1512740417895" expanded="true" signature="10982:10988" ph=" " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Note/note.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="175" column="0" lean-forward="false" selection-start-line="175" selection-start-column="0" selection-end-line="176" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/大神作品/web插件/jquery-image-cut/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5016">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Social/share.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5026">
+          <caret line="59" column="130" lean-forward="false" selection-start-line="59" selection-start-column="130" selection-end-line="59" selection-end-column="130" />
+          <folding>
+            <element signature="n#style#0;n#i#0;n#div#2;n#div#0;n#div#0;n#div#0;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#1;n#php#0;n#div#2;n#div#0;n#div#0;n#div#0;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#section#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1512742064184" expanded="true" signature="11527:11533" ph=" " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Public/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="19" column="17" lean-forward="false" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
           <folding />
         </state>
       </provider>
