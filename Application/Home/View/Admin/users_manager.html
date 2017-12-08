@@ -57,82 +57,54 @@
                             <div class="task-content">
 
                                 <ul class="task-list">
-                                    <li>
-                                        <div class="task-checkbox">
-                                            <input type="checkbox" class="list-child" value=""  />
-                                        </div>
-                                        <div class="task-title">
-                                            <span class="task-title-sp">Dashgum - Admin Panel Theme</span>
-                                            <span class="badge bg-theme">Done</span>
-                                            <div class="pull-right hidden-phone">
-                                                <button class="btn btn-success btn-xs"><i class=" fa fa-check"></i></button>
-                                                <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
-                                                <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
+                                    <foreach name="users" item="user">
+                                        <li>
+                                            <div class="task-title">
+                                                <span class="task-title-sp">{$user.id} - {$user.username}</span>
+                                                <div id ="{$user.id}" class="pull-right hidden-phone">
+                                                    <button class="btn btn-warning btn-xs" title="设置权限" onclick="modify_auth(this)"><i class="fa fa-cog"></i></button>
+                                                    <button class="btn btn-primary btn-xs" title="修改密码" onclick="edit(this)"><i class="fa fa-pencil"></i></button>
+                                                    <button class="btn btn-danger btn-xs" title="删除用户" onclick="delete_user(this)"><i class="fa fa-trash-o "></i></button>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="task-checkbox">
-                                            <input type="checkbox" class="list-child" value=""  />
-                                        </div>
-                                        <div class="task-title">
-                                            <span class="task-title-sp">Extensive collection of plugins</span>
-                                            <span class="badge bg-warning">Cool</span>
-                                            <div class="pull-right hidden-phone">
-                                                <button class="btn btn-success btn-xs"><i class=" fa fa-check"></i></button>
-                                                <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
-                                                <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="task-checkbox">
-                                            <input type="checkbox" class="list-child" value=""  />
-                                        </div>
-                                        <div class="task-title">
-                                            <span class="task-title-sp">Free updates always, no extra fees.</span>
-                                            <span class="badge bg-success">2 Days</span>
-                                            <div class="pull-right hidden-phone">
-                                                <button class="btn btn-success btn-xs"><i class=" fa fa-check"></i></button>
-                                                <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
-                                                <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="task-checkbox">
-                                            <input type="checkbox" class="list-child" value=""  />
-                                        </div>
-                                        <div class="task-title">
-                                            <span class="task-title-sp">More features coming soon</span>
-                                            <span class="badge bg-info">Tomorrow</span>
-                                            <div class="pull-right hidden-phone">
-                                                <button class="btn btn-success btn-xs"><i class=" fa fa-check"></i></button>
-                                                <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
-                                                <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="task-checkbox">
-                                            <input type="checkbox" class="list-child" value=""  />
-                                        </div>
-                                        <div class="task-title">
-                                            <span class="task-title-sp">Hey, seriously, you should buy this Dashboard</span>
-                                            <span class="badge bg-important">Now</span>
-                                            <div class="pull-right">
-                                                <button class="btn btn-success btn-xs"><i class=" fa fa-check"></i></button>
-                                                <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
-                                                <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
-                                            </div>
-                                        </div>
-                                    </li>
+                                        </li>
+                                    </foreach>
                                 </ul>
                             </div>
                         </div>
                     </section>
                 </div><!-- /col-md-12-->
             </div><!-- /row -->
+
+            <!-- Modal -->
+            <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="editModal" class="modal fade">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title"> 修 改 密 码 </h4>
+                        </div>
+                        <form action="__URL__/editPassword" method="post">
+                            <div class="modal-body">
+                                <p>请输入新的密码</p>
+
+                                <input type="hidden" name="id" value="">
+
+                                <input required type="password" name="password1" autocomplete="off"
+                                       class="form-control placeholder-no-fix">
+                                <p>再次输入密码</p>
+                                <input required type="password" name="password2" autocomplete="off"
+                                       class="form-control placeholder-no-fix">
+
+                            </div>
+                            <div class="modal-footer">
+                                <button data-dismiss="modal" class="btn btn-default" type="button">取 消</button>
+                                <button class="btn btn-theme" type="submit">确 认</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
 
 
         </section><! --/wrapper -->
@@ -160,11 +132,22 @@
 
 
 <script>
-    //custom select box
+    function edit(node) {
+        document.getElementsByName('id').item(0).setAttribute('value',node.parentNode.id);
+        $('#editModal').modal('show')
+    }
 
-    $(function(){
-        $('select.styled').customSelect();
-    });
+    function delete_user(node) {
+        if(window.confirm("删除是不可恢复的，你确认要删除该用户吗？")){
+            window.location="__URL__/deleteUser/uid/"+node.parentNode.id;
+        }
+    }
+
+    function modify_auth(node) {
+        if(window.confirm("你确认要将TA升级为普通管理员吗？")){
+            window.location="__URL__/modifyAuth/uid/"+node.parentNode.id;
+        }
+    }
 
 </script>
 
